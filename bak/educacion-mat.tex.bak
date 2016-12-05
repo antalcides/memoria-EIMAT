@@ -1,0 +1,1973 @@
+\renewcommand\thesection{EM\ \nplpadding{2}\numprint{\arabic{section}}}
+\pagestyle{eimat}
+\pagecolor{ptcbackground}
+\chapter{Educaci\'on Matem\'amatica }
+\thispagestyle{empty}
+\pagecolor{ptcbackground}
+\chaptertoc
+%%%%%%%%%%%%%%%%%%%%3 %%%%%%%%%%%%%%%%%
+\author{%
+\tema{Educaci\'on Matem\'atica,}\vspace{2pt}\\
+    Dolly Garc\'ia G,\vspace{2pt} \\
+    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize mdgarcia@uniquindio.edu.co}\vspace{20pt} \\
+    Luis Hernando Hurtado T,\vspace{2pt}\\
+    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\setcounter{section}{2}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Simulaciones con Tasas de Inter\'es mostrando su interpretaci\'on Gr\'afica }}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{225pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    Las pruebas SABER 11 se han utilizado por algunas universidades como
+mecanismo de selecci\'on de estudiantes; para su aplicaci\'on son analizadas
+considerando separadamente los resultados en sus distintas \'areas y
+utilizando un sistema de ponderaci\'on que le da un peso diferente a cada \'a%
+rea, dependiendo de la carrera a la cual el estudiante aspira. El problema
+que surge es la forma como se construye el sistema de ponderaci\'on: \textquestiondown Cu\'al es
+su base cient\'ifica?, \textquestiondown Las \'areas que tienen mayor ponderaci\'on se supone que
+son garant\'ia de rendimiento del estudiante en esa carrera?, \textquestiondown C\'omo asignar un
+n\'umero a cada \'area que refleje su importancia en una determinada carrera?.
+Generalmente estos interrogantes han sido resueltos en forma intuitiva por
+los administradores de los programas acad\'emicos.
+
+Se propone la construcci\'on de un sistema de ponderaci\'on, con base cient\'i%
+fica, \ garantizando \ que el puntaje global asignado al aspirante a
+ingresar a una carrera, a trav\'es de una combinaci\'on lineal de las diferentes 
+\'areas de la prueba SABER 11, tenga m\'axima correlaci\'on con el rendimiento acad%
+\'emico posterior de ese estudiante. En t\'erminos de Matem\'aticas el problema se
+reduce a encontrar un vector que maximice una funci\'on de dominio en un
+espacio vectorial y con imagen en los n\'umeros reales.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem{1}Apostol, T. An\'alisis Matem\'atico. Addison Wesley. 1957.
+
+\bibitem{2}Asmar, Abraham. T\'opicos en Teor\'ia de Matrices. 1995.
+
+\bibitem{3}Bartle, R. The Elements of Real Analysis. Second Edition. Wiley. 1976  
+
+\bibitem{4}Diaz, Luis. Estad\'istica Multivariada: Inferencia y M\'etodos.
+
+Panamericana Formas e Impresos S.A. 2002.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%4%%%%%%%%%%%%%%%%%
+\author{%
+\tema{Educaci\'on Matem\'atica,}\vspace{2pt}\\
+    Dolly Garc\'ia G,\vspace{2pt} \\
+    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize mdgarcia@uniquindio.edu.co}\vspace{20pt} \\
+    Luis Hernando Hurtado T,\vspace{2pt}\\
+    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{2}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{La deserci\'on estudiantil en la Universidad del Quind\'io}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{225pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    La Universidad del Quind\'io aborda el an\'alisis y la b\'usqueda de soluciones al
+problema de la deserci\'on en su poblaci\'on estudiantil, con una aplicaci\'on
+juiciosa del An\'alisis de Sobrevivencia y la Regresi\'on Log\'istica. Se analiza
+el efecto que en conjunto puedan tener sobre la deserci\'on diez y seis (16)
+factores, utilizando la Regresi\'on Log\'istica y luego, se hace un an\'alisis
+detallado y en forma individual de los factores que muestran un aporte
+significativo a la deserci\'on, esto \'ultimo comparando adem\'as estad\'isticamente
+las curvas de sobrevivencia por medio de pruebas Logrank en el caso discreto
+y Raz\'on de Verosimilitud en las variables continuas.
+
+Los resultados obtenidos muestran que para la Universidad del Quind\'io la
+mayor deserci\'on de los estudiantes se presenta en los tres (3) primeros
+semestres, situaci\'on que es generalizable a todos los Programas Acad\'emicos
+de la modalidad presencial; tambi\'en se encuentra que al considerar los
+factores o variables en forma conjunta, los que tienen un efecto
+significativo como variables que explican la deserci\'on son  los siguientes:
+el rendimiento acad\'emico del estudiante, medido por el puntaje de calidad
+promedio acumulado; el puntaje de ingreso a la Universidad, obtenido en las
+Pruebas SABER 11, principalmente los resultados obtenidos en las pruebas de
+Matem\'aticas, Lenguaje e Ingl\'es; la edad de ingreso a la Universidad y la
+procedencia geogr\'afica del estudiante.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem{1}Hosmer D.W., Lemeshow S. : \emph{Applied Logistic Regression}. John Wiley
+and Sons, 1989 
+
+\bibitem{2}Lee Elisa T., Wang J. W. : \emph{Statistical Methods for Survival Data
+Analysis}. Wiley Series in Probability and Statistics, 2003. 
+
+\bibitem{2}Ministerio de Educaci\'on Nacional, CEDE Universidad de los Andes.: \emph{%
+Investigaci\'on sobre Deserci\'on en las Instituciones de Educaci\'on Superior en
+Colombia.} Informe de acompa\~namiento a la Universidad del Quind\'io, 2007. 
+
+Panamericana Formas e Impresos S.A. 2002.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%5 %%%%%%%%%%%%%%%%%%%
+\author{%
+\tema{Educaci\'on Matem\'atica,}\vspace{2pt}\\
+    Mar\'{\i}a Jos\'{e} Ortega Wilches,\vspace{2pt} \\
+    Universidad Pedag\'{o}gica Experimental Libertador - IPC, Venezuela,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize mariajoseow@gmail.com}\vspace{20pt} \\
+    Sandra Leal Huise,\vspace{2pt}\\
+   Universidad Sim\'{o}n Bol\'{\i}var. Caracas, Venezuela ,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize sandralealhuise@gmail.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{2}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Metodolog\'ia centrada en la Resoluci\'on de Problemas: 
+Aportes al desarrollo del Razonamiento
+ Matem\'atico de los estudiantes}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{225pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+   El razonamiento matem\'atico es de gran importancia en las clases de Matem\'atica porque al tener inherentes procesos cognitivos como representar, visualizar, generalizar, clasificar, conjeturar, analizar, abstraer, formalizar permite a los estudiantes comprender y expresar fen\'omenos al tiempo que son capaces de hacer conjeturas y justificar resultados. En este sentido, es tarea del docente generar una pr\'actica pedag\'ogica que induzca al razonamiento matem\'atico de sus discentes.\\
+ Por ello, el presente trabajo tiene como finalidad valorar las implicaciones que genera una metodolog\'ia centrada en la Resoluci\'on de Problemas en el razonamiento matem\'atico de los estudiantes de secundaria, con la selecci\'on cuidadosa de problemas interesantes que induzcan al desarrollo de dicho razonamiento y partiendo de la premisa que este tipo de metodolog\'ia es donde el razonamiento matem\'atico encuentra una de las mejores formas de manifestarse.\\
+Para tal fin, se consideraron los aportes te\'oricos de matem\'aticos como de Polya (1975), Schoenfeld (1985) y Lester (1985) en la teor\'ia de resoluci\'on de problemas; Flavell (1979), Bur\'on (1996) y Davinson y Stemberg (1998) en la Metacognici\'on y autores como Archer (2010) y Lithner (2000) en el razonamiento matem\'atico.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem{1} {\sc Archer, M } (2010). {\it Estudio de casos sobre el razonamiento matem\'{a}tico de alumnos con \'{e}xito acad\'{e}mico en la ESO}. Tesis de doctorado no publicada. Universidad de Barcelona, Espa\~{n}a.\\
+
+\bibitem{2} {\sc	Bur\'{o}n, J. } (1996). {\it Ense\~{n}ar a aprender: Introducci\'{o}n a la metacognici\'{o}n}.  Bilbao: Ediciones Mensajero.\\
+
+\bibitem{3}{\sc	Flavell, J. } (1979). {\it Metacognition and cognitive monitoring}.  Bilbao: Ediciones Mensajero.\\
+
+\bibitem{4} {\sc	Lithner, J. } (2000). {\it Mathematical reasoning in task solving}. Educational studies in mathematics, (41), 165-190.\\
+
+\bibitem{5} {\sc	Polya, G. } (1984). {\it C\'{o}mo plantear y resolver problemas}. M\'{e}xico: Trillas.\\
+
+\bibitem{6} {\sc	Schoenfeld, A. } (1985). {\it Mathematical problem solving}. New York: Academic Press.\\
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%% 6 %%%%%%%%%%%%%%%
+\author{%
+\tema{Educaci\'on Matem\'atica,}\vspace{2pt}\\
+    John Jairo Garc\'{i}a Mora,\vspace{2pt} \\
+   Instituto tecn\'ologico Metropolitano,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize jhongarcia@itm.edu.co}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Del OVA al MOOC en Geometr\'{i}a}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{225pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    Un estudio comparativo nos permiti\'{o} evaluar el rendimiento acad\'{e}mico en geometr\'{i}a de dos grupos de estudiantes empleando las estrategias del denominado m\'{e}todo cuasi-experimental de investigaci\'on \cite{1}. Empleando Applets dise\~nados con el mediador virtual GeoGebra el grupo experimental dej\'{o} de lado el papel, la regla y el comp\'{a}s, y de igual forma se redujo el tiempo empleado para el c\'{a}lculo geom\'{e}trico, mientras que el grupo control emple\'{o} esos instrumentos en sus construcciones.\\
+\indent
+Los Objetos Virtuales de Aprendizaje empleados para el estudio comparativo nos permiti\'{o} pensar en los Massive Online Open Course, conocidos como  MOOC, que son una invasi\'{o}n tecnol\'{o}gica que debe llegar al aula, un espacio cada vez menos f\'{i}sico; hay una comunicaci\'{o}n generalizada, el aula est\'{a} abierta y debe poseer cada d\'{i}a m\'{a}s cobertura.\\
+\indent
+El dise\~nar un MOOC en geometr\'{i}a requiere poseer adem\'{a}s de los elementos de un Learning Management System (LMS), caracterizados porque gestionan usuarios, recursos, actividades de formaci\'{o}n, adem\'{a}s del seguimiento al proceso de aprendizaje a trav\'{e}s de evaluaciones (formativas y sumativas), informes e interacciones v\'{i}a chat, foros de discusi\'{o}n, videoconferencias, entre otros. \\
+\indent
+El \'{e}xito de los MOOC se encuentra en la combinaci\'{o}n de v\'{i}deos y actividades de evaluaci\'{o}n que permiten poner a prueba nuevas metodolog\'{i}as, nuevas tecnolog\'{i}as y nuevas formas de organizar la educaci\'{o}n[2].\\
+\indent
+El trabajo realizado con los OVAs y los cursos visitados en plaformas MOOC, permitieron enumerar las bondades y limitantes al que nos enfrentamos para crear nuestro primer MOOC.
+
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem{1}Apostol, T. An\'alisis Matem\'atico. Addison Wesley. 1957.
+
+\bibitem{2}Asmar, Abraham. T\'opicos en Teor\'ia de Matrices. 1995.
+
+\bibitem{3}Bartle, R. The Elements of Real Analysis. Second Edition. Wiley. 1976  
+
+\bibitem{4}Diaz, Luis. Estad\'istica Multivariada: Inferencia y M\'etodos.
+
+Panamericana Formas e Impresos S.A. 2002.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%7 %%%%%%%%%%%%%%%%%%%%
+\author{%
+\tema{Nuevas Tecnolog\'{i}as Aplicadas a la Educaci\'{o}n en Ciencias B\'{a}sicas,}\vspace{2pt}\\
+ Margarita Pati\~no Jaramillo,\vspace{2pt} \\
+   Instituto tecn\'ologico Metropolitano,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize margaritapatino@itm.edu.co}\vspace{20pt} \\
+    John Jairo Garc\'{i}a Mora,\vspace{2pt} \\
+   Instituto tecn\'ologico Metropolitano,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize jhongarcia@itm.edu.co}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Uso de las TIC como herramienta mediadora y pedag\'ogica en la ense\~nanza de las matem\'aticas}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{225pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    Durante el proceso de ense\~nanza aprendizaje de los estudiantes, son muchas las dificultades que se manifiestan en el aula, pero quiz\'{a} una de las m\'{a}s comunes es el bajo rendimiento de que presentan en el \'area de matem\'{a}ticas, situaci\'{o}n que resulta preocupante, si se tiene en cuenta la importancia que esta \'{a}rea tiene para el desempe\~no de todo individuo en la sociedad,  en donde las operaciones matem\'{a}ticas hacen parte de la cotidianidad humana. As\'i que, uno de los principales objetivos de la escuela, y por lo tanto de los docentes, es que los estudiantes sean capaces de asimilar y de comprender los contenidos de su asignatura; para ello se buscan nuevas t\'{e}cnicas, m\'{e}todos de ense\~nanza, herramientas y soportes para ponerlos en pr\'{a}ctica. 
+
+Las TIC como mediadoras del proceso de ense\~nanza y aprendizaje, apoyan, facilitan y motivan al estudiante en la adquisici\'{o}n de competencias. Experiencias previas realizadas por Cruz y Puente (2012), Villarraga, otros (2012), muestran que la utilizaci\'{o}n de nuevas tecnolog\'{i}as ayudan a los estudiantes a aprender matem\'{a}ticas, les permite mejorar la comprensi\'{o}n, descubrir por si mismos conceptos y por ende desarrollar en ellos un aprendizaje significativo y las competencias deseadas.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{Ad}{\sc Cruz, M. y Puente,A.} (2012) {\it "Innovaci\'{o}n Educativa: Uso de las TIC en la ense\~nanza de la matem\'{a}tica b\'{a}sica''}.  Edemetic.V 1(2),128-145.
+
+\bibitem{bav1} {\sc Villarraga,M., Saavedra,F., Espinosa, Y.,Jim\'{e}nez, C., S\'{a}nchez,L. Sanguino,J.} (2012) "Acercando al profesorado de matem\'ticas a las TIC para la ense\~nanza y aprendizaje''. \emph{Edemetic} V 1(2),65-88.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%% 8 %%%%%%%%%%%%%%%%%%%
+\author{%
+\tema{Nuevas Tecnolog\'{i}as Aplicadas a la Educaci\'{o}n en Ciencias B\'{a}sicas,}\vspace{2pt}\\
+ Margarita Pati\~no Jaramillo,\vspace{2pt} \\
+   Instituto tecn\'ologico Metropolitano,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize margaritapatino@itm.edu.co}\vspace{20pt} \\
+    John Jairo Garc\'{i}a Mora,\vspace{2pt} \\
+   Instituto tecn\'ologico Metropolitano,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize jhongarcia@itm.edu.co}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Transferencia investigativa con el apoyo de la estad\'istica a los niveles precedentes en el marco STEAM Labs 2014}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{225pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    
+Esta es una experiencia  de transferencia de conocimiento enmarcada en el marco del proceso experimental denominado "STEAM Labs Medell\'in 2014" Laboratorios de Innovaci\'on para la Educaci\'on?, patrocinado por  la Secretar\'ia de Educaci\'on de la Alcald\'ia de Medell\'in, ejecutado desde el Parque Explora y en estrecha colaboraci\'on con Fundaci\'on Proantioquia, Empresarios por la Educaci\'on y Ruta N. Todas estas instituciones est\'an intentando unir esfuerzos y apalancar recursos en torno al desarrollo e implementaci\'on de mejoras de la calidad y pertinencia educativa, as\'i como su conexi\'on con las pol\'iticas de Ciencia, Tecnolog\'ia e Innovaci\'on, productividad y competitividad. 
+Los procesos investigativos del Instituto Tecnol\'ogico Metropolitano le han permitido a la instituci\'on convertirse en la primera Instituci\'on de Educaci\'on Superior de car\'acter p\'ublico en obtener acreditaci\'on de alta calidad. El saber a transferir por el Instituto Tecnol\'ogico Metropolitano busca intervenir los niveles precedentes a la Educaci\'on Superior en el campo investigativo con apoyo de las herramientas estad\'isticas. La transferencia que busca dise\~nar una metodolog\'ia en la que los estudiantes adquieran las bases descriptivas necesarias para comprender y plantear soluciones  a la problem\'atica de su entorno cercano, dot\'andolos de las capacidades que les permitan soluciones m\'as complejas al acceder a la vida universitaria y luego a su profesi\'on. 
+
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{Ad}{\sc Mendez, C.E.} (2007) {\it "Metodolog\'ia''}.  Noriega editores, Bogot\'a, Colombia.
+
+\bibitem{bav1} {\sc Hern\'andez,R., Fern\'andez, C., Baptista, P.} (2010) "metodolog\'ia de la investigaci\'on''. \emph{McGraw Hill Per\'u.}
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%9 %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%% 8 %%%%%%%%%%%%%%%%%%%
+\author{%
+\tema{Nuevas Tecnolog\'{i}as Aplicadas a la Educaci\'{o}n en Ciencias B\'{a}sicas,}\vspace{2pt}\\
+ Margarita Pati\~no Jaramillo,\vspace{2pt} \\
+   Instituto tecn\'ologico Metropolitano,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize margaritapatino@itm.edu.co}\vspace{20pt} \\
+    John Jairo Garc\'{i}a Mora,\vspace{2pt} \\
+   Instituto tecn\'ologico Metropolitano,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize jhongarcia@itm.edu.co}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{V\'{i}deos Interactivos en C\'{a}lculo Integral}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{225pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    
+El aprendizaje con el apoyo de v\'{i}deos permite el aprendizaje colaborativo y estos, inmersos en las TIC son herramientas esenciales para el docente del tercer entorno [1].\\
+El impacto de las TIC en el aprendizaje es una medici\'on a mediano plazo de tipo cualitativo pues tiene caracter\'isticas impl\'{i}citas. Por la importancia de las TIC y para ellas mismas, se hace imperioso dise\~nar herramientas pedag\'{o}gicas soportadas por im\'{a}genes, la construcci\'{o}n de conocimiento con v\'{i}deos tipo 'Khan Academy' solo generan intertextualidad, o sea que solo potencian competencias comunicativas y operativas. Nuestro dise\~no refleja una propuesta que a trav\'{e}s de las im\'{a}genes en movimiento de los v\'{i}deos digitales podamos generar interactividad en los modelos presentados a estudiantes en c\'{a}lculo integral.\\
+Presentamos una estrategia innovadora en las clases de matem\'{a}ticas que permite la interacci\'{o}n del estudiante con un v\'{i}deo fortaleciendo el concepto con el refuerzo inmediato a su interactividad. En nuestro modelo, la transmisi\'{o}n de conceptos del c\'{a}lculo integral con videos interactivos soportados en HTML5, no abandonar\'{a}n una planificaci\'on del trabajo a realizar para afianzar los conceptos del curso donde se implemente. El dise\~no de videos interactivos elaborados en plataformas como GeoGebra y Descartes permiten que el concepto sea observado, analizado e intervenido por la obligaci\'{o}n del estudiante a interactuar, la cual es retroalimentada inmediatamente. 
+
+
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{Ad}{\sc Echavarr\'{i}a, J.} (1999) {\it Los se\~nores del aire:tel\'{e}polis y el tercer entorno}.  Editorial Destino, Barcelona, Espa\~na.
+
+\bibitem{bav1} {\sc Cabrera D. Kary y Gonz\'{a}lez, Luis} (2006) "Curriculo universitario basado en competencias''.Universidad del Norte, Bogota, Colombia.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%% 11
+\author{%
+\tema{Educaci\'on Matem\'atica - Geometr\'ia,}\vspace{2pt}\\
+ D\'uwamg Alexis Prada Mar\'in,\vspace{2pt} \\
+   Universidad Pontificia Bolivaviana Seccional Bucaramanga, \\
+   \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize duwamg.prada@upb.edu.co}\vspace{20pt} \\
+    Jenny Mayerli G\'omez Cort\'es,\vspace{2pt} \\
+   Universidad Industrial De Santander,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize mayita429@hotmail.com}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\setcounter{section}{10}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Construcci\'on de funciones trigonom\'etricas utilizando software educativo: geogebra}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{225pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    
+Las herramientas tecnol\'ogicas se han convertido en una ayuda para el
+docente en su continuo quehacer pedag\'ogico.  La mediaci\'on docente en
+las universidades no solo contempla el conocimiento como la
+transmisi\'on de un saber apropiado por el docente, sino adem\'as, la
+mediaci\'on debe permitir que el estudiante pueda evidenciar lo
+observado en el aula de clase en cada una de las actividades
+did\'acticas. Dado que la mayor\'ia de nuestros estudiantes son nativos
+digitales, se hace necesario que innovemos en la utilizaci\'on de
+ciertas herramientas que permitan la construcci\'on de modelos y la
+simulaci\'on de los mismos, para que el estudiante pueda confrontar la
+actividad acad\'emica del aula con actividades fuera de la misma en la
+cual mediante la simulaci\'on se genere un conocimiento apropiado y
+duradero.  Es de observar que este tipo de actividades donde el
+estudiante se convierte en actor principal de su propio
+conocimiento, genera en \'el mas que la apropiaci\'on del mismo y lo
+convierte en un integrante independiente en el proceso educativo.\\
+
+El conocimiento, seg\'un Arist\'oteles, se desarrolla en un proceso de
+abstracci\'on a partir de lo sensible, donde los elementos que
+percibimos con nuestros sentidos van tomando diversas formas a
+medida que los vamos abstrayendo.  Dichas formas se presentan en
+niveles de complejidad. El grado mas bajo es el de la sensaci\'on o
+a\'isthesis, que surge por capacidad biol\'ogica.  El segundo nivel, la
+experiencia, es decir dichas sensaciones tienen su fuga en la
+memor\'ia, el tercer nivel, la t\'ecnica o t\'ekhne, en el cual se
+evidencia el saber que rige la producci\'on de algo; el cuarto nivel
+la episteme o ciencia, en el cual se evidencia el saber
+demostrativo; el quinto nivel, llamado sophia o sabidur\'ia, es el
+saber sobre los principios que fundamentan la demostraci\'on, es
+decir, saber sobre el sentido de las cosas y el sexto nivel llamado
+gnosis o prudencia, que es el saber moral.\\
+
+La tecnolog\'ia generalmente se asocia con la modernizaci\'on de ciertos
+artefactos de manera equivoca, sin embargo, el concepto de
+tecnolog\'ia apareci\'o en el siglo XIX, la tecnolog\'ia es la uni\'on entre
+la tecno y logos, luego podr\'iamos acotar que la tecnolog\'ia es el
+hacer fundamentado en el saber, es decir, como aprovechar ciertas
+herramientas para buscar un prop\'osito general.  El software Geogebra
+es un procesador geom\'etrico y algebraico, interactivo, libre y con
+posibilidades de construcci\'on geom\'etrica en su ambiente. Geogebra
+fue desarrollado por el Austriaco Markus Hohenwarter en el a\~no
+($2001$).  Mediante este software es posible realizar construcciones
+con las cuales podemos observar como aparecen las gr\'aficas de las
+funciones trigonom\'etricas desde el c\'irculo unitario.\\
+
+El objetivo de este cursillo es realizar las construcciones de las
+funciones trigonom\'etricas (seno, coseno y tangente) mediante la
+utilizaci\'on de este software, evidenciar la simulaci\'on del mismo y
+resolver algunos de los ejercicios b\'asicos que involucran la
+utilizaci\'on de las funciones trigonom\'etricas.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{Andrade} ANDRADE, H., G\'OMEZ, L., \textit{Tecnolog\'ia inform\'atica en la Escuela}
+Cuarta Edici\'on, Divisi\'on de publicaciones Universidad Industrial de
+Santander, Bucaramanga, Santander, Colombia, (2009)
+
+\bibitem{Castro} CASTRO, I., P\'EREZ, J., \textit{Un paseo finito por lo infinito.  El infinito en matem\'aticas},
+Editorial Pontificia Universidad Javeriana, Bogot\'a, Colombia, (2007)
+
+\bibitem{Doody} DOODY, M., \textit{Arist\'oteles y los secretos de la vida},
+Edhasa, Espa\~na, (2007)
+
+\bibitem{Prada} PRADA D., \textit{El desarrollo de actitudes y valores: un verdadero lenguaje en el proceso educativo universitario}
+Monograf\'ia de grado, Especializaci\'on en Docencia Universitaria,
+Universidad Industrial de Santander, Bucaramanga, Colombia (2012)
+
+\bibitem{ZIll} ZILL, D., DEWAR, J., \textit{\'algebra, trigonometr\'ia y geometr\'ia an\'alitica},
+Tercera Edici\'on, Mc Graw Hill, Mexico (2012).
+
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%% 12 %%%%%%%%%%%%%%%%%%%%%
+\author{%
+\tema{Pensamiento Num\'erico,}\vspace{2pt}\\
+ Teovaldo Garcia ,\vspace{2pt} \\
+   Universidad Popular Del Cesar,\vspace{2pt} \\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize teovaldogarcia@unicesar.edu.co}\vspace{20pt} \\
+    Hamilton Garcia,\vspace{2pt} \\
+  Universidad Popular Del Cesar,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize hamiltongarcia@unicesar.edu.co}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{10}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Reflexi\'{o}n acerca del pensamiento mum\'erico y sistemas num\'ericos}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    
+En este trabajo se presenta una investigaci\'{o}n de corte positivista de tipo cuantitativa Por ende, gravitado en un tratado te\'{o}rico, descriptivo, explicativo y proyectivo, de dise�o no experimental, transeccional causal, de enfoque emp\'{i}rico- inductivo; con muestreos probabil\'{i}sticos, aplicaci\'{o}n de cuestionarios y medidas objetivas de comportamiento, aplicando t\'{e}cnicas estad\'{i}sticas en el an\'{a}lisis, para la generalizaci\'{o}n de los resultados entre otras tipolog\'{i}as. Donde, se analiza el car\'{a}cter de los conocimientos b\'{a}sicos de las matem\'{a}ticas escolares que se viene trabajando en las escuelas y colegios de Colombia, especialmente en los niveles b\'{a}sicos y medio de acuerdo a la Ley 115 o Ley General de la educaci\'{o}n de 1994 propuesta por el Ministerio de Educaci\'{o}n Nacional Colombiano MEN. Desarrollado, por el Grupo de Investigaci\'{o}n Interdisciplinario Estudio del Pensamiento Num\'{e}rico, Pol\'{i}ticas P\'{u}blicas, Producci\'{o}n Agraria y Medio Ambiente de la Universidad Popular del Cesar. La motivaci\'{o}n surge, a partir de las m\'{o}ltiples dificultades detectadas en el automatismo de los algoritmos de dicho pensamiento, sobre todo en cuesti\'{o}n de concepciones subyacentes que lo conforman. De igual manera, se expone el resultado de una amplia revisi\'{o}n bibliogr\'{a}fica en la cual se sit\'{u}a el \'{e}nfasis en las tesis y ejemplificaci\'{o}n de conocimiento contiguos. Por ende, su prop\'{o}sito es analizar la influencia, caracter\'{i}sticas e importancia del pensamiento num\'{e}rico y los sistemas num\'{e}ricos en el desarrollo escolar de los colegiales de los diferentes niveles educativos, puesto que se refiere no s\'{o}lo a la capacidad de hacer c\'{a}lculos sino a la de establecer relaciones num\'{e}ricas y a las competencias necesarias que brindan la posibilidad de usar estos conocimientos en forma flexible para hacer juicios matem\'{a}ticos y desarrollar estrategias tendientes a resolver problemas, progresivamente m\'{a}s exigentes, donde ellos puedan demostrar en diferentes situaciones que son capaces de aplicarlos en su entorno de manera glocal y global. En tal sentido, el eje tem\'{a}tico de este estudio se ubic\'{o} en el \'{a}rea de la l\'{i}nea de educaci\'{o}n matem\'{a}tica del grupo de investigaci\'{o}n en comento, enmarcada hacia un escenario acad\'{e}mico Adem\'{a}s, se propone una estrategia did\'{a}ctica que se genera tomando en cuenta un conjunto de principios did\'{a}cticos, los cuales enfocan la construcci\'{o}n de los recursos de aprendizaje pertinentes para tal fin. Finalmente, se presenta un gu\'{i}a que ha sido construida mediante elucubraci\'{o}n te\'{o}rica pr\'{a}ctica de los integrantes del grupo de investigaci\'{o}n referenciado como reacci\'{o}n a las dificultades identificadas precedentemente.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem{Ad}{\sc Sosa, L., Carrillo, J.} (2010) {\it Sobolev spaces}. Caracterizaci\'{o}n del conocimiento matem\'{a}tico para la ensenanza. \emph{Math. Notes} 569-580. Lleida: SEIEM.
+
+\bibitem{bav1} {\sc English, L.} (2009) {\it Sobolev spaces}. Setting an agenda for international research in mathematics education. \emph{Math. Notes}(pp. 3-19). New York: Routledge.
+
+\bibitem{bav1} {\sc Godino, J. D.} (2009) {\it Sobolev spaces}.Categor\'{i}as de An\'{a}lisis de los conocimientos del Profesor de Matem\'{a}ticas. \emph{Math. Notes}(20, 13-31. )
+
+\bibitem{bav1} {\sc R. Rico} (2008) {\it Sobolev spaces}.Competencias matem\'{a}ticas desde una perspectiva curricular
+
+\bibitem{bav1} {\sc MEN} (1994) {\it Sobolev spaces}.Ley General de Educaci\'{o}n 115 de 1994
+\bibitem{bav1} {\sc MEN} (2003) {\it Sobolev spaces}.Est\'{a}ndares B\'{a}sicos de la calidad de las matem\'{a}ticas.
+
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%13 %%%%%%%%%%
+\author{%
+\tema{Educaci\'on,}\vspace{2pt}\\
+Juan Guillermo Arango Arango ,\vspace{2pt} \\
+   Instituto Tennol\'ogico Metropolitano,\vspace{2pt} \\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize memo.arango@hotmail.com}\vspace{20pt} \\
+    Diana Yanet Gaviria Rodr\'iguez,\vspace{2pt} \\
+  Instituto Tennol\'ogico Metropolitano,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize diyagaro@hotmail.como}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{10}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{C\'omo mejorar la ense\~nabilidad del C\'alculo Diferencial por medio de Objeto Interactivo de Aprendizaje apoyado por un video}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+  
+Con \'esta ponencia traemos una propuesta donde escogemos el tema de la funci\'on exponencial que hace parte de la asignatura de C\'alculo Diferencial. Lo primero es que despu\'es de ver con los estudiantes todos los conceptos de la funci\'on exponencial, trabajemos con ellos situaciones problema en clase; luego apoy\'andonos en el software GeoGebra  hacemos una simulaci\'on de una situaci\'on problema. Con el software GeoGebra que es din\'amico, libre e interactivo se crea un Objeto Interactivo de Aprendizaje (OIA)  y vamos a tener unas ventanas donde hay unos par\'ametros que podemos cambiar dando pie a infinidad de problemas y al cambiar \'estos valores la gr\'afica se transforma y el estudiante comienza a construir su conocimiento, ya que estas variaciones de las gr\'aficas lo ponen a analizar porqu\'e ocurren, adem\'as de llevarlo a investigar otros cambios. En un video hecho por el docente se le indica al estudiante como manipular \'este OIA y c\'omo se hacen los c\'alculos matem\'aticos para que el estudiante sea capaz de resolver el problema y el OIA simplemente le sirva para corroborar que trabajo correctamente.
+
+Con \'estos OIA apoyados por medio de videos, los docentes tienen una extraordinaria herramienta para que los estudiantes deseen trabajar la asignatura fuera del aula de clase; adem\'as que traer\'ian a la clase nuevas preguntas producto de sus diferentes investigaciones al variar los datos de las ventanas del OIA; fomentando un di\'alogo heur\'istico entre docente, estudiante y el OIA.  
+
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{Ad} \url{http://www.geogebra.org/cms/en/}.
+
+\bibitem{bav1}  \url{http://www.ecured.cu/index.php/Objetos_Interactivos_de_aprendizaje}
+
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%% 14 %%%%%%%%%
+\author{%
+\tema{Educaci\'on,}\vspace{2pt}\\
+Juan Guillermo Arango Arango ,\vspace{2pt} \\
+   Instituto Tennol\'ogico Metropolitano,\vspace{2pt} \\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize memo.arango@hotmail.com}\vspace{20pt} \\
+    Diana Yanet Gaviria Rodr\'iguez,\vspace{2pt} \\
+  Instituto Tennol\'ogico Metropolitano,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize diyagaro@hotmail.como}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{10}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Simulaci\'on de un problema de raz\'on de cambio por medio de un Objeto Interactivo de Aprendizaje}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    Nos apoyamos en el software Geom\'etrico, din\'amico, interactivo y libre GeoGebra  para hacer una simulaci\'on de un problema de raz\'on de cambio. La situaci\'on problema nos dice: ?Una volqueta descarga arena sobre el suelo a raz\'on de V (cm3/seg.) formando un cono circular recto donde la altura es  n veces el radio. Calcule a qu\'e velocidad cambia el Radio cuando \'este es de R cm.?     
+
+Se hace un Objeto Interactivo de Aprendizaje (OIA)  con \'este software GeoGebra donde al variar los par\'ametros ?V?, ?n? y ?R?; la figura inmediatamente se transforma y aparece el resultado de c\'omo cambia el radio con respecto al tiempo.
+
+La idea es que uno como docente ya les explic\'o a los estudiantes en el aula de clase como se resuelve el problema matem\'aticamente; y el OIA simplemente les sirve a los estudiantes para que se autoeval\'uen cambiando los valores en los par\'ametros del OIA y resolviendo el problema con papel y l\'apiz y luego corroborar con el OIA si trabaj\'o correctamente.
+
+En esta ponencia se pretende dar unas peque\~nas bases de c\'omo se dise\~na un OIA y lo amigable que es el Software GeoGebra para realizar \'estos dise\~nos.
+
+Tambi\'en se muestra otro OIA de la misma situaci\'on problema donde aparecen las curvas de las funciones. 
+
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{Ad} \url{http://www.geogebra.org/cms/en/}.
+
+\bibitem{bav1}  \url{http://www.ecured.cu/index.php/Objetos_Interactivos_de_aprendizaje}
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%15
+\author{%
+\tema{Educaci\'on,}\vspace{2pt}\\
+Juan Guillermo Arango Arango ,\vspace{2pt} \\
+   Instituto Tennol\'ogico Metropolitano,\vspace{2pt} \\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize memo.arango@hotmail.com}\vspace{20pt} \\
+    Diana Yanet Gaviria Rodr\'iguez,\vspace{2pt} \\
+  Instituto Tennol\'ogico Metropolitano,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize diyagaro@hotmail.como}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{10}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Simulaci\'on de una funci\'on de Ingresos utilizando la funci\'on cuadr\'atica y apoyada en el software GeoGebra como herramienta en la ense\~nabilidad y su interpretaci\'on con el C\'alculo Diferencial}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    Apoy\'andonos en el software GeoGebra  hacemos una simulaci\'on de una funci\'on de Ingresos utilizando la funci\'on cuadr\'atica. La simulaci\'on es la siguiente: Un hotel tiene h habitaciones que puede rentar en su totalidad. Si la renta se fija en R d\'olares al mes por habitaci\'on; y por cada incremento de 1 d\'olar en la renta de cada habitaci\'on, una habitaci\'on quedar\'a vac\'ia sin posibilidad alguna de rentarla. Exprese el ingreso total mensual I como una funci\'on de: a) x, si x es el n\'umero de incrementos de 5 d\'olares en la renta de cada habitaci\'on.    b) La renta mensual P de cada habitaci\'on. c) Realice la gr\'afica de I(x). d) \textquestiondown Cu\'antos incrementos x debe hacer para tener los m\'aximos ingresos?  e) \textquestiondown En  cu\'anto quedar\'a rentada cada habitaci\'on? f) \textquestiondown Cu\'antas habitaciones quedar\'an vac\'ias? g) \textquestiondown Cu\'anto ser\'a el ingreso m\'aximo?
+
+En el OIA  (Objeto Interactivo de Aprendizaje) vamos a tener unas ventanas donde podemos variar: El n\'umero de habitaciones ?h?, la renta mensual de cada habitaci\'on ?R?, el incremento por mes en la renta de cada habitaci\'on "?".  Haci\'endose esto, la gr\'afica inmediatamente se transformar\'a dando pie a diferentes interpretaciones matem\'aticas que obligaran a analizar al estudiante  y lo llevaran a diferentes interpretaciones de la situaci\'on problema.
+
+
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{Ad} \url{http://www.geogebra.org/cms/en/}.
+
+\bibitem{bav1}  \url{http://www.ecured.cu/index.php/Objetos_Interactivos_de_aprendizaje}
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%% 17
+\author{%
+\tema{Educaci\'on,}\vspace{2pt}\\
+Yiseth Maritza S\'anchez G\'omez,\vspace{2pt} \\
+   Instituto Tennol\'ogico Metropolitano,\vspace{2pt} \\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize yisethsanchez126952@correo.itm.edu.co}\vspace{20pt} \\
+    Diana Yanet Gaviria Rodr\'iguez,\vspace{2pt} \\
+  Instituto Tennol\'ogico Metropolitano,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize diyagaro@hotmail.como}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{10}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Simulaciones con Tasas de Inter\'es mostrando su interpretaci\'on Gr\'afica}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    
+A trav\'es de una simulaci\'on se dise\~nan y se construyen en un plano cartesiano graficas de tasas de inter\'es compuesto, como son las tasas anticipadas y vencidas, determinando su interpretaci\'on grafica donde de una forma din\'amica e interactiva conlleve a un di\'alogo heur\'istico entre docente, estudiantes y la herramienta tecnol\'ogica utilizada y se ayude a ver, comprender, analizar e interpretar las conversiones de las tasas de inter\'es de una manera sencilla. 
+
+?La tasa de inter\'es es el precio del dinero en el mercado financiero. Al igual que el precio de cualquier producto, cuando hay m\'as dinero la tasa baja y cuando hay escasez sube.  Cuando la tasa de inter\'es sube, los demandantes desean comprar menos, es decir, solicitan menos recursos en pr\'estamo a los intermediarios financieros, mientras que los oferentes buscan colocar m\'as recursos (en cuentas de ahorros, CDT, etc.). Lo contrario sucede cuando baja la tasa: los demandantes del mercado financiero solicitan m\'as cr\'editos, y los oferentes retiran sus ahorros?  
+
+En el contexto de la ense\~nanza apoyada con las Tecnolog\'ias de la Informaci\'on y la Comunicaci\'on (TIC), la ponencia busca que los docentes y estudiantes establezcan la importancia de entender claramente las tasas de inter\'es como una necesidad y base para el estudio de las finanzas .
+
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{Ad}\url{ http://www.banrep.gov.co/es/contenidos/page/qu-tasa-inter-s.}
+
+\bibitem{bav1} \url{ http://www.eltiempo.com/estilo-de-vida/educacion/pruebas-saber-de-octubre-evaluaran-a-alumnos-sobre-finanzas-y-economia/14201395} 
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%17
+\author{%
+\tema{Educaci\'on,}\vspace{2pt}\\
+Alicia Duque S\'anchez ,\vspace{2pt} \\
+  Universidad del Atl\'antico,\vspace{2pt} \\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize aliciaduque@mail.uniatlantico.edu.co }\vspace{20pt} \\
+%    Diana Yanet Gaviria Rodr\'iguez,\vspace{2pt} \\
+%  Instituto Tennol\'ogico Metropolitano,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize diyagaro@hotmail.como}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{10}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Aplicaci\'on del razonamiento algebraico en la elaboraci\'on de la estructura b\'asica del Estado de Flujos de Efectivo, presentado por el m\'etodo indirecto}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    
+El Estado de Flujos de Efectivo es uno de los estados financieros b\'asicos de la Contabilidad Financiera en Colombia y en el \'ambito internacional; cuya estructura de presentaci\'on proviene de la aplicaci\'on del razonamiento algebraico ,   al partir de la doble ecuaci\'on contable, que luego  pasa por las fases de la determinaci\'on de las variaciones de los componentes de estas dos ecuaciones y el despeje de la variaci\'on del efectivo.
+
+Entonces, teniendo en cuenta que \textquestiondown el surgimiento del razonamiento algebraico se basa en un primer proceso de generalizaci\'on?  en la presente ponencia se aplica el razonamiento algebraico mediante la generalizaci\'on  del proceso de elaboraci\'on del Estado de Flujos de Efectivo, bajo ciertas condiciones que lo hacen f\'acil de entender a estudiantes y docentes, con m\'inimos conocimientos de contabilidad; partiendo de  la doble ecuaci\'on contable vertical con abstracci\'on de todos sus componentes, es decir, con literales en ambos miembros. 
+
+El objetivo general de esta ponencia es proporcionar un esquema de aplicaci\'on del razonamiento algebraico en la elaboraci\'on del Estado de Flujos de Efectivo, presentado por el m\'etodo indirecto, para que sea impartido a los estudiantes de primer semestre del programa de Contadur\'ia P\'ublica y afines, en la asignatura de matem\'aticas. 
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{Ad} Geloneze \& Kassai, 2012,  p. 300.
+
+\bibitem{bav1}  Godino, Castro, Ak\'e, \& Wilhelmi, 2012, p.497. 
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%19
+\author{%
+\tema{Educaci\'on Matem\'atica,}\vspace{2pt}\\
+Pedro Le\'on Tejada ,\vspace{2pt} \\
+  Universidad de la Guajira,\vspace{2pt} \\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize pedroleon4087@hotmail.com }\vspace{20pt} \\
+%    Diana Yanet Gaviria Rodr\'iguez,\vspace{2pt} \\
+%  Instituto Tennol\'ogico Metropolitano,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize diyagaro@hotmail.como}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\setcounter{section}{18}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Construcci\'on de los modelos matem\'aticos para la f\'isica}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+   El lenguaje de la F\'isica requiere de modelos Matem\'aticos para comprender y
+construir las leyes F\'isicas, las cuales traducen relaciones entre conceptos
+como, proporcionalidad directas o proporcionalidad inversas. El estudio surge
+de las dificultades presentadas por el estudiante al momento de resolver los
+problemas y desarrollar los an\'alisis experimentales en las asignaturas de
+Matem\'aticas I. En general y de f\'isica I, en particular. Se escogieron 48
+estudiantes, los cuales fueron distribuidos en dos grupos de 24 estudiantes
+cada uno, denominados grupo control y grupo Experimental. el grupo Control
+sigui\'o su proceso curricular y metodol\'ogico convencional, mientras que el
+grupo Experimental se le aplico la estrategia metodol\'ogica fundamentada en,
+Construir Ecuaciones matem\'aticas a partir del estudio y an\'alisis de fen\'omenos
+f\'isicos; m\'as espec\'ificamente el m\'etodo se considera como: la matematizacion de
+los fen\'omenos en f\'isica para mirar el comportamiento y la relaci\'on entre las
+variables experimentales de estudio de dicho fen\'omeno. El estudio comenz\'o con
+una valoraci\'on previa (evaluaci\'on experimental de un fen\'omeno f\'isico) que
+determin\'o el diagnostico inicial y finaliz\'o con una valoraci\'on posterior, que
+sirvi\'o como referencial para determinar el efecto de la aplicaci\'on de la
+estrategia utilizada. Los resultados fueron satisfactorios, evidencian ventaja
+en el grupo experimental sobre el grupo control y reflejan que es
+significativa la diferencia observada en el comportamiento de ambos grupos. Es
+decir, el grupo experimental se destac\'o y mostr\'o ventajas sobre el grupo
+control al momento de resolver problemas experimentales, mediante la
+matematizaci\'on de los fen\'omenos f\'isicos, y su aplicaci\'on para el an\'alisis de
+los resultados obtenidos.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem {D\'iaz}D\'iaz\textsc{,C.} (1994) \textit{Introducci\'on a la mec\'anica},
+Bogot\'a D.C -- Colombia.
+
+\bibitem {Arrieta}Arrieta, X. (1999) \textit{Practicas de F\'isica}, Maracaibo
+-- Venezuela.
+
+\bibitem {Hewit}Hewit, P. (1998) \textit{Manual de Laboratorio de F\'isica}, New York.
+
+\bibitem {Sears }Sears and Zemansky. Freedman Young (2006) \textit{F\'isica} I,
+New York.
+
+\bibitem {Lea}Lea S. -- Burke J. (2001) \textit{La Naturaleza de las cosas
+f\'isicas}
+
+\bibitem {Cortijo }Cortijo J,(1996) \textit{Did\'actica de las ramas t\'ecnicas},
+la Habana -- Cuba
+\
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%% 24 
+\author{%
+\tema{Educaci\'on Matem\'atica,}\vspace{2pt}\\
+Jes\'us David Berrio Valbuena,\vspace{2pt} \\
+  Universidad de Santander,\vspace{2pt} \\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize jesus\_berrio14@ hotmail.com  }\vspace{20pt} \\
+%    Cindy Nathalia Morgado,\vspace{2pt} \\
+%  Universidad de Santander,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize cindy.morgado@ udes.edu.co}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\setcounter{section}{23}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{La Exploraci\'on de la Teor\'ia en la Construcci\'on de Pasos de Razonamiento}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    Se estudia el uso de un software --asistente de demostraci\'on--, basado en la exploraci\'on de reglas te\'oricas de la geometr\'ia euclidiana que facilita la construcci\'on y validaci\'on de pasos de razonamiento en el proceso de construcci\'on de demostraciones formales. Nuestra hip\'otesis es que el proceso de exploraci\'on de reglas te\'oricas, en el asistente de demostraci\'on, caracterizado por procesos de razonamiento abductivo y deductivo es interiorizado progresivamente por el estudiante. Mostraremos la funcionalidad del asistente de demostraci\'on, a trav\'es de la resoluci\'on de algunos problemas y algunas conclusiones obtenidas en lo que va del desarrollo de la investigaci\'on.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{Ad}{\sc Garc\'ia, M.} (2003) {\it Construcci\'on de la actividad conjunta y traspaso de control en una situaci\'on de juegointeractivo padres-hijos}.  Tesis Doctoral. Universitat Rovira i Virgili, Tarragona, Espa\~na.
+
+\bibitem{bav1} {\sc Hunting, R. } (1997) ``Clinical interview methods in mathematics education research and practice''. \emph{Journal of Mathematical Behavior} V. 16(2), 145--164.
+
+\bibitem{Ad}{\sc Wertsch, J. } (1985) {\it Vigotsky and the social formation of mind}.  Harvard University Press, USA.
+
+\bibitem{bav1} {\sc Wood, D., Bruner, J., y Ross, G. } (1976) ``The role of tutoring in problem solving''. \emph{Juornal of Child Psychology and Psychiatry} V. 17, 89--100.
+\end{thebibliography}
+\end{titlepage}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%25
+\author{%
+\tema{Educaci\'on Matem\'atica,}\vspace{2pt}\\
+Jes\'us David Berrio Valbuena,\vspace{2pt} \\
+  Universidad de Santander,\vspace{2pt} \\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize jesus\_berrio14@ hotmail.com  }\vspace{20pt} \\
+    Cindy Nathalia Morgado,\vspace{2pt} \\
+  Universidad de Santander,\vspace{2pt} \\
+    \hspace*{-2cm}\texttt{\scriptsize cindy.morgado@ udes.edu.co}\vspace{20pt} \\
+%    Luis Hernando Hurtado T,\vspace{2pt}\\
+%    Universidad del Quind\'io. Grupo de Investigaci\'on y Asesor\'ia en Estad\'istica ,\vspace{2pt} \\
+%    \hspace*{-2cm}\texttt{\scriptsize lhhurtado@uniquindio.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{23}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Resoluci\'on de Problemas de Lugar
+ Geom\'etrico mediante Pr\'acticas de Matem\'atica Experimental}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    Mediante la pr\'actica de la matem\'atica experimental, utilizando el software geometr\'ia din\'amica Geogebra ense\~naremos a construir el detector de puntos. Esta es una herramienta din\'amica que permite obtener datos y emitir conjeturas acerca de la soluci\'on de algunos problemas que surgen del estudio de las propiedades de las funciones cuadr\'aticas. En esta charla, tambi\'en mostraremos, el trabajo desarrollado en la soluci\'on de estos problemas en el Seminario de Profesores de Matem\'aticas de la Universidad  de Santander.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{bav1} {\sc Acosta, E. y Mej\'ia, C., y Rodr\'iguez, W.} (2011) "Resoluci\'on de problemas por medio	de matem\'atica experimental: uso de software de geometr\'ia	din\'amica para la construcci\'on de un lugar geom\'etrico desconocido''. \emph{Revista Integraci\'on} V. 29(2), 163--174.
+
+\bibitem{bav1} {\sc Bailey, H. y Borwein, J.} (2005) "Experimental mathematics: Examples, Methods and	 Implications''. \emph{Notices of the AMS} V. 29(5), 502--514.
+
+\bibitem{bav1} {\sc Banegas, J.} (2006) "Razonamientos no rigurosos y demostraciones asistidas por
+	ordenador''. \emph{Revista contraste} V. 12(1), 27--50.
+
+\bibitem{Ad}{\sc Borwein, J. et al.} (2004) {\it Experimentation in mathematics, computational paths to
+	discovery}.  A.K Peters, EEUU.
+
+\bibitem{bav1} {\sc Jacovkis, P. M.} (2005) "Computadoras, modelizaci\'on matem\'atica y ciencia experimental''. \emph{Revista CTS} V. 2(5), 51--63.
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%26 %%%%%%%%%%%%%%%%%%%%%%%5
+\author{%
+\tema{Aprendizaje  de las matem\'aticas,}\vspace{2pt}\\
+Ever de  la  Hoz  Molinares,\vspace{2pt} \\
+  Universidad Popular del Cesar,\vspace{2pt} \\
+  Valledupar, Colombia,\vspace{2pt}\\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize everdelahoz@unicesar.edu.co }\vspace{10pt} \\
+   Omar Trujillo Varilla,\vspace{2pt} \\
+   Universidad Popular del Cesar,\vspace{2pt} \\
+  Valledupar, Colombia,\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize omartrujillo@unicesar.edu.co}\vspace{10pt} \\
+%    Carmen Morales Castro,\vspace{2pt}\\
+%   Liceo Nal Virginia Gil de Hermoso ,\vspace{2pt} \\
+% Valledupar, Colombia,\vspace{2pt}\\
+%    \hspace*{-2cm}\texttt{\scriptsize clizmorales@gmail.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{23}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Metrolog\'ia en la comunidad Arhuaca}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+   Medir es una actividad que el hombre ha desarrolla desde la antig\"uedad. Esto ha permitido construir patrones metrol\'ogicos, que con el tiempo fueron evolucionando hasta crear las medidas estandarizadas actuales. Por lo tanto, el prop\'osito de esta charla es exponer los diferentes sistemas de medici\'on utilizados por la cultura Arhauca de acuerdo a su cosmovisi\'on y su cosmolog\'ia. 
+      \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{aroca}{\sc AROCA, A}. (2008). {\it Una propuesta metodol\'ogica en Etnomatem\'aticas}. Rev. U.D.C.A Actualidad \& Divulgaci\'on Cient\'ifica. 
+\bibitem{abronsio}{\sc D\'{}AMBROSIO, U.} (2002). {\it Etnomatem\'atica: Elo entre as tradi\c{c}\~oes e a modernidade}. Belo Horizonte: Aut\^entica Editora.
+\bibitem{gerdes}{\sc GERDES, P}. (2013). {\it Cultura e o despertar do pensamiento geom\'etrico}.
+\bibitem{aroca}{\sc PADR\'ON, J.} (2007). {\it Tendencias epistemol\'ogicas de la Investigaci\'on Cient\'ifica en el siglo XXI}.  Versi\'on escrita de la Conferencia en el III Congreso de Escuelas de Postrado del Per\'u
+\bibitem{santos}{\sc SANTOS, R.} Conferencia: {\it ETNOARQUITECTURA: SIMBOLISMO Y GEOMETR\'IA ARM\'ONICA}.
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%% 27 %%%%%%%%%%
+\author{%
+\tema{Aprendizaje  de las matem\'aticas,}\vspace{2pt}\\
+Ever de  la  Hoz  Molinares,\vspace{2pt} \\
+  Universidad Popular del Cesar,\vspace{2pt} \\
+  Valledupar, Colombia,\vspace{2pt}\\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize everdelahoz@unicesar.edu.co }\vspace{10pt} \\
+   Omar Trujillo Varilla,\vspace{2pt} \\
+   Universidad Popular del Cesar,\vspace{2pt} \\
+  Valledupar, Colombia,\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize omartrujillo@unicesar.edu.co}\vspace{10pt} \\
+   Juan Bautista Pacheco,\vspace{2pt}\\
+    Omar Trujillo Varilla,\vspace{2pt} \\
+   Universidad Popular del Cesar,\vspace{2pt} \\
+  Valledupar, Colombia,\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize juanpacheco@unicesar.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{23}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Los n\'umeros y el universo Arhuaco}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+   En este  art\'iculo se reporta los resultados del proyecto de investigaci\'on sobre la cultura Iku. En la cual se muestra como se  expresan los conceptos de orden, n\'umero,  espacio y entorno. Adem\'as,  de la organizaci\'on del sistema num\'erico siguiendo un proceso de abstracci\'on desarrollado a partir del origen de un ordenamiento natural. Se detecta como el conocimiento del sistema de numeraci\'on  Arahuaco ha trascendido en el tiempos. Los hallazgos indican que existen algunos n\'umeros sagrados para los arahuacos como son: uno, dos, cuatro, siete y nueve. En particular, el cuatro en sus pr\'acticas tradicionales. 
+     \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{aroca}{\sc AROCA, A}. (2009).  {\it Geometr\'ia en las mochilas arhuacas: Por una ense\~nanza de las matem\'aticas desde una perspectiva cultural}.  Colombia: Programa Editorial Universidad del Valle. Santiago de Cali.
+\bibitem{padron}{\sc PADR\'oN, J.} (2007).  {\it Tendencias epistemol\'ogicas de la Investigaci\'on Cient\'ifica en el siglo XXI}.  Versi\'on escrita de la Conferencia en el III Congreso de Escuelas de Postrado del Per\'u, 22-24 de Noviembre de 2006.  Universidad Nacional de Cajamarca.  Cajamarca, Per\'u.
+\bibitem{zabaleta}{\sc ZALABATA, L.}  (2008).  {\it Pensamiento Arhuaco: Bio\'etica sentido de la vida}. Colombia: Universidad del Bosque-Bogot\'a
+\bibitem{zabaleta1}{\sc ZALABATA,  R.} (2000).  {\it Cosmogon\'ia Arhuaca}.  Memorias de la conferencia dictada a la expedici\'on  nacional.  Pueblo Bello (Cesar).
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 28
+\author{%
+\tema{Aprendizaje  de las matem\'aticas,}\vspace{2pt}\\
+Ever de  la  Hoz  Molinares,\vspace{2pt} \\
+  Universidad Popular del Cesar,\vspace{2pt} \\
+  Valledupar, Colombia,\vspace{2pt}\\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize everdelahoz@unicesar.edu.co }\vspace{10pt} \\
+   Omar Trujillo Varilla,\vspace{2pt} \\
+   Universidad Popular del Cesar,\vspace{2pt} \\
+  Valledupar, Colombia,\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize omartrujillo@unicesar.edu.co}\vspace{10pt} \\
+    Carmen Morales Castro,\vspace{2pt}\\
+   Liceo Nal Virginia Gil de Hermoso ,\vspace{2pt} \\
+ Valledupar, Colombia,\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize clizmorales@gmail.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{23}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Geometr\'ia en la vivienda tradicional Arhuaca}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+   En esta investigaci\'on se muestra como las viviendas de los Arhuacos son dise\~nadas aplicando sus saberes geom\'etricos adquiridos en sus pr\'acticas tradicionales, de acuerdo a su cosmovisi\'on, cosmolog\'ia y cosmogon\'ia. Tambi\'en  en ellas se representan los cuatro elementos de la naturaleza: agua, tierra, aire y fuego, y los puntos cardinales.
+     \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{aroca}{\sc AROCA, A}. (2008). {\it Una propuesta metodol\'ogica en Etnomatem\'aticas}. Rev. U.D.C.A Actualidad \& Divulgaci\'on Cient\'ifica. 
+\bibitem{abronsio}{\sc D\'{}AMBROSIO, U.} (2002). {\it Etnomatem\'atica: Elo entre as tradi\c{c}\~oes e a modernidade}. Belo Horizonte: Aut\^entica Editora.
+\bibitem{gerdes}{\sc GERDES, P}. (2013). {\it Cultura e o despertar do pensamiento geom\'etrico}.
+\bibitem{aroca}{\sc PADR\'ON, J.} (2007). {\it Tendencias epistemol\'ogicas de la Investigaci\'on Cient\'ifica en el siglo XXI}.  Versi\'on escrita de la Conferencia en el III Congreso de Escuelas de Postrado del Per\'u
+\bibitem{santos}{\sc SANTOS, R.} Conferencia: {\it ETNOARQUITECTURA: SIMBOLISMO Y GEOMETR\'IA ARM\'ONICA}.
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%% 29 
+\author{%
+\tema{Educaci\'on matem\'atica,}\vspace{2pt}\\
+Jhonny Rivera,\vspace{2pt} \\
+  Universidad Popular del Cesar,\vspace{2pt} \\
+  Valledupar, Colombia,\vspace{2pt}\\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize jhonnyrivera@unicesar.edu.co }\vspace{10pt} \\
+   Sa\'ul Vides,\vspace{2pt} \\
+   Universidad Popular del Cesar,\vspace{2pt} \\
+  Valledupar, Colombia,\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize saulvides@unicesar.edu.co}\vspace{10pt} \\
+%    Carmen Morales Castro,\vspace{2pt}\\
+%   Liceo Nal Virginia Gil de Hermoso ,\vspace{2pt} \\
+% Valledupar, Colombia,\vspace{2pt}\\
+%    \hspace*{-2cm}\texttt{\scriptsize clizmorales@gmail.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{23}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Comparaci\'on de las escuelas de educaci\'on matem\'atica realista y socioepistemolog\'ia}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{145pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+  La educaci\'on matem\'atica (EM) se encarga de describir y explicar los fen\'omenos relativos a las relaciones entre ense\~nanza y aprendizaje del saber matem\'atico, mejorar los m\'etodos y los contenidos de la ense\~nanza, crear las condiciones para un funcionamiento estable de los sistemas did\'acticos, asegurando entre los alumnos la construcci\'on de un saber viviente, susceptible de evoluci\'on, y funcional, que permita resolver problemas y plantear verdaderas preguntas. Este trabajo muestra a trav\'es de un cuadro comparativo el an\'alisis de las escuelas de educaci\'on matem\'atica realista y socioepistemolog\'ia en cuanto a los siguientes criterios de comparaci\'on: N\'ucleo, Fases, y Validaci\'on de resultados, que permite entender cu\'ales son los fundamentos de estas y por ende observar los puntos de divergencia y convergencia.
+     \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{cama}{\sc Camacho R\'ios A.} (2006) {\it Socioepistemolog\'ia y pr\'acticas sociales}. Educaci\'on Matem\'atica, abril, vol. 18. N\'umero 001. Santillana, Distrito federal, M\'exico pp. $133-160$.
+
+\bibitem{cantoral} {\sc Cantoral Ricardo.} (2013) {\it Teor\'ia Socioepistemol\'ogica de la Matem\'atica educativa}. Gediisa Editorial.
+
+\bibitem{cultura}{Freudenthal, Hans}. (2000). {\it A mathematician on didactics and curriculum theory}, K. Gravemeijer. J. Curr\'iculo Studies. Vol. 32, n\textdegree 6, 777-796.
+
+\end{thebibliography}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 30
+\author{%
+\tema{Educaci\'on matem\'atica,}\vspace{2pt}\\
+Jos\'e Manuel G\'omez Soto,\vspace{2pt} \\
+ Universidad Aut\'onoma de Zacatecas, M\'exico,\vspace{2pt} \\
+  %Valledupar, Colombia,\vspace{2pt}\\
+  % \emph{Grupo de Investigaci\'on SED-UPB}\vspace{2pt}\\
+    \hspace*{-2cm}\texttt{\scriptsize jmgomezuam@gmail.com }\vspace{10pt} \\
+%   Sa\'ul Vides,\vspace{2pt} \\
+%   Universidad Popular del Cesar,\vspace{2pt} \\
+%  Valledupar, Colombia,\vspace{2pt}\\
+%    \hspace*{-2cm}\texttt{\scriptsize saulvides@unicesar.edu.co}\vspace{10pt} \\
+%    Carmen Morales Castro,\vspace{2pt}\\
+%   Liceo Nal Virginia Gil de Hermoso ,\vspace{2pt} \\
+% Valledupar, Colombia,\vspace{2pt}\\
+%    \hspace*{-2cm}\texttt{\scriptsize clizmorales@gmail.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+%\setcounter{section}{23}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\'afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{La computadora: un dispositivo que enriquece el significado de"Entender"}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{245pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    En este curso se dar\'an ejemplos de como un alumno puede
+aprender a programar en dos d\'ias y como puede entender conceptos
+matem\'aticos program\'andolos.
+
+\begin{itemize}
+\item Series (d\'ia 1)
+\item Derivadas e Integraci\'on Num\'erica (d\'ia 2)
+\item  El M\'etodo de Montecarlo (d\'ia 3)
+\item Sistemas Din\'amicos (puntos fijo y diagrama de la telara\~na "cobweb") (d\'ia 4)
+%\item   Teor\'ia de Gr\'aficas (conexidad y componentes) (d\'ia 5)
+\end{itemize}
+
+
+
+El lenguaje de programaci\'on  que se utiliza es Racket y/o Mathematica.
+     \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{abelson}{\sc Abelson Harold, Sussman Jerry y Sussman Julie} (1984) {\it Structure and 
+Interpretation of Computer Programs}.  MIT Press.
+
+\bibitem{borwein}{\sc Jonathan M Borwein; Keith J Devlin} (2009) {\it The computer as crucible : an 
+introduction to experimental 
+mathematics}.   A.K. Peters.
+
+
+\bibitem{bailey}{\sc Bailey David H.} (2007) {\it Experimental 
+Mathematics in Action}.    K Peter Ltd.
+
+
+\bibitem{racket}{\sc http://racket-lang.org/} (2012) {\it Manual del lenguaje Racket}.  
+
+\end{thebibliography}
+\end{titlepage}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

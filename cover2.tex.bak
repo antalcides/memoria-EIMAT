@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage[margin=0.5cm,bottom=2cm]{geometry}
+\usepackage{kpfonts}
+\usepackage{eso-pic}                
+\usepackage{tcolorbox}
+
+\tcbuselibrary{skins}
+
+\tcbset{
+    pccstyle/.style={
+        enhanced,flushright upper,
+        boxrule=1.4pt,
+        colback=white,colframe=black!50!yellow,
+        drop fuzzy midday shadow=black!50!yellow
+    }
+}
+
+\AddToShipoutPicture{% from package eso-pic: put something to the background
+    \AtPageCenter{% start the bar at the bottom right of the page
+        \put(-\LenToUnit{.465\paperwidth},-\LenToUnit{.4\paperheight}){% move it to the middle
+            %{\transparent{.5}{\includegraphics[width=20cm]{50th_mathematicsproof}}}
+            \begin{tcolorbox}[pccstyle,left=0mm,top=0mm,bottom=0mm]
+                \includegraphics[width=20cm]{imagecover2.jpg}
+            \end{tcolorbox}
+        }%
+    }%
+    \AtPageLowerLeft{% start the bar at the bottom right of the page
+        \put(\LenToUnit{\dimexpr\paperwidth-3cm},0){% move it to the top right
+            \color{blue}\rule{3cm}{\LenToUnit\paperheight}%
+        }%
+        \put(\LenToUnit{\dimexpr\paperwidth-2.7cm},\LenToUnit{17cm}){% move it to the top right
+            \color{gray}\scalebox{8}{$\sum$}
+        }%
+        \put(\LenToUnit{\dimexpr\paperwidth-2.5cm},\LenToUnit{12.5cm}){% move it to the top right
+            \color{gray}\scalebox{8}{$\int$}
+        }%
+        \put(\LenToUnit{\dimexpr\paperwidth-2.3cm},\LenToUnit{8.5cm}){% move it to the top right
+            \color{gray}\scalebox{8}{$e$}
+        }%
+        \put(\LenToUnit{\dimexpr\paperwidth-2.7cm},\LenToUnit{5.0cm}){% move it to the top right
+            \color{gray}\scalebox{8}{$\pi$}
+        }%
+        \put(\LenToUnit{\dimexpr\paperwidth-2.2cm},\LenToUnit{1.5cm}){% move it to the top right
+            \color{gray}\scalebox{8}{$i$}
+        }%
+    }%
+}
+
+\pagestyle{empty}
+\begin{document}
+
+\vspace*{1cm}
+\mbox{}\hfill\scalebox{2}{
+    \begin{tcolorbox}[pccstyle,width=7.8cm,left=5mm,top=0mm,bottom=0mm]
+    \centering
+        {\bfseries\LARGE {X ENCUENTRO INTERNACIONAL} \par}
+        {\bfseries\LARGE  DE MATEM\'ATICAS \\[10pt]}
+        {\large UNIVERSIDAD DEL ATL\'ANTICO }
+    \end{tcolorbox}
+}
+
+\vfill
+\centering
+
+\scalebox{2}{%
+    \begin{tcolorbox}[pccstyle,width=5cm,left=5mm,top=0mm,bottom=0mm]
+    \centering
+        {\tiny\scshape DEL 30 SEPTIEMBRE AL 6 OCTUBRE DE  2014\par}
+        {\tiny\scshape Barranquilla - Colombia}
+    \end{tcolorbox}
+}
+\end{document}

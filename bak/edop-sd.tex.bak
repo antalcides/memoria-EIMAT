@@ -1,0 +1,709 @@
+\renewcommand\thesection{ED\,$\&$SD\ \nplpadding{2}\numprint{\arabic{section}}}
+\pagestyle{eimat}
+\pagecolor{ptcbackground}
+\chapter{Ecuaciones Diferenciales y Sistemas Din\'amicos}
+\thispagestyle{empty}
+\pagecolor{ptcbackground}
+\chaptertoc
+%%%%%%%%%%%%%%%%%%%%1 %%%%%%%%%%%%%%%%%
+\author{%
+\tema{Ecuaciones diferenciales difusas}\\
+    Gilberto Arenas D\'iaz \\
+    Universidad Industrial De Santander \\
+    \texttt{garenasd@uis.edu.co}\vspace{40pt} \\
+%    Author 2 name \\
+%    Department name \\
+%    \texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Acerca de las ecuaciones diferenciales difusas}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+El tema que abordaremos en esta charla se enmarca dentro de
+la teor\'ia de las ecuaciones diferenciales difusas (EDD).  Esta
+teor\'ia surge con el desarrollo del an\'alisis matem\'atico difuso.
+Es un \'area de estudio e investigaci\'on que viene generando
+grandes expectativas ya que ha logrado resolver inconvenientes
+que se presentaban en el modelado matem\'atico  a trav\'es
+de las ecuaciones diferenciales ordinarias.
+
+En t\'erminos generales lo que haremos ser\'a estudiar un problema de
+valor inicial en el contexto difuso (PVID), el cual consiste en
+encontrar una funci\'on difusa $x$ definida en un intervalo $T$ de
+n\'umeros reales, con valores en la clase $X$ de los conjuntos difusos
+definidos sobre $\R^n ,$ tal que
+\begin{equation}\label{pviintro1}
+ x'(t)  = f(t,x(t)),\ \qquad  x(t_{0})  = x_{0}, \tag{$\star$}
+\end{equation}
+donde $x_{0}\in X$, $t_{0}\in T$  y $f\colon T\times X \longrightarrow X$ es una funci\'on
+difusa. As\'i, al plantear el PVID (\ref{pviintro1}), observamos como
+primera medida, la necesidad de conocer el sentido de la derivada
+$x'$ de la inc\'ognita  $x$, lo cual ha sido el
+factor semilla en la b\'usqueda de abordajes te\'oricos para analizar la
+existencia de soluci\'on. En la charla se presentar\'a algunos conceptos alrededor del 
+estudio del desarrollo de la teor\'ia de la diferenciabilidad de funciones difusas y 
+resultados sobre la existencia de soluci\'on del  PVID (\ref{pviintro1}).
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem{VillamizarETAL14}
+{\sc  Villamizar-Roa, E.J.;  Angulo-Castillo, V.; Chalco-Cano, Y.} 
+(2014) "Existence of solutions to fuzzy differential equations with
+  generalized {H}ukuhara derivative via contractive-like mapping principles''.
+  {\em Fuzzy Sets and Systems}. http://dx.doi.org/10.1016/j.fss.2014.07.015.
+
+\bibitem{Villamizar&Arenas14}
+{\sc  Villamizar-Roa, E.J.;  Arenas-D\'iaz G.}
+(2014) {\it Introducci\'on a las ecuaciones diferenciales difusas}.  Universidad Industrial de Santander, Bucaramanga.
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%2 %%%%%%%%%%%%%%%%
+\author{%
+\tema{Sistemas Din\'amicos, Teor\'ia Erg\'odica}\\
+    Cristian Jes\'us Rojas Milla \\
+   Universidad del Atl\'antico\\
+    \hspace*{-2.5cm}\texttt{\scriptsize cristianrojas@mail.uniatlantico.edu.co}\vspace{40pt} \\
+%    Author 2 name \\
+%    Department name \\
+%    \texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Una mirada probabilistica a las ecuaciones diferenciales}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    El objetivo del minicurso es dar una introducci\'on de car\'acter
+elemental a la teor\'ia erg\'odica. Es decir en muchas situaciones queremos
+entender el comportamiento cualitativo de flujos de campos vectoriales que
+provienen de ecuaciones diferenciales bastante complicadas. En muchos de
+estos casos la variedad ambiente que soporta nuestro campo vectorial es
+compacta y tenemos flujo para todo tiempo real o complejo y mas a\'un el flujo
+preserva volumen, es decir podemos definir una medida invariante bajo el
+flujo. Esto nos permite estudiar con ojos probabilisticos a nuestra ecuaci\'on
+diferencial. Nuestro objetivo primario es dar ejemplos concretos de como
+podemos hacer esto en la practica apoy\'andonos en resultados b\'asicos pero
+sumamente poderosos e interesantes de la teor\'ia erg\'odica. Con esto como
+meta, se propone el siguiente plan para nuestro minicurso
+
+ D\'ia 1:) Se definen medidas invariantes, ejemplos. Se enuncia y
+se demuestra el teorema de recurrencia de Poincare (Distintas versiones). F\'o%
+rmula de Lioville.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{Ad} {\normalsize \textsc{Viana Marcelo y Krerley Oliveira} (2012) 
+\textit{.Fundamentos de teor\'ia erg\'odica. Instituto de Matem\'atica pura y
+Aplicada. Rio de Janeiro. Brasil.}  }
+
+\bibitem{bav1} \textsc{Ricardo Ma\~ne}{\normalsize \ (1987) Ergodic theory and
+differentiable dynamics. (IMPA). }\emph{Springer-Verlag.}
+\end{thebibliography}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%3 %%%%%%%%%
+\author{%
+\tema{Ecuaciones Diferenciales}\\
+    Alex M. Montes Padilla \\
+    Universidad del Cauca \\
+    \texttt{amontes@unicauca.edu.co}\vspace{40pt} \\
+%    Author 2 name \\
+%    Department name \\
+%    \texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Travelling waves to a Benney-Luke type system}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{abstract}
+    In this talk we establish the existence of travelling wave
+solutions\linebreak(periodic and solitary waves) for the
+2D-Boussinesq-Benney-Luke type system,
+\begin{equation}
+\left\{
+\begin{array}{rl}
+\left(I-\frac\mu2\Delta\right) \eta_t +\Delta\Phi
+-\frac{2\mu}3\Delta^2\Phi +\epsilon \nabla\cdot(\eta\nabla\Phi)&= 0,
+\\ \label{bbl} \\
+\left(I-\frac\mu2\Delta\right) \Phi_t  + \eta -\mu\sigma\Delta\eta
++\frac{\epsilon}2|\nabla\Phi|^2&=0,
+\end{array}\right.
+\end{equation}
+which describe the evolution of long water waves with small
+amplitude in the presence of surface tension. Here $\mu, \epsilon$
+are small positive parameters and the functions $\eta(x,y,t)$ and
+$\Phi(x,y,t)$ denote the wave elevation and the potential velocity
+on the bottom $z=0$, respectively.
+\noindent By a travelling wave
+solution we mean a solution for the system (\ref{bbl}) of the form
+\begin{equation*}
+\eta(x,y,t)=u\left(x-ct,y\right), \  \   \
+\Phi(x,y,t)=v\left(x-ct,y\right),
+\end{equation*}
+where $c$ denotes the speed of the wave. We will show that solitary
+waves of finite energy and $x-$periodic travelling waves are
+characterized as critical points of some action functional, for
+which the existence of critical points follows as a consequence of
+the Mountain Pass Theorem.
+    \end{abstract}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem{AM-JQ}{\sc Montes, A. M., Quintero J. R.} (2013) {\it Existence, physical sense and analyticity of solitons for a 2D
+Boussinesq-Benney-Luke system}. Dynamics of PDE. V. 10, No 4,
+313-342.
+
+\bibitem{AMa}{\sc Montes, A. M.} (2013) {\it Boussinesq-Benney-Luke systems related with water wave
+models}. Doctoral Thesis, Universidad del Valle.
+
+\bibitem{AMb} {\sc Montes, A. M.} (2014) {\it Periodic travelling waves for a Boussinesq-Benney-Luke
+system}. Preprint.
+
+\end{thebibliography}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%4 %%%%%%%%%%%%%
+\author{%
+\tema{Sistemas Din\'amicos}\\
+    Primitivo B. Acosta-Humanez \\
+    Universidad Del Atl\'antico \\
+    \texttt{primi@intelectual.co}\vspace{20pt} \\
+    Alberto M. Reyes L.\\
+    Universidad Del Atl\'antico \\
+   \hspace*{-1.5cm} \texttt{\scriptsize areyeslinero@mail.uniatlantico.edu.co}\vspace{20pt}\\
+    Jorge L. Rodriguez C. \\
+    Universidad Del Atl\'antico \\
+    \texttt{jorge.jrodri@gmail.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Galoisian and Qualitative Study of the Family $yy'=(\alpha x^{2k}+\beta x^{m-k-1})y+\gamma x^{2m-2k-1}$}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{200pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+%\footnotesize
+%\vspace{5pt}
+%    \begin{resumen}
+%
+%    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+\begin{minipage}{0.85\linewidth}
+\vspace{5pt}
+    \begin{abstract} 
+  
+The analysis of the dynamic systems has been a topic of great interest to mathematicians and physicists. Each system has their own characteristics, which allows grouping these families, such as caracterizasteis. One of these families can be see in the problem 11 of the sections 1.3.3, on Book; Handbook of exact solutions for ordinary differential equations, by Polyanin-Zaitsev, Which is a family with five parameters of Lienard's systems. About this family a Galoisian study is performed, making a series of transformations (using some tools like the Hamiltonian Algebrizations) which allow the Lienard Equation to take the Second Order Equation, Then a Gegenbauer Equation, followed by Hypergeometric equation and finally in a Legendre equation.  with help of the Differential Galois theory, allows us to conclude if the system's integrability or not integrability. Finally we will make a study of the qualitative properties of this family, such as conditions so that the system is formed by polynomials functions, study also critical points, conditions for their existence and stability.
+
+    \end{abstract}\vspace{5pt}
+    % \hspace*{25pt}\keywords{one, two, three, four}
+    
+\end{minipage}
+\vspace{25pt}
+\end{minipage}
+\\[20pt]
+\begin{thebibliography}{99}
+
+\bibitem{Almp}P.B. Acosta-Hum\'anez, J.T Lazaro, J.J. Morales-Ruiz, C. Patanzi{\it On the integrability of polynomial fields in the plane by means of Picard-Vessiot theory}. arXiv:1012.4796.
+
+\bibitem{PY} A.D. Polyanin and V.F. Zaitsev, {\it Handbook of exact solutions for ordinary differential equations, Secod Edition}.Chapman and Hall, Boca Raton (2003)
+
+\end{thebibliography}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%5 %%%%%%%%%%%%%%
+\author{%
+\tema{Ecuacines Diferenciales}\\
+    Primitivo Acosta-Hum\'anez \\
+    Universidad del Atl\'antico \& Intelectual.Co\\
+    \texttt{primi@intelectual.co}\vspace{40pt} \\
+%    Author 2 name \\
+%    Department name \\
+%    \texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Propagadores Liouvillianos}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{165pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+  Propagadores Liouvillianos fueron introducidos en \cite{3}
+como aplicaci\'on de la teor\'ia de Galois diferencial a la resolubilidad
+de la Ecuaci\'on no estacionaria de Schr\"{o}dinger y posteriormente
+estudiados en \cite{4}. El caso estacionario fue estudiado en \cite{1},\cite{2}. En esta
+conferencia se dar\'an ejemplos expl\'icitos de c\'omo construir propagadores
+a trav\'es de la ecuaci\'on caracter\'istica de la Ecuaci\'on no estacionaria
+de Schr\"{o}dinger.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{1} P.B. Acosta-Hum\'anez, Galoisian Approach to Supersymmetric Quantum Mechanics: The integrability analysis of the Schr\"{o}dinger equation by means of differential Galois theory, VDM Verlag Dr Mueller Publishing, Berlin, 2010.
+
+\bibitem{2} P.B. Acosta-Hum\'anez, J.J. Morales-Ruiz,
+J.A. Weil, Galoisian approach to integrability of Schr\"{o}dinger equation,
+Reports on Mathematical Physics 67 (3), (2011), 305-374
+
+\bibitem{3}  P.B. Acosta-Hum\'anez, E Suazo, Liouvillian Propagators, Riccati Equation and Differential Galois Theory,
+Journal of Physics A: Mathematical and Theoretical 46 (45), 2013, 
+
+\bibitem{4} P.B. Acosta-Humanez, SI Kryuchkov, A Mahalov, E Suazo, SK Suslov, Degenerate Parametric Amplification of Squeezed Photons: Explicit Solutions, Statistics, Means and Variances, arXiv preprint arXiv:1311.2479
+
+\end{thebibliography}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%6 %%%%%%%%%%%
+\author{%
+\tema{Ecuacines Diferenciales}\\
+    Primitivo Acosta-Hum\'anez \\
+    Universidad del Atl\'antico \& Intelectual.Co \\
+    \texttt{primi@intelectual.co}\vspace{20pt} \\
+    Adriana Chuquen\\
+   Universidad del Norte \\
+    %\texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Pegar y Reversar en ecuaciones diferenciales}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{165pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    Pegar y Reversar son operaciones que fueron
+introducidas por el primer expositor en \cite{1} y posteriormente estudiadas
+en \cite{2,3,4}. En esta conferencia aplicaremos las t\'ecnicas Pegar y
+Reversar a ecuaciones diferenciales. En particular, estudiaremos
+palindrom\'ia y antipalindrom\'ia de operadores y sistemas diferenciales.
+Analizaremos casos de integrabilidad y las simetr\'ias que se preservan
+al aplicar estas t\'ecnicas, previamente haciendo una excursi\'on por el
+\'algebra multilineal.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{1} P.B. Acosta-Hum\'anez, \textit{La operaci\'on pegamiento y el cuadrado de los n\'umeros naturales}, Civilizar 3, (2003), 85-97
+
+\bibitem{2} P.B. Acosta-Hum\'anez, A.L. Chuquen, A.M. Rodriguez, \textit{On
+Pasting and Reversing operations over some rings}, Bolet\'in de
+Matem\'aticas 17 (2), (2010), 143-164
+
+\bibitem{3} P.B. Acosta-Hum\'anez, A.L. Chuquen, A.M. Rodriguez, \textit{On
+Pasting and Reversing operations over vector spaces}, Bolet\'in de
+Matem\'aticas 20 (2), (2013), 145-161
+
+\bibitem{4} P.B. Acosta-Hum\'anez, E.Mart\'inez-Castiblanco, \textit{Simple
+permutations with order \$4 n+ 2\$. Part I}, arXiv preprint
+arXiv:1012.2076
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%7 %%%%%%%%%%%%%%%%%%%%%%%
+\author{%
+\tema{Ecuacines Diferenciales}\\
+    Primitivo Acosta-Hum\'anez \\
+    Universidad del Atl\'antico \& Intelectual.Co \\
+    \texttt{primi@intelectual.co}\vspace{20pt} \\
+    Adriana Chuquen\\
+   Universidad del Norte \\
+    %\texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Pegar y Reversar en ecuaciones diferenciales}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{165pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    Pegar y Reversar son operaciones que fueron
+introducidas por el primer expositor en \cite{1} y posteriormente estudiadas
+en \cite{2,3,4}. En esta conferencia aplicaremos las t\'ecnicas Pegar y
+Reversar a ecuaciones diferenciales. En particular, estudiaremos
+palindrom\'ia y antipalindrom\'ia de operadores y sistemas diferenciales.
+Analizaremos casos de integrabilidad y las simetr\'ias que se preservan
+al aplicar estas t\'ecnicas, previamente haciendo una excursi\'on por el
+\'algebra multilineal.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+%\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{1} P.B. Acosta-Hum\'anez, \textit{La operaci\'on pegamiento y el cuadrado de los n\'umeros naturales}, Civilizar 3, (2003), 85-97
+\bibitem{2} P.B. Acosta-Hum\'anez, A.L. Chuquen, A.M. Rodriguez, \textit{On Pasting and Reversing operations over some rings}, Bolet\'in de Matem\'aticas 17 (2), (2010), 143-164
+\bibitem{3} P.B. Acosta-Hum\'anez, A.L. Chuquen, A.M. Rodriguez, \textit{On Pasting and Reversing operations over vector spaces}, Bolet\'in de Matem\'aticas 20 (2), (2013), 145-161
+\bibitem{4} P.B. Acosta-Hum\'anez, E.Mart\'inez-Castiblanco, \textit{Simple permutations with order \$4 n+ 2\$. Part I}, arXiv preprint arXiv:1012.2076
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%% 8 %%%%%%%%%%%%
+\author{%
+\tema{Ecuacines Diferenciales,}\\
+     Thomas Dreyfus,\\
+    Instituto de Matem\'ticas de Toulouse, \\
+    \hspace*{-2cm}\texttt{tdreyfus@math.univ-toulouse.fr}\vspace{20pt} \\
+%    Adriana Chuquen\\
+%   Universidad del Norte \\
+    %\texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Confluence of q difference equations to differential equations}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{165pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{abstract}
+   Every differential equation may be discretized by a $q$ difference
+equation by replacing the derivative $\dfrac{d}{dz}$ by the operator
+$f(z)\longrightarrow \dfrac{f(qz)-f(z)}{(q-1)z}$. Recently, the Galois theory of $q$ difference equation has obtained many contributions. We will see that
+many object that are present in this theory my be seen as $q$ deformation
+of differential object.
+    \end{abstract}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\cite*
+\bibliographystyle{plain} 
+\bibliography{dreyfus.bib}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%% 9 %%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%10 %%%%%%%%%%%%%%

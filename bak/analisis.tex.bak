@@ -1,0 +1,106 @@
+\documentclass[subfiles.tex]{subfiles} 
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr}               %Paquete para dar forma al encabezado y pie de p\'{a}gina
+\usepackage[spanish]{babel}
+\usepackage[utf8x,latin1]{inputenc}
+\usepackage{chapterbib}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\textit{An\'alisis Funcional No-lineal}}     
+\fancyfoot[R]{\scriptsize \emph{\thepage}}\fancyfoot[L]{\scriptsize \emph{Universidad
+ del Atl\'antico Programa de Matem\'aticas.  Barranquilla, Colombia}}
+\renewcommand{\headrulewidth}{0.6pt} % Ancho de la l\'{\i}nea horizontal bajo el encabezado
+\renewcommand{\footrulewidth}{0.6pt} % Ancho de la l\'{\i}nea horizontal sobre el pie (que en
+%este ejemplo est\'{a} vac\'{\i}o)
+\setlength{\headheight}{1.5\headheight} % Aumenta la altura del encabezado en una vez y media
+\pagestyle{fancy}
+    \makeatletter
+\renewenvironment{thebibliography}[1]
+     {\section*{\bibname}% <-- this line was changed from \chapter* to \section*
+      \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother 
+  
+\begin{document}
+
+\noindent
+\begin{minipage}{400pt}
+\vspace*{-4.7cm}
+%\begin{flushright}
+\textbf{X Encuentro Internacional de Matem\'aticas EIMAT 2014}\\
+%\end{flushright}
+\end{minipage}
+\\ [.5cm]
+
+
+
+\thispagestyle{fancy}
+\begin{center}
+ \large
+ \textbf{Bifurcaci\'on de Soluciones al Problema de la Cuerda Vibrante}
+\end{center}
+\vspace{0.5cm}
+
+\begin{center}
+\textbf{ARTURO SANJU\'AN}
+\end{center}
+    \begin{center}
+    UNIVERSIDAD DISTRITAL FRANCISCO JOS\'E DE CALDAS
+    \emph{aasanjuanc@udistrital.edu.co}
+    \end{center}
+
+
+
+\vspace{1.5cm}
+\section*{Resumen}
+
+Presentamos aplicaciones de la teor\'ia de Bifurcaciones como el Teorema de
+Krasonosel'skii-Rabinowitz \cite{Bro04} y otros \cite{Dem85} a la ecuaci\'on de onda semilineal.
+
+La bifurcaci\'on en infinito de la ecuaci\'on de onda no-lineal est\'a poco documentada y se presentar\'an
+algunos ejemplos al respecto.
+
+Esta ponencia est\'a enmarcada en la investigaci\'on doctoral del autor dirigida por los
+profesores Francisco Caicedo y Alfonso Castro.
+
+\CitationPrefix{\thechapter.}
+\begin{thebibliography}{99}
+
+\bibitem{Bro04} R.F. Brown. \newblock {\em {A Topological Introduction to Nonlinear Analysis}}.
+\newblock Birkh{\"a}user Boston, 2004.
+
+\bibitem{CaCaiDu11}
+J.~F. Caicedo, A.~Castro, and R.~Duque.
+\newblock {Existence of Solutions for a wave equation with non-monotone
+  nonlinearity}.
+\newblock {\em Milan J. Math}, 79(1):207--222, 2011.
+
+\bibitem{Dem85}
+K.~Deimling.
+\newblock {\em {Nonlinear functional analysis}}.
+\newblock Springer-Verlag, 1985.
+
+\bibitem{Rabi71}
+P. Rabinowitz.
+\newblock {Some global results for nonlinear eigenvalue problems}.
+\newblock {\em Journal of Functional Analysis}, 7(3):487--513, 1971.
+
+\end{thebibliography}
+
+\end{document}

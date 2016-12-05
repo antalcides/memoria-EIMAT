@@ -1,0 +1,20 @@
+@comment{x-kbibtex-personnameformatting=<%f ><%l><, %s>}
+
+@article{New1,
+	author = "Thomas Dreyfus",
+	journal = "To appear in Ann. Inst. Fourier (Grenoble)",
+	title = "{Confluence of meromorphic solutions of $q$-difference equations}",
+	year = "2014}"
+}
+
+@article{New2,
+	author = "Jacques Sauloy",
+	issn = "0373-0956",
+	journal = "Ann. Inst. Fourier (Grenoble)",
+	number = "4",
+	pages = "1021--1071",
+	title = "{Syst{\`e}mes aux {$q$}-diff{\'e}rences singuliers r{\'e}guliers: classification, matrice de connexion et monodromie}",
+	volume = "50",
+	year = "2000"
+}
+

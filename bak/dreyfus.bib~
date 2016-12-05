@@ -1,0 +1,15 @@
+AUTHOR = {Sauloy, Jacques},
+     TITLE = {Syst\`emes aux {$q$}-diff\'erences singuliers r\'eguliers:
+              classification, matrice de connexion et monodromie},
+   JOURNAL = {Ann. Inst. Fourier (Grenoble)},
+  FJOURNAL = {Universit\'e de Grenoble. Annales de l'Institut Fourier},
+    VOLUME = {50},
+      YEAR = {2000},
+    NUMBER = {4},
+     PAGES = {1021--1071},
+      ISSN = {0373-0956},
+     CODEN = {AIFUA7},
+   MRCLASS = {39A13 (34M35 34M40)},
+  MRNUMBER = {1799737 (2001m:39043)},
+MRREVIEWER = {Guoting Chen},
+       URL = {http://www.numdam.org/item?id=AIF_2000__50_4_1021_0}

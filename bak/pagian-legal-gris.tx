@@ -1,0 +1,96 @@
+\documentclass[lettersize,twocolumn,balance,spanish,svgnames,x11names,x11names,HTML]{book}
+ \input{preamble2.tex}
+ \usepackage{mdframed}
+\begin{document}
+\newgeometry{left=5cm,right=-2cm,top=2cm,bottom=2cm,textheight=25.9cm}
+\pagestyle{empty}
+\footnotesize
+
+\pagecolor{ptcbackground}
+%\pagecolor{white}
+ \vfill
+%\begin{multicols}{1}
+%\onecolumn
+{\color{white}
+\bfseries \setlength\parindent{0pt}
+\begin{center}
+
+\begin{mdframed}[backgroundcolor=ptctitle,hidealllines=true]
+\parbox[t]{\dimexpr\textwidth-2\fboxsep\relax}{  \color{white}\bfseries\sffamily  \uppercase{Memoria Del D\'ecimo Encuentro Internacional de Matem\'aticas - EIMAT} }
+\end{mdframed}
+
+EIMAT A\~no 2014
+
+ISSN:\vfill
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily EDITORES:}\\[5pt]
+
+JORGE LUIS RODR\'IGUEZ CONTRERAS
+
+ALEJANDRO URIELES GUERRERO
+
+ALEJANDRO VILLAREAL DAZA
+
+\vfill
+
+ \begin{multicols}{2} 
+
+\begin{figure}[H]
+\centering\includegraphics[scale=0.3]{antorcha2}
+\end{figure}
+ 
+\begin{figure}[H]
+\centering\includegraphics[scale=0.3]{uac1}
+\end{figure}
+
+
+ \end{multicols} 
+
+\vfill
+
+ \begin{multicols}{2} 
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily Rectora Universidad Del Atl\'antico :}\\[5pt]
+
+ANA SOF\'IA MESA DE CUERVO
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily Rector Universidad Aut\'onoma Del Caribe :}\\[5pt]
+
+\uppercase{ Ramses Vargas Lamadrid}
+
+ \end{multicols} 
+
+\vfill
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily VICERECTOR ADMINISTRATIVO Y FINANCIERO:}\\[5pt]
+
+FREDDY D\'IAZ MENDOZA\vfill
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily VICERECTOR DE DOCENCIA:}\\[5pt]
+
+REMBERTO DE LA HOZ REYES \vfill
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily VICERECTORA DE INVESTIGACI\'ON, EXTENSI\'ON Y PROYECCI\'ON SOCIAL:}\\[5pt]
+
+RAFAELA VOS OBESO \vfill
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily DECANO FACULTAD DE CIENCIAS B\'ASICAS :}\\[5pt]
+
+LUIS CARLOS GUTI\'ERREZ MORENO\vfill\vspace{3cm}
+
+
+\textsf{El material de esta publicaci\'on no puede ser reproducido sin
+la autorizaci\'on de los autores y editores. La responsabilidad del
+contenido de este texto corresponde a sus autores.} \vfill
+
+
+\copyright UNIVERSIDAD DEL ATL\'ANTICO BARRANQUILLA - COLOMBIA 2014 
+
+
+
+\copyright UNIVERSIDAD AUT\'ONOMA DEL CARIBE BARRANQUILLA - COLOMBIA
+2014
+
+\end{center}
+\newpage
+\end{document}

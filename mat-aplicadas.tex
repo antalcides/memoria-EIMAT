@@ -1,0 +1,1121 @@
+\renewcommand\thesection{MA\ \nplpadding{2}\numprint{\arabic{section}}}
+\pagestyle{eimat}
+\pagecolor{ptcbackground}
+\chapter{Matem\'aticas Aplicadas}
+\thispagestyle{empty}
+\pagecolor{ptcbackground}
+\chaptertoc
+%%%%%%%%%%%%%%%%%%%%1 %%%%%%%%%%%%%%%%%
+\author{%
+\tema{Modelaci\'on Matem\'atica,}\vspace{2pt}\\
+    M.~en C.~Victor Manuel P\'erez Vera, \vspace{2pt}\\
+  Programa de doctorado en matem\'aticas,\vspace{2pt}\\
+  Departamento de Matem\'aticas, \\
+  Universidad Aut\'onoma Metropolitana, \vspace{2pt}\\
+    Unidad Iztapalapa, M\'exico, D.~F,\vspace{2pt}\\
+    \texttt{vipemath@gmail.com}\vspace{20pt} \\
+%    Author 2 name \\
+%    Department name \\
+%    \texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Un modelo computacional de transporte de liposomas en tumores s\'olidos}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}    
+En la liberaci\'on de f\'armacos en tumores s\'olidos, existen barreras fisiol\'ogicas presentadas por la vasculatura anormal del tumor y la matriz intersticial. R.~K.~Jain y H.~M.~Bryne ~\cite{jai2010, rak,bry2006}, han descrito c\'omo el microambiente tumoral pueden estar implicado en la resistencia a la liberaci\'on de f\'armacos.   Estos estudios han sido de gran aporte en la investigaci\'on acerca de transporte de f\'armacos en liposomas.
+
+Dentro del contexto de los fen\'omenos de transporte, mediante la elaboraci\'on y descripci\'on de un modelo matem\'aico y computacional, estudiamos el problema de difusi\'on y flujo de peque\~nas part\'iculas, llamadas    liposomas (del orden de los 100 nan\'ometros), dentro de tumores s\'olidos, las cuales transportan f\'armacos al interior del tumor. Adoptamos un enfoque probabilista en la descripci\'on de la din\'amica de transporte  de liposomas en el tumor y su red de capilares e incorporamos interacciones entre los  liposomas y paredes capilares mediante diferentes potenciales.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem{rak} Rakesh K. Jain: Barries to Drug Delivery in solid Tumors
+Scientific American. 58--65. 1993.
+\bibitem{poz2003} C.~Pozrikidis and D.~D.~Farrow: A Model of Fluid Flow in Solid Tumors
+Annals of Biomedical Engineering, 31, 181--194.2003
+\bibitem{bry2006}H.~M.~Bryne, T.~Alarcon, M.~R.~Owen, S.~D.~Webb and P.~K.~Maini: Modelling aspects of cancer dynamics a review
+Phil.~Trans.~R.~Soc.~A, 1563--1578. 2006.
+\bibitem{jai2010} R.~K.~Jain \& Stylianopoulos: Delivering Nanomedicine to Solid Tumor
+T.~Nat.~Rev.~Clin.~Oncol. 7, 653--664. 2010.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%% 2 %%%%%%%%%%%%%
+\author{%
+\tema{Geometr\'ia Diferencial,}\vspace{2pt}\\
+  \'Oscar Andr\'es Monta\~no Carre\~no, \vspace{2pt}\\
+      Universidad Del Valle,\vspace{2pt}\\
+    \hspace{-2cm}\texttt{\scriptsize oscar.montano@correounivalle.edu.co}\vspace{20pt} \\
+%    Author 2 name \\
+%    Department name \\
+%    \texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Cota Superior para el Primer Valor
+Propio del Problema de Steklov en el Espacio Euclideo}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen} 
+    Sea $(M^{n},g)$ una variedad Riemanniana compacta con frontera $\partial M$. El  problema de Steklov consiste en encontrar soluciones de la ecuaci\'on
+\begin{align} \label{steklov}
+\Delta \varphi &= 0 \text{   en   } M \notag \\
+ \frac{\partial \varphi}{\partial \eta}&= \nu  \varphi \text{   sobre   } \partial M
+\end{align}
+donde $\nu$ es un n\'umero real y $\eta$ es la normal unitaria exterior a $\partial M$. Este problema fue introducido por Steklov \cite{Steklov} en 1902, para dominios acotados en el plano.  El primer valor $\nu$ no nulo para el cual el problema (\ref{steklov}) tiene soluci\'on, es conocido como el primer valor propio de Steklov. En esta charla demostraremos que el primer valor propio de Steklov, $\nu_{1}(M)$,  sobre un dominio acotado $M$ de $\mathbb{R}^{n}$ tiene como cota superior a $\frac{1}{r}$, donde $r>0$ es el radio de una bola $B_{r}$ contenida en el dominio $M$.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem{Escobar} J.F  Escobar, \emph{The Geometry of the first Non-Zero Stekloff Eigenvalue, Journal of functional analysis},  150, 544-556, (1997)
+\bibitem{Oscar1}  O. A. Monta\~no, \emph{The Stekloff problem for  rotationally invariant metrics on the ball, Revista Colombiana de Matem\'aticas}, 47, 181 - 190, (2013)
+\bibitem{Oscar2}  O. A. Monta\~no, \emph{Cota superior para el primer valor propio del problema de Steklov, Revista Integraci\'on}, 31, 1, 53-58, (2013)
+\bibitem{Oscar3}  O. A. Monta\~no, \emph{Cota superior para el primer valor propio del problema de Steklov en el Espacio Euclideo, Revista de Ciencias Naturales y Exactas de la Universidad del Valle}, 17, 2, 85 - 93(2013)
+\bibitem{Steklov}  M. W. Steklov, \emph{Sur les problemes fondamentaux de la physique mathematique, Ann. Sci. \'Ecole Norm},  19, 445 - 490, (1902)
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%13%%%%%%%%%%%%%%%%
+\setcounter{section}{12}
+\author{%
+\tema{Matem\'aticas Aplicadas,}\vspace{2pt}\\
+  Jorge Villamizar Morales, \vspace{2pt}\\
+      Universidad Industrial de Santander, \vspace{2pt}\\
+    \hspace{-2cm}\texttt{\scriptsize jorge@matematicas.uis.edu.co}\vspace{20pt} \\
+    Michael \'alvarez Navarro, \vspace{2pt} \\
+    Universidad Industrial de Santander, \vspace{2pt}\\
+   \texttt{\scriptsize michael@matematicas.uis.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Matrices de Transformaci\'on Homog\'enea y Cuaternios aplicados al desarrollo
+ del modelo cinem\'atico directo para un manipulador industrial visualizado
+ en una GUI MATLAB \circledR}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+Este trabajo desarrolla un modelo cinem\'atico directo
+para un manipulador industrial mediante el uso de las matrices de transformaci\'on homog\'enea como
+m\'etodo de representaci\'on conjunta de posici\'on y orien\-taci\'on, y los cuaternios de Hamilton
+$
+(Q=q_{0}+q_{1}\hat{\imath}+q_{2}\hat{\jmath}+q_{3}\hat{k},
+$
+donde $q_{0},q_{1},q_{2},q_{3}\in \mathbb{R})$, como m\'etodo para representar
+transformaciones de rotaciones y orientaciones en $\mathbb{R}^{3}$. En el
+desarrollo del modelo se tienen en cuenta adicionalmente, los conceptos asociados a los
+espacios vectoriales, a la geometr\'ia de las transformaciones lineales de dimensi\'on finita y
+a la localizaci\'on espacial.\\
+Asimismo se presenta el \'algebra de las matrices homog\'eneas y de los cuaternios y se define el operador de
+rotaci\'on ${L_{Q}(\vec{v})=Q(0+\vec{v})Q^{\ast }}$, donde $Q$ es un cuaternio
+que cumple con la rotaci\'on de puntos en el espacio. Se hace la
+presentaci\'on del robot KUKA KR120-2P$\circledR$, se de\-sarro\-lla su modelo cinem\'atico directo
+haciendo uso de las matrices homog\'eneas y de los cuaternios y se presenta la interfaz gr\'a%
+fica de usuario (GUI) dise\~nada bajo un ambiente MATLAB$\circledR$ para validar y
+simular el modelo de\-sarro\-lla\-do.
+Finalmente, se ejecutan los comandos corres\-pondientes a las opera\-ciones entre matrices homog\'eneas y c\'alculo de cuaternios, contando la cantidad de operaciones y el tiempo de ejecuci\'on, siendo esta \'ultima medida la versi\'on optimizada para comprobar el rendimiento de un conjunto de instrucciones en MATLAB$\circledR$.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem{A} Archila D\'iaz, J. F., Bautista Rojas L. E., Villamizar Morales J. (2011). \emph{Transformaciones lineales de dimensi\'on finita, aplicadas al desarrollo del modelo cinem\'atico directo para el robot KUKA$\circledR$ KR 60 JET en cursos de \'algebra lineal y dibujo de m\'aquinas}. Revista ERM. Universidad del Valle. Vol. XIX, Nº2, 33-47.
+
+
+\bibitem{L} Lozano, E. J. (2002). \emph{Cuaternios de Hamilton}. Bucaramanga:
+Universidad Industrial de Santander.
+
+%[3] Barrientos, A., Pe\~n\'in, L. F., Balaguer C. and Aracil, R. (2007).
+%\emph{Fundamentos de Rob\'otica}. Madrid: Mc Graw Hill.\\
+%
+%[4] Grossman, S. I. (2004). \emph{\'algebra lineal}. Quinta edici\'on.
+%Belmont: Mc Graw Hill.\\
+
+
+\bibitem{K} Kuipers, J. B. (1999). \emph{Quaternios and rotation sequences: A
+primer with aplications to orbits, aerospace, and virtual reality}.
+Princenton: Princenton University Press.
+
+%[6] KUKA Robotic. Technical data KR 120-2P.\\
+%Obtenida de
+%http://www.roboticturnkeysolutions.com/robots/kuka/datasheet/kr\_120.pdf/
+%
+%[7] Corke, P. I. (2008). \emph{Robotics toolbox for Matlab}.\\
+%Obtenida de http://www.petercorke.com/
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%14%%%%%%%%%%%%%%%%
+\author{%
+\tema{Matem\'aticas Aplicadas,}\vspace{2pt}\\
+  Daniel Brito, \vspace{2pt}\\
+      Universidad de Oriente, \vspace{2pt}\\
+   %\hspace{-2cm}
+    \texttt{\scriptsize danieljosb@gmail.com}\vspace{20pt} \\
+%    Michael \'alvarez Navarro, \vspace{2pt} \\
+%    Universidad Industrial de Santander, \vspace{2pt}\\
+%   \texttt{\scriptsize michael@matematicas.uis.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Vecindad, V\'ertices Independientes y Hamiltonicidad en Grafos Bipartitos Balanceados}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    
+La motivaci\'on de este trabajo es su relaci\'on con el problema
+Hamiltoniano; un problema abierto, el cual no ha podido ser
+caracterizado y que comenzamos con una extensi\'on, a conjuntos
+independientes balanceados de seis v\'ertices en grafos bipartitos
+balanceados, de un resultado dado por Alcal\'a et al [1].
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{alc} {\sc Yusleidy Alcal\'{a}, Daniel Brito and Lope Mar\'{\i}n} (2013) ``The Hamiltonicity of
+Balanced Bipartite Graphs Involving Balanced Independent Set''.
+\emph{\it Mathematical Forum} 8, 1353 - 1358.
+\end{thebibliography}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%16%%%%%%%%%%%%%%%%
+\setcounter{section}{15}
+\author{%
+\tema{C\'alculo Fraccional,}\vspace{2pt}\\
+  Jaime Castillo P\'erez, \vspace{2pt}\\
+      Universidad De La Guajira -Colombia, \vspace{2pt}\\
+   %\hspace{-2cm}
+    \texttt{\scriptsize jcastillo@uniguajira.edu.co}\vspace{20pt} \\
+    Leda Gal\'ue Leal, \vspace{2pt} \\
+     Universidad Del Zulia -Venezuela, \vspace{2pt}\\
+%   \texttt{\scriptsize michael@matematicas.uis.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Elementos Hist\'oricos del C\'alculo Fraccional}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    
+El C\'alculo Fraccional generaliza las ideas del c\'alculo cl\'asico, es decir, la
+integraci\'on y diferenciaci\'on de orden entero a orden no entero. El inter\'es en
+este tema se hizo evidente tan pronto se conocen las ideas del c\'alculo
+cl\'asico, lo que garantiza que esta teor\'ia no es tan nueva. \ Leibniz [5] lo
+menciona en una carta dirigida a L'Hopital en 1695. \ Los primeros estudios
+m\'as o menos sistem\'aticos al parecer se hicieron a comienzos y mediados del
+siglo XIX por Liouville [6], Riemann [11], y Holmgren [2], aunque Euler [1] y
+Lagrange [4], hicieron contribuciones interesantes.  A trav\'es del tiempo
+reconocidos matem\'aticos han contribuido en su desarrollo [12]. Pero, a\'un
+siendo \'esta una generalizaci\'on del C\'alculo Cl\'asico, y aunque su nacimiento es
+igual de antiguo, sus aplicaciones han sido notorias solo en estas \'ultimas
+d\'ecadas [3], [10]. La causa de esto es debido posiblemente a la dificultad que
+se presenta en su parte operativa, a las diversas formulaciones de la derivada
+e integral de orden fraccional, y en especial la falta de una clara
+interpretaci\'on geom\'etrica y f\'isica de los operadores fraccionales [7]. En la
+primera Conferencia Internacional sobre el C\'alculo Fraccional en New Haven
+(USA), en 1974, la interpretaci\'on f\'isica y geom\'etrica fueron incluidos en la
+lista de problemas abiertos [13], siendo repetida en las conferencias
+internacionales realizadas en 1984, 1989 e incluso en el encuentro sobre
+C\'alculo Fraccional realizado en Varna 1996, y desde ese tiempo la situaci\'on no
+ha cambiado mucho. El primer libro dedicado al C\'alculo Fraccional fue
+publicado en 1974 [9], en el cual se intent\'o dar un reporte de los avances
+te\'oricos de su tiempo, pero no fue tan accesible a profesionales de otras
+disciplinas. Posteriormente se publicaron otros libros [8], [10], pero a pesar
+de esto, esta teor\'ia se ha mantenido un poco distante de muchos
+investigadores, cient\'ificos e instituciones acad\'emicas. En general, la raz\'on
+de este resultado es debido principalmente, que a pesar de la gran cantidad de
+publicaciones en este campo, se siente la necesidad de formalizar y ordenar
+los conceptos, propiedades y aplicaciones del c\'alculo fraccional, para que sea
+atractiva y de f\'acil acceso a los investigadores de otras \'areas, as\'i como a
+los mismos matem\'aticos.
+
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem {Euler}Euler, L. (1730) \textit{M\'emoire dans le tome V des Comment},
+Saint Petersberg Ann\'ees, 55, 1730.
+
+\bibitem {Holmgren}Holmgren, H. J. (1964) Om differentialkalkylen med indices
+of hvad nature sam helst, Kongliga svenska. \textit{Vetenskaps-akademiens
+handlinger}, 5 (11), 1-83.
+
+\bibitem {Kilbas2}Kilbas, A., Srivastava,  H. M. and Trujillo, J. J. (2006)
+\textit{Theory and Applications of Fractional Differential Equations},
+Elsevier Inc., New York.
+
+\bibitem {Lagrange}Lagrange, J. L. (1869) Sur une nouvelle espèce de calcul
+relatif à la differentiation et à l'integration des quantit\'es variables, Nouv.
+mem. Acad. Roy. Sci. 1772, reprinted in Oeuvres, 3, 441-476.
+
+\bibitem {Leibniz}Leibniz, G. W. (1962) "Letter from Hanover, Germany,1695 to
+L. A. L'Hospital". \textit{Leibnizen Mathematische Schriften}, 2, 301-302.
+First published in 1849.
+
+\bibitem {Liouville}Liouville, J. (1832) "M\'emoire: sur le calcul des
+diff\'erentielles \`{a} indices quelconques", \textit{J. de l'\^{E}cole Polytechnique},
+13, 71-162.
+
+\bibitem {Mainardi}Mainardi F.(2010) \textit{Fractional Calculus and Waves in
+Linear Viscoelasticity}, Imperial College Press, London.
+
+\bibitem {Miller}Miller, K. S. and Ross, B. (1993) \textit{An Introduction to
+the Fractional Calculus and Fractional Differential Equations}\emph{,} John
+Wiley \& Sons Inc., New York.
+
+\bibitem {Oldham}Oldham, K. and Spanier, J. (1974)\textit{The Fractional
+Calculus}, Academic Press, New York.
+
+\bibitem {Podlubny}Podlubny, I. (1999)\textit{Fractional Differential
+Equations}\emph{,} Academic Press, New York.
+
+\bibitem {Riemann}Riemann, B. (1953) \textit{Versuch einer allgemeinen
+Auffasung der integration und differentiation}, The Collected Works of
+Bernhard Riemman (H. Weber, ed.) 2nd ed. New york.
+
+\bibitem {Ross}Ross, B. (1977)Fractional calculus: An histotical apologia for
+the development of a calculus using differentiation and antidifferentiation of
+non integral orders,\emph{\ }\textit{Mathematics Magazine}, 50 (3), 115-122.
+
+\bibitem {Ross1}Ross, B. (1975) (Ed.), \textit{Fractional Calculus and Its
+Applications}, Proceedings of the International Conference on Fractional
+Calculus and Its Applications, University of New Haven, West Haven, Conn.,
+June 1974, Springer-Verlag, New York.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%17%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%19%%%%%%%%%%%%%%%
+\setcounter{section}{18}
+\author{%
+\tema{\'Algebra,}\vspace{2pt}\\
+ Gabriel Vergara,\vspace{2pt}\\
+  Julio Romero, \vspace{2pt}\\
+      Universidad Del Atl\'antico -Colombia, \vspace{2pt}\\
+   \hspace{-2cm}
+    \texttt{\scriptsize gabrielvergara@mail.uniatlantico }\vspace{20pt} \\
+%    Leda Gal\'ue Leal, \vspace{2pt} \\
+%     Universidad Del Zulia -Venezuela, \vspace{2pt}\\
+%   \texttt{\scriptsize michael@matematicas.uis.edu.co}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Transformaciones de Tietze}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}    
+ Uno de los principales resultados de la la teor\'ia combinatoria de grupos afirma que todo grupo tiene una presentaci\'on y que todo grupo finito es finitamente presentado(Ver \cite{DL}) presentaci\'on finita es construir presentaciones  En esta charla hablaremos de las transformaciones de Tietze, las cuales nos permiten  pasar de una presentaci\'on finita de un grupo a otra presentaci\'on isomorfa del mismo grupo.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+\bibitem{DL}{\sc Johnson , D.L}(1990) {\it Presentations of groups}. London Mathematical Society,
+Cambridge.
+
+\bibitem{PH}{\sc Harpe, P.} (2000) {\it Topics in geometric group theory}. Chicago Lectures in Mathematics Series., Chicago, EEUU.
+
+
+\bibitem{GO}{\sc  Vergara, G. and Salazar O.}(2011) ¨Introducci\'on a la teor\'ia geom\'etrica de grupos¨. \emph {Revista Integraci\'on} V.29, 15-30.
+
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%22%%%%%%%%%%%%%%
+\setcounter{section}{21}
+\author{%
+\tema{Matem\'aticas Aplicadas}\\
+    Jose V Barraza A\\
+     Universidad del Atl\'antico - Departamento de Matem\'aticas \\
+ \hspace*{-2cm}\texttt{\scriptsize josebarraza@mail.uniatlantico.edu.co}\vspace{20pt} \\
+%    Adriana Chuquen\\
+%   Universidad del Norte \\
+    %\texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Aplicaciones Del ACM Al Estudio De Problemas Visuales}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{240pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+  El presente trabajo tiene como finalidad analizar la interdependencia entre las variables que tipifican o caracterizan los defectos refractivos oculares como la hipermetrop\'ia, miop\'ia, astigmatismo, astigmatismo hiperm\'etrope y astigmatismo mi\'opico,con algunas variables sociodemogr\'aficas.
+\smallskip
+\vspace*{0,005 cm}
+\noindent\\
+El an\'alisis de correspondencias es una t\'ecnica descriptiva multivariada para representar tablas de contingencia  bidimensionales pero que tambi\'en puede extenderse a tablas de m\'as de dos entradas\cite{emul}.\\
+\noindent
+El an\'alisis de correspondencias m\'ultiples (ACM), es un an\'alisis de correspondencias simple (ACS), aplicado a una tabla disyuntiva completa,donde se registran las filas que representan los individuos o pacientes y en las columnas las modalidades de las variables que se categorizan para su estudio \cite{amult}.\\
+\noindent
+La base de datos fue facilitada en algunas historias cl\'inicas en un consultorio de optometr\'ia en el Norte de la ciudad de Barranquilla.\\
+\smallskip
+\vspace*{0,0001 cm}\\
+El an\'alisis de correspondencias t\'ecnica utilizada en el estudio,analiza desde un punto de vista gr\'afico, las relaciones de dependencia e independencia de un conjunto de variables categ\'oricas a partir de los datos de una tabla de contingencia\cite{anadet}.
+\smallskip
+\vspace*{0,005 cm}\\
+Algunas enfermedades visuales son de car\'acter multifactorial;por ejemplo, el glaucoma y la hipermetrop\'ia elevada. El estrabismo que suele degenerar en ambliop\'ia,puede producir p\'erdida visual permanente\cite{imge}.
+\smallskip
+\vspace*{0,005 cm}\\
+La academia de medicina en Colombia realiz\'o un estudio comparativo entre Bogot\'a y Barranquilla, a fin de establecer la proporci\'on de defectos refractivos,y en una muestra consecutiva de 1000 historias encontr\'o que los miopes eran el 56\%, del grupo estudiado, mientras que en la Costa Atl\'antica eran el 49\%.\\
+\noindent
+En este estudio realizado en el Norte de Barranquilla a 376 pacientes, se encontr\'o que:
+aproximadamente el 6,91\% de los pacientes examinados se les diagnostic\'o astigmatismo puro en uno o en ambos ojos, el 32,18\% astigmatismo hiperm\'etrope, un 17,81\% astigmatismo mi\'opico, el 31,65\% solo hipermetrop\'ia y el 11,44\% solo miop\'ia.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+%\vspace{5pt}
+%\cite*
+%\bibliographystyle{plain} 
+%\bibliography{dreyfus.bib}
+\begin{thebibliography}{99}
+\bibitem{emul}
+Lebart, L; Morineau, A; et al.
+\emph{Statisque Exploratoire Multidimensionnelle}
+Dunod,Par\'is(1995).
+\bibitem{amult}
+D\'iaz, M. L.
+\emph{Estad\'istica Multivariada.Inferencia y M\'etodos}
+Editorial Panamericana Formas e Impresos, S. A,Bogot\'a(2002).
+\bibitem{anadet}
+Etxeberr\'ia, M. J; Garc\'ia, J. E, et al.
+\emph{An\'alisis de datos y textos}
+Editorial RA-MA, Madrid(1995).
+\bibitem{imge}\emph{Implicaciones gen\'eticas de los errores refractivos oculares}\\
+www.encolombia.com/medicina/pediatr\'ia/pedi36301-implicacionesgen.
+\end{thebibliography}
+
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setcounter{section}{21}
+\author{%
+\tema{Matem\'aticas Aplicadas,}\vspace{20pt}\\
+    Jose V Barraza A,\vspace{20pt}\\
+     Universidad del Atl\'antico - Departamento de Matem\'aticas,\vspace{20pt} \\
+ \hspace*{-2cm}\texttt{\scriptsize josebarraza@mail.uniatlantico.edu.co}\vspace{20pt} \\
+%    Adriana Chuquen\\
+%   Universidad del Norte \\
+    %\texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Aplicaciones Del ACM Al Estudio De Problemas Visuales}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{240pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+  El presente trabajo tiene como finalidad analizar la interdependencia entre las variables que tipifican o caracterizan los defectos refractivos oculares como la hipermetrop\'ia, miop\'ia, astigmatismo, astigmatismo hiperm\'etrope y astigmatismo mi\'opico,con algunas variables sociodemogr\'aficas.
+\smallskip
+\vspace*{0,005 cm}
+\noindent\\
+El an\'alisis de correspondencias es una t\'ecnica descriptiva multivariada para representar tablas de contingencia  bidimensionales pero que tambi\'en puede extenderse a tablas de m\'as de dos entradas\cite{emul}.\\
+\noindent
+El an\'alisis de correspondencias m\'ultiples (ACM), es un an\'alisis de correspondencias simple (ACS), aplicado a una tabla disyuntiva completa,donde se registran las filas que representan los individuos o pacientes y en las columnas las modalidades de las variables que se categorizan para su estudio \cite{amult}.\\
+\noindent
+La base de datos fue facilitada en algunas historias cl\'inicas en un consultorio de optometr\'ia en el Norte de la ciudad de Barranquilla.\\
+\smallskip
+\vspace*{0,0001 cm}\\
+El an\'alisis de correspondencias t\'ecnica utilizada en el estudio,analiza desde un punto de vista gr\'afico, las relaciones de dependencia e independencia de un conjunto de variables categ\'oricas a partir de los datos de una tabla de contingencia\cite{anadet}.
+\smallskip
+\vspace*{0,005 cm}\\
+Algunas enfermedades visuales son de car\'acter multifactorial;por ejemplo, el glaucoma y la hipermetrop\'ia elevada. El estrabismo que suele degenerar en ambliop\'ia,puede producir p\'erdida visual permanente\cite{imge}.
+\smallskip
+\vspace*{0,005 cm}\\
+La academia de medicina en Colombia realiz\'o un estudio comparativo entre Bogot\'a y Barranquilla, a fin de establecer la proporci\'on de defectos refractivos,y en una muestra consecutiva de 1000 historias encontr\'o que los miopes eran el 56\%, del grupo estudiado, mientras que en la Costa Atl\'antica eran el 49\%.\\
+\noindent
+En este estudio realizado en el Norte de Barranquilla a 376 pacientes, se encontr\'o que:
+aproximadamente el 6,91\% de los pacientes examinados se les diagnostic\'o astigmatismo puro en uno o en ambos ojos, el 32,18\% astigmatismo hiperm\'etrope, un 17,81\% astigmatismo mi\'opico, el 31,65\% solo hipermetrop\'ia y el 11,44\% solo miop\'ia.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+%\vspace{5pt}
+%\cite*
+%\bibliographystyle{plain} 
+%\bibliography{dreyfus.bib}
+\begin{thebibliography}{99}
+\bibitem{emul}
+Lebart, L; Morineau, A; et al.
+\emph{Statisque Exploratoire Multidimensionnelle}
+Dunod,Par\'is(1995).
+\bibitem{amult}
+D\'iaz, M. L.
+\emph{Estad\'istica Multivariada.Inferencia y M\'etodos}
+Editorial Panamericana Formas e Impresos, S. A,Bogot\'a(2002).
+\bibitem{anadet}
+Etxeberr\'ia, M. J; Garc\'ia, J. E, et al.
+\emph{An\'alisis de datos y textos}
+Editorial RA-MA, Madrid(1995).
+\bibitem{imge}\emph{Implicaciones gen\'eticas de los errores refractivos oculares}\\
+www.encolombia.com/medicina/pediatr\'ia/pedi36301-implicacionesgen.
+\end{thebibliography}
+
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%25 %%%%%%%%%
+\setcounter{section}{24}
+\author{%
+\tema{Muestreo estad\'istico,}\vspace{2pt}\\
+   Humberto Barrios,\vspace{2pt}\\
+     Universidad Popular del Cesar,\vspace{2pt} \\
+ \hspace*{-2cm}\texttt{\scriptsize hbarrios@unicesar.edu.co}\vspace{20pt} \\
+%    Adriana Chuquen\\
+%   Universidad del Norte \\
+    %\texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{El Estimador de Horvitz-Thompson para Datos Funcionales}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{120pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}  
+Los cient\'ificos est\'an recogiendo cada vez m\'as datos que se extraen de procesos continua. Los
+m\'etodos de \emph{an\'alisis de datos funcionales} (ADF), son aplicables al an\'alisis de muchos conjuntos de datos que son comunes en muchos experimentos que se dan en funci\'on del tiempo, espacio o volumen. Los cuales le permiten al investigador ver en que momento pueden existir diferencia en la serie entre dos o m\'as conjunto de observaciones. En este trabajo se hace un breve introducci\'on del estimador Horvitz-Thompson para datos funcionales en un muestreo aleatorio proporcional al tama\~no y al final se construye bandas de confianza, teniendo en cuenta la normalidad  asint\'otica de los estimadores.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+%\vspace{5pt}
+%\cite*
+%\bibliographystyle{plain} 
+%\bibliography{dreyfus.bib}
+\begin{thebibliography}{99}
+\bibitem{car}{\sc Cardot, H., Goga, C. and Lardin, P. } (2013). {\sc Uniform convergence and asymptotic confidence bands for model-assisted estimators of the mean of sampled functional data}. Electronic J. of Statistics, 7, 562596.
+\bibitem{bau}{\sc Herv\'e Cardot, Alain Dessertaine, Camelia Goga, \'Etienne Josserand and Pauline Lardin
+} (2013), {\it Comparison of different sample designs and construction of confidence bands to estimate the mean of functional data:  
+An illustration on electricity consumption 
+}, Survey Methodology, December 2013 Vol. 39, No. 2, pp. $283-301$
+Statistics Canada, Catalogue No. $12-001-X$ .
+\bibitem{gu}{\sc HERV,  CARDOT, DAVID DEGRAS and ETIENNE JOSSERAND} (2013), {\it Con?dence bands for Horvitz?Thompson estimators using sampled noisy functional data}, Bernoulli 19(5A), 2013, $2067-2097$
+DOI: $10.3150/12-BEJ443$.
+\bibitem{lor}{\sc DANIEL J. L.,REGINA L. N., BRADLEY W. \& RAMSAY} (2007), {\it Introduction to Functional Data Analysis}, Canadian Psychology 2007, Vol. 48, No. 3, $135-155$.
+\bibitem{Sar}{\sc S\"{a}rndal, C., Swensson, R. \& Wretman, J.} (1992), {\it Model Assisted Survey Sampling}, Springer-Verlag, New York.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%26%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%
+
+\author{%
+\tema{Muestreo estad\'istico,}\vspace{2pt}\\
+   Humberto Barrios,\vspace{2pt}\\
+     Universidad Popular del Cesar,\vspace{2pt} \\
+ \hspace*{-2cm}\texttt{\scriptsize hbarrios@unicesar.edu.co}\vspace{20pt} \\
+%    Adriana Chuquen\\
+%   Universidad del Norte \\
+    %\texttt{email2@example.com}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Introducci\'on al Muestreo por Conglomerados en una y dos Etapas}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{100pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}  
+   En estas notas se presenta  una breve introducci\'on para el muestro por conglomerados en una y dos etapas, donde en la primera y segunda etapa se realiza con un muestreo aleatorio simple con reemplazo. Los fundamentos b\'asicos se ilustran con aplicaciones.
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+%\vspace{5pt}
+%\cite*
+%\bibliographystyle{plain} 
+%\bibliography{dreyfus.bib}
+\begin{thebibliography}{99}
+\bibitem{bau}{\sc Bautista, J.} (1998), {\it Dise\~no de muestreo estad\'istico}, Universidad Nacional de Colombia, Bogot\'a.
+
+\bibitem{gu}{\sc Guti\'errez, H.} (1992), {\it Estrategias de Muestreo. Dise\~no de encuestas y estimaci\'on de par\'ametros}, Universidad Santo Tom\'as, Bogot\'a.
+
+\bibitem{lor}{\sc Lohr, S.} (2000), {\it Muestreo: Dise\~no y Analisis}, Thompson.
+
+\bibitem{Sar}{\sc S\"{a}rndal, C., Swensson, R. \& Wretman, J.} (1992), {\it Model Assisted Survey Sampling}, Springer-Verlag, New Yo
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%27%%%%%%%%%%
+\author{%
+\tema{Matem\'aticas aplicadas,}\vspace{2pt}\\
+   Jorge Robinson Evilla,\vspace{2pt}\\
+    Universidad del Atl\'antico, Barranquilla, Colombia,\vspace{2pt} \\
+ \hspace*{-2cm}\texttt{\scriptsize jorgerobinson@mail.uniatlantico.edu.co}\vspace{20pt} \\
+   Jesus Arbelaez,\vspace{2pt}\\
+   Stiven Florez,\vspace{2pt}\\
+   Sergio G\'omez,\vspace{2pt}\\
+   Henry Mej\'ia,\vspace{2pt}\\
+   Jos\'e Meza,\vspace{2pt}\\
+   Jorge Rodri\'iguez,\vspace{2pt}\\
+   Gustavo Vergara,\vspace{2pt}\\
+  Universidad del Norte ,\vspace{2pt}\\
+    %\texttt{email2@example.com},\vspace{20pt}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Soluci\'on de problemas en ecuaciones diferenciales usando MATLAB \circledR}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{250pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}  
+  Las ecuaciones diferenciales se caracterizan por brindar soluciones a problemas f\'isicos. Dentro de los problemas f\'isicos que resuelven las ecuaciones diferenciales se destacan: Modelos de poblaci\'on, transferencia de calor, vibraciones mec\'anicas, circuitos el\'ectricos, velocidad y aceleraci\'on. \\
+El MATLAB  \circledR \ es una herramienta de software matem\'atico que con un lenguaje de programaci\'on propio permite modelar situaciones f\'isicas y realizar con velocidad y precisi\'on un gran n\'umero de c\'alculos y operaciones matem\'aticas.\\
+El objetivo de este trabajo es mostrar como enfrentar estos problemas de las ecuaciones diferenciales ordinarias usando MATLAB \circledR . Se expondr\'an los principales algoritmos que de manera muy eficiente resuelven problemas f\'isicos cuya modelaci\'on se realiza por medio de ecuaciones diferenciales ordinarias. Se presentar\'an adem\'as, experiencias propias de soluci\'on a problemas, as\'i como tambien combinaciones de problemas, cuya soluci\'on ex\'ige el uso de computadoras.   
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+%\vspace{5pt}
+%\cite*
+%\bibliographystyle{plain} 
+%\bibliography{dreyfus.bib}
+\begin{thebibliography}{99}
+
+\bibitem{Ad}{\sc EDWARDS, H. Y PENNEY, D.}  {\it Ecuaciones diferenciales y problemas con valores en la frontera. C\'omputo y modelado}.  PEARSON EDUCACI\'ON. M\'exico, 2009.
+
+\bibitem{Ad}{\sc SIMMONS, G. Y KRANTZ, S.}  {\it Differential Equations: Theory, technique, and practice.} McGraw-Hill companies. New York, 2007.
+
+\bibitem{Ad}{\sc BUTCHER, J.C.}  {\it Numerical Methods for Ordinary Differential Equations}.  John Wiley \& Sons. England, 2008.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%%% 28 %%%%%%%%%%%%5
+\author{%
+\tema{Matem\'aticas aplicadas,}\vspace{2pt}\\
+   Jorge Robinson Evilla,\vspace{2pt}\\
+    Universidad del Atl\'antico, Barranquilla, Colombia,\vspace{2pt} \\
+ \hspace*{-2cm}\texttt{\scriptsize jorgerobinson@mail.uniatlantico.edu.co}\vspace{20pt} \\
+   Javier Henriqez Amador,\vspace{2pt}\\
+  Ronald Romero Mun\~noz,\vspace{2pt}\\
+    Universidad del Atl\'antico, Barranquilla, Colombia ,\vspace{2pt}\\
+    %\texttt{email2@example.com},\vspace{20pt}\\
+         }
+\pagecolor{white}
+\pagestyle{eimat}
+\begin{titlepage}
+\pagecolor{white}
+%%%%%%%definiciones
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+%%%%%%%%%%
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\bf\large\textcolor{white}{Soluci\'on de problemas en ecuaciones diferenciales parciales usando MATLAB\circledR}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{250pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}     
+Las ecuaciones diferenciales parciales son muy \'utiles por brindar soluciones a problemas f\'isicos. Dentro de los problemas f\'isicos que resuelven las ecuaciones diferenciales parciales se destacan: Problemas que involucran vibraciones u oscilaciones, problemas que involucran conducci\'on o difusi\'on de calor y problemas que involucran potencial el\'ectrico o gravitacional.  \\
+El MATLAB \circledR \ es una herramienta de software matem\'atico que con un lenguaje de programaci\'on propio permite modelar situaciones f\'isicas y realizar con velocidad y precisi\'on un gran n\'umero de c\'alculos y operaciones matem\'aticas.\\
+El objetivo de este trabajo es mostrar como enfrentar estos problemas de las ecuaciones diferenciales parciales usando MATLAB \circledR. Se expondr\'an los principales algoritmos que de manera muy eficiente resuelven problemas f\'isicos cuya modelaci\'on se realiza por medio de ecuaciones diferenciales parciales. Se presentar\'an adem\'as, experiencias propias de soluci\'on a problemas, as\'i como tambien combinaciones de problemas, cuya soluci\'on ex\'ige el uso de computadoras.   
+    \end{resumen}
+    %\hspace*{25pt}\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%\lipsum[3-4]
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+    
+%\end{minipage}
+\end{minipage}
+%\vspace{5pt}
+%\cite*
+%\bibliographystyle{plain} 
+%\bibliography{dreyfus.bib}
+\begin{thebibliography}{99}
+\bibitem{Ad}{\sc COLEMAN, MATHEW P.}  {\it An introduction to partial differential equation with MATLAB}.  PEARSON EDUCACI\'ON. M\'exico, 2009.
+
+\bibitem{Ad}{\sc SIMMONS, G. Y KRANTZ, S.}  {\it Differential Equations: Theory, technique, and practice.} Chapman \& Hall/CRC applied mathematics and nonlinear science series. Florida, 2005.
+\end{thebibliography}
+\end{titlepage}
+

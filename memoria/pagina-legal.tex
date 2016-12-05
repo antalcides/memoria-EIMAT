@@ -1,0 +1,200 @@
+\documentclass[twocolumn,twocolumn,balance,spanish,svgnames,x11names,x11names,HTML]{book}
+\usepackage[utf8x]{inputenc}
+\pagestyle{headings}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Special footnote code from the package 'stblftnt.sty'
+%% Author: Robin Fairbairns -- Last revised Dec 13 1996
+\let\SF@@footnote\footnote
+\def\footnote{\ifx\protect\@typeset@protect
+    \expandafter\SF@@footnote
+  \else
+    \expandafter\SF@gobble@opt
+  \fi
+}
+\expandafter\def\csname SF@gobble@opt \endcsname{\@ifnextchar[%]
+  \SF@gobble@twobracket
+  \@gobble
+}
+\edef\SF@gobble@opt{\noexpand\protect
+  \expandafter\noexpand\csname SF@gobble@opt \endcsname}
+\def\SF@gobble@twobracket[#1]#2{}
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage[utf8x]{inputenc}
+\usepackage{balance}
+\pagestyle{headings}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage[headings]{fullpage}
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+\newcommand{\lyxmathsym}[1]{\ifmmode\begingroup\def\b@ld{bold}
+  \text{\ifx\math@version\b@ld\bfseries\fi#1}\endgroup\else#1\fi}
+
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newenvironment{lyxlist}[1]
+{\begin{list}{}
+{\settowidth{\labelwidth}{#1}
+ \setlength{\leftmargin}{\labelwidth}
+ \addtolength{\leftmargin}{\labelsep}
+ \renewcommand{\makelabel}[1]{##1\hfil}}}
+{\end{list}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\input{preamble}
+\input{codigo}
+\usepackage{fancyvrb}
+\usepackage{cancel}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
+ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{
+ pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false}
+ \newsavebox{\LstBox}
+ %\graphicspath{ {./img/} }
+ \makeatletter
+\def\input@path{{./}{./build/}}
+\makeatother
+ \graphicspath{{./}{./img/}{./build/}}
+ \renewcommand{\baselinestretch}{1.5}
+\raggedbottom %para que no distibuya los espacios verticales en una hoja
+\usepackage[spanish]{babel}
+ 
+\addto\captionsspanish{
+\def\tablename{Tabla}
+\def\listtablename{\'Indice de tablas}
+}
+%\titleformat{\section}{\large\bfseries}{CO\thesection}{1em}{}
+%\renewcommand{\thesection}{CO\ \arabic{section}} 
+\renewcommand\thesection{CO\ \nplpadding{3}\numprint{\arabic{section}}}
+\makeatother
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{%
+  \clearpage
+  {\pagestyle{empty}\origdoublepage}%
+}
+
+\makeatother
+
+\usepackage[spanish]{babel}
+\addto\shorthandsspanish{\spanishdeactivate{~<>}}
+
+\begin{document}
+
+\frontmatter
+%\includepdf{cover} %caratula (Frontcover)
+
+\pagestyle{empty}
+\pagecolor{ptcbackground}
+%\pagecolor{white}
+ \vfill
+%\begin{multicols}{1}
+\onecolumn
+{\color{white}
+\bfseries \setlength\parindent{0pt}
+
+
+\begin{mdframed}[backgroundcolor=ptctitle,hidealllines=true]
+\parbox[t]{\dimexpr\textwidth-2\fboxsep\relax}{  \color{white}\bfseries\sffamily  \uppercase{Res\'umenes de la vig\'esima octava reuni\'on de matem\'atica educativa} }
+\end{mdframed}
+
+RELME - CLAME 28 Año 2014
+
+ISSN:\vfill
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily EDITORES:}
+
+JORGE LUIS RODRÍGUEZ CONTRERAS
+
+ALEJANDRO URIELES GUERRERO
+
+ALEJANDRO VILLAREAL DAZA
+
+\vfill
+
+ \begin{multicols}{2} 
+
+\begin{figure}[H]
+\centering\includegraphics[scale=0.3]{antorcha}
+\end{figure}
+ 
+\begin{figure}[H]
+\centering\includegraphics[scale=0.3]{uac}
+\end{figure}
+
+
+ \end{multicols} 
+
+\vfill
+
+ \begin{multicols}{2} 
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily Rectora Universidad Del Atlántico :}
+
+ANA SOFÍA MESA DE CUERVO
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily Rector Universidad Autónoma Del Caribe :}
+
+\uppercase{ Ramses Vargas Lamadrid}
+
+ \end{multicols} 
+
+\vfill
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily VICERECTOR ADMINISTRATIVO Y FINANCIERO:}
+
+FREDDY DÍAZ MENDOZA\vfill
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily VICERECTOR DE DOCENCIA:}
+
+REMBERTO DE LA HOZ REYES \vfill
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily VICERECTORA DE INVESTIGACIÓN, EXTENSIÓN Y PROYECCIÓN SOCIAL:}
+
+RAFAELA VOS OBESO \vfill
+
+\colorbox{ptctitle}{\color{white}\bfseries\sffamily DECANO FACULTAD DE CIENCIAS BÁSICAS :}
+
+LUIS CARLOS GUTIÉRREZ MORENO\vfill\vspace{3cm}
+
+\textsf{El material de esta publicación no puede ser reproducido sin
+la autorización de los autores y editores. La responsabilidad del
+contenido de este texto corresponde a sus autores.} \vfill
+
+\begin{center}
+\copyright UNIVERSIDAD DEL ATLÁNTICO BARRANQUILLA - COLOMBIA 2014 
+\par\end{center}
+
+\begin{center}
+\copyright UNIVERSIDAD AUTÓNOMA DEL CARIBE BARRANQUILLA - COLOMBIA
+2014
+\par\end{center}
+
+\begin{center}
+\vfill
+\end{document}

@@ -1,0 +1,75 @@
+\documentclass{book}
+\usepackage{subfiles}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage{fancyhdr} 
+\usepackage{chapterbib}              %Paquete para dar forma al encabezado y pie de p\'{a}gina
+\usepackage[spanish]{babel}
+%\usepackage[latin1,utfx8]{inputenc}
+\usepackage[utf8x,latin1]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    urlcolor=black
+}
+\usepackage[all]{xypic}
+\usepackage{amssymb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%title%%%%%%%%%%%%%%
+\makeatletter
+\def\maketitle{
+	\begin{titlepage}
+	\null\vfill
+	\begin{center}
+		{\LARGE \@title}
+		\vskip 1cm
+		{\Large \@author}
+		\vskip 1cm
+		{\texttt{\@email}}
+		\vskip 1cm
+		{\Large \@date}
+	\end{center}
+	\vfill\null
+	\end{titlepage}
+}
+\def\email#1{\def\@email{#1}}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}\fancyhf{}\fancyhead[C]{\textit{An\'alisis Funcional No-lineal}}     
+\fancyfoot[R]{\scriptsize \emph{\thepage}}\fancyfoot[L]{\scriptsize \emph{Universidad
+ del Atl\'antico Programa de Matem\'aticas.  Barranquilla, Colombia}}
+\renewcommand{\headrulewidth}{0.6pt} % Ancho de la l\'{\i}nea horizontal bajo el encabezado
+\renewcommand{\footrulewidth}{0.6pt} % Ancho de la l\'{\i}nea horizontal sobre el pie (que en
+%este ejemplo est\'{a} vac\'{\i}o)
+\setlength{\headheight}{1.5\headheight} % Aumenta la altura del encabezado en una vez y media
+\pagestyle{fancy}
+
+ \makeatletter
+\renewenvironment{thebibliography}[1]
+     {\section*{\bibname}% <-- this line was changed from \chapter* to \section*
+      \@mkboth{\MakeUppercase\bibname}{\MakeUppercase\bibname}%
+      \list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \@openbib@code
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\makeatother 
+\begin{document}
+\include{analisis.tex}
+%\include{rponce.tex}
+\end{document}

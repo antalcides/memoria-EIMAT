@@ -1,0 +1,49 @@
+\documentclass{book}
+\usepackage{appendix}
+\usepackage{etoc}
+\usepackage{titletoc}
+\usepackage{tocloft}
+\usepackage{graphics}
+\renewcommand\cftchapfont{\small\bfseries}
+\renewcommand\cftsecfont{\small}
+\renewcommand\cftsubsecfont{\small}
+\renewcommand{\cfttoctitlefont}{\hfill\Huge\sffamily}
+%\renewcommand\cftchappagefont{\LARGE\bfseries}
+\renewcommand\cftsecpagefont{\tiny}
+
+%\renewcommand\cftchapafterpnum{\par\addvspace{6pt}}
+\renewcommand\cftsecafterpnum{\par\addvspace{6pt}}
+
+\makeatletter
+    \etocsettocstyle
+    {\section *{\small\contentsname%
+% FOLLOWING TWO LINES OPTIONAL DEPENDING ON YOUR NEED
+%                \@mkboth {\MakeUppercase \contentsname}
+%                         {\MakeUppercase \contentsname}%
+    }}
+    {}%
+\def\etocstandarddisplaystyle{\etocarticlestyle}
+%\titlecontents{section}[2.5em]{\addvspace{5pt}\bfseries}{\fontsize{6}{7}\fontseries{bc}\sectocfont\contentslabel{1.25em}}{\hspace{2.5em}}{\hfill\contentspage}
+\makeatother
+\begin{document}
+\tableofcontents
+
+\chapter{\large My First Chapter}
+\localtableofcontents
+\section{  My First Section}
+\section{My Second Section}
+
+\begin{appendices}
+\chapter{My First Appendix}
+\section{My First sec Appendix}
+\localtableofcontents
+\subsection{My First Subsection}
+\subsection{My Second Subsection}
+\chapter{My Second Appendix}
+\section{My Second sec Appendix}
+\localtableofcontents
+\subsection{My First Subsection}
+\subsection{My Second Subsection}
+\end{appendices}
+
+\end{document}

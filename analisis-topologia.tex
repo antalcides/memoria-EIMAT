@@ -1,0 +1,2399 @@
+\chapter{An\'alisis y Topolog\'ia}
+\chaptertoc
+\thispagestyle{empty}
+\pagecolor{ptcbackground}
+\author{%
+\tema{An\'alisis}\\
+    Arturo Sanju\'an \\
+    Universidad Distrital Francisco Jos\'e De Caldas \\
+    \texttt{\footnotesize aasanjuanc@udistrital.edu.co}\vspace{40pt} \\
+%    Author 2 name \\
+%    Department name \\
+%    \texttt{email2@example.com}\\
+         }
+\pagecolor{white}\afterpage{\nopagecolor}
+\pagestyle{eimat}
+\renewcommand\thesection{A\,$\&$T\ \nplpadding{2}\numprint{\arabic{section}}}
+%%%%%%%%%%%%%%1
+\begin{titlepage}
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Bifurcaci\'on de Soluciones al Problema de la Cuerda Vibrante}}
+
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+Presentamos aplicaciones de la teor\'ia de Bifurcaciones como el Teorema de
+Krasonosel'skii-Rabinowitz \cite{Bro04} y otros \cite{Dem85} a la ecuaci\'on de onda semilineal.
+
+La bifurcaci\'on en infinito de la ecuaci\'on de onda no-lineal est\'a poco documentada y se presentar\'an
+algunos ejemplos al respecto.
+
+Esta ponencia est\'a enmarcada en la investigaci\'on doctoral del autor dirigida por los
+profesores Francisco Caicedo y Alfonso Castro.
+
+    \end{resumen}
+   \end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+\bibitem{Bro04} R.F. Brown. \newblock {\em {A Topological Introduction to Nonlinear Analysis}}.
+\newblock Birkh{\"a}user Boston, 2004.
+
+\bibitem{CaCaiDu11}
+J.~F. Caicedo, A.~Castro, and R.~Duque.
+\newblock {Existence of Solutions for a wave equation with non-monotone
+  nonlinearity}.
+\newblock {\em Milan J. Math}, 79(1):207--222, 2011.
+
+\bibitem{Dem85}
+K.~Deimling.
+\newblock {\em {Nonlinear functional analysis}}.
+\newblock Springer-Verlag, 1985.
+
+\bibitem{Rabi71}
+P. Rabinowitz.
+\newblock {Some global results for nonlinear eigenvalue problems}.
+\newblock {\em Journal of Functional Analysis}, 7(3):487--513, 1971.
+
+\end{thebibliography}
+
+\end{titlepage}
+%%%%%%%%%%%%%%2
+\pagestyle{eimat}
+\pagecolor{ptcbackground}
+
+\author{%
+\tema{An\'alisis}\\
+    Rodrigo Ponce \thanks{Research was supported by Fondecyt-Iniciaci\'on 11130619}\\
+    Universidad de Talca \\
+        \texttt{\footnotesize rponce@inst-mat.utalca.cl}\vspace{40pt} \\
+%    Author 2 name \\
+%    Department name \\
+%    \texttt{email2@example.com}\\
+         }
+\pagecolor{white}\afterpage{\nopagecolor}
+\pagestyle{eimat}
+\begin{titlepage}
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\large\bf\textcolor{white}{Bounded mild solutions to fractional integro-differential equations in Banach spaces}}
+
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+%\begin{minipage}{0.85\linewidth}
+%\footnotesize
+%\vspace{5pt}
+%    \begin{resumen}
+%\lipsum[3-4]
+%    \end{resumen}
+%    \hspace*{25pt}\palabras{one, two, three, four}
+%\end{minipage}
+%\vspace*{5pt}\\
+\footnotesize
+\begin{minipage}{0.85\linewidth}
+\vspace{5pt}
+    \begin{abstract} 
+  
+We study the
+existence and uniqueness of bounded solutions for a semilinear fractional
+differential equation. Sufficient conditions are established for the
+existence and uniqueness of an almost periodic, almost automorphic
+and asymptotically almost periodic solution, among other.\\
+In this  talk, we consider the following semilinear fractional differential equation with infinite delay
+\begin{equation}\label{eq1.1}
+\displaystyle D^\alpha u(t) = Au(t)+\int_{-\infty}^t a(t-s)Au(s)ds +f(t,u(t)), \qquad t\in\mathbb{R},
+\end{equation}
+where $A$  is a closed linear
+operator defined on a Banach space $X,$ $a\in L^1(\mathbb{R}_+)$ is a scalar-valued kernel, $f$ belongs to a closed
+subspace of the space of continuous and bounded functions, and for $\alpha>0,$ the fractional derivative is understood in the Weyl's sense.
+
+Under appropriate assumptions on $A$ and $f,$ we want to prove that (\ref{eq1.1}) has a unique {\it mild} solution $u$ which behaves in the same way that $f$. For example, we want to find conditions implying that $u$ is almost periodic (resp.
+automorphic) if $f(\cdot,x)$ is almost periodic (resp. almost
+automorphic). Existence of almost periodic or almost automorphic (among other) mild solutions to equations in the form of (\ref{eq1.1}) has been studied, for instance, in \cite{Cu-Li08,Di-09,Di-Ng-VMi-04} .
+
+Using some results in \cite{Li-Ng-09}, we study in \cite{Pon-13} the existence and uniqueness of mild solutions for (\ref{eq1.1}) where the input data $f$ belongs to some of above functions spaces. Concretely, we prove that if $f$ is for example almost periodic (resp. almost automorphic) and satisfies some Lipschitz type conditions, then there exists a unique mild solution $u$ of (\ref{eq1.1}) which is almost periodic (resp. almost automorphic) and is given by
+\begin{equation}\label{eq1.2}
+u(t)=\int_{-\infty}^t S_\alpha(t-s)f(s,u(s))ds, \quad t\in\mathbb{R},
+\end{equation}
+where $\{S_\alpha(t)\}_{t\geq 0}$ is the $\alpha$-{\it resolvent family} generated by $A$. It is remarkable that, in the scalar case, that is $A=-\rho I,$ with $\rho>0,$ some concrete examples of integrable $\alpha$-resolvent families are showed.
+
+    \end{abstract}\vspace{5pt}
+     \hspace*{25pt}%\keywords{one, two, three, four}
+    
+\end{minipage}
+\end{minipage}
+\vspace{5pt}
+\begin{thebibliography}{99}
+
+%\bibitem{tpp}
+%N1.~Apellido1, N2.~Apellido2:
+%{\em T\'itulo articulo}, nombre revista, n\'umero, p\'agina inicial--p\'agina final, a\~no.
+
+
+\bibitem{Cu-Li08} C. Cuevas, C. Lizama. {\it Almost Automorphic Solutions to a class of Semilinear Fractional Differential Equations,} Applied Math. Letters, {\bf 21}, (2008), 1315-1319.%8
+
+\bibitem{Di-09} T. Diagana. {\it Existence of solutions to some classes of partial fractional differential equations,} Nonlinear Anal. {\bf 71} (2009), 5269-5300.%13
+
+\bibitem{Di-Ng-VMi-04} T. Diagana, G. M. N'Gu\'er\'ekata, N. van Minh. {\it Almost automorphic solutions of evolution equations,} Proc. Amer. Math. Soc. {\bf 132} (11) (2004), 3289-3298.%14
+
+\bibitem{Li-Ng-09}  C. Lizama, G. M. N'Gu\'er\'ekata. {\it Bounded mild solutions for semilinear integro-differential equations in Banach spaces,} Integral Equations and Operator Theory, {\bf 68} (2) (2010), 207-227.
+
+\bibitem{Pon-13} R. Ponce, {\it Bounded mild solutions to fractional integro-differential equations in Banach spaces,} Semigroup Forum, 87, (2013), 377-392, DOI 10.1007/s00233-013-9474-y.
+
+\end{thebibliography}
+
+\end{titlepage}
+%\restoregeometry
+%%%%%%%%%%%%%%%%3
+\pagestyle{eimat}
+\pagecolor{ptcbackground}
+
+\author{%
+\tema{An\'alisis}\\
+    Rodrigo Ponce \gracias{Suppor\-ted by Fondecyt-Iniciaci\'on 11130619}\\
+    Universidad de Talca \\
+        \texttt{\footnotesize rponce@inst-mat.utalca.cl}\vspace{40pt} \\
+%    Author 2 name \\
+%    Department name \\
+%    \texttt{email2@example.com}\\
+         }
+\pagecolor{white}\afterpage{\nopagecolor}
+\pagestyle{eimat}
+\begin{titlepage}
+%\pagecolor{yellow}\afterpage{\nopagecolor}
+%\pagestyle{plain}
+
+
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+
+\section{\large\bf\textcolor{white}{T\'opicos de An\'alisis Funcional: Una introducci\'on a la teor\'ia de $C_0$-semigrupos}}
+
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{-3pt}
+%
+\begin{minipage}{0.02\linewidth}
+   \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+El concepto de semigrupo de operadores lineales acotados tiene su ra\'iz en la simple observaci\'on de que la ecuaci\'on funcional de Cauchy $\phi(t+s)=\phi(t)\phi(s)$ tiene una soluci\'on continua no trivial s\'olo para funciones de la forma $e^{at},$ para alg\'un $a\in\mathbb{R}.$ De hecho, el propio A. Cauchy en 1821 preguntaba en su {\em Cours d'Analyse,} (sin ninguna motivaci\'on adicional), lo siguiente
+
+{\em
+\begin{center}
+D\'eterminer la fonction $\phi(x)$ de manière qu'elle reste continue entre deux
+limites r\'eelles quelconques de la variable $x,$ et que l'on ait pour toutes
+les valeurs r\'eelles des variables $x$ et $y$ $$\phi(x + y) = \phi(x)\phi(y).$$
+\end{center}
+}
+
+
+
+Observe que si $\phi(0)\neq 0$ satisface esta ecuaci\'on, entonces $\phi(0)=1.$ Usando notaci\'on {\em moderna}, el problema puede ser planteado en la siguiente forma:
+
+{\em Problema.} Encuentre todas las funciones $T:\mathbb{R}_+\to \mathbb{C}$ que satisfacen la ecuaci\'on funcional
+\begin{equation}\label{eq2-1}
+T(t+s)=T(t)T(s), \quad T(0)=1, \quad s,t>0.
+\end{equation}
+Observe que las funciones exponenciales $t\mapsto e^{at}$ satisfacen la ecuaci\'on para todo $a\in\mathbb{C}.$
+El siguiente resultado da la respuesta al Problema planteado por A. Cauchy.
+
+\begin{thm}
+Sea $T(\cdot):\mathbb{R}_+\to \mathbb{C}$ una funci\'on continua satisfaciendo
+(\ref{eq2-1}). Entonces existe un \'unico $a\in \mathbb{C}$ tal que $$T(t)=e^{at}, \mbox{ para todo } t\geq 0.$$
+\end{thm}
+
+Una de las primeras generalizaciones de este problema fue estudiada por G. Peano \cite{Pe-1888}, quien defini\'o la funci\'on exponencial de una matriz $A$ por $e^{At}:=\sum_{k=0}^\infty \frac{t^n}{n!}A^n,$ con el objetivo de resolver expl\'icitamente la ecuaci\'on de primer orden $u'=Au+f$ por medio de la f\'ormula de variaci\'on de constantes
+$$u(t)=e^{tA}u(0)+\int_0^t e^{(t-s)A}f(s)ds.$$
+Para sistemas infinito-dimensionales, los primeros pasos fueron dados por una de las estudiantes de Peano, Mar\'ia Gramegna \cite{Gr-1910}.
+
+Tomando ventaja de las poderosas herramientas del An\'alisis Funcional, se obtuvieron resultados que permitieron estudiar el llamado {\em problema de Cauchy Abstracto,} por medio de la {\em teor\'ia de Semigrupos de operadores lineales}, que emergi\'o entre 1930-1960 junto con las contribuciones de Stone, Hille, Yosida, Feller, Lumer, Miyadera, Phillips, entre otros.
+
+
+
+
+
+    \end{resumen}
+    \hspace*{25pt}%\palabras{one, two, three, four}
+\end{minipage}
+\vspace*{5pt}\\
+\footnotesize
+%\begin{minipage}{0.85\linewidth}
+%\vspace{5pt}
+%    \begin{abstract} 
+%  
+%We study the
+%existence and uniqueness of bounded solutions for a semilinear fractional
+%differential equation. Sufficient conditions are established for the
+%existence and uniqueness of an almost periodic, almost automorphic
+%and asymptotically almost periodic solution, among other.\\
+%In this  talk, we consider the following semilinear fractional differential equation with infinite delay
+%\begin{equation}\label{eq1.1}
+%\displaystyle D^\alpha u(t) = Au(t)+\int_{-\infty}^t a(t-s)Au(s)ds +f(t,u(t)), \qquad t\in\mathbb{R},
+%\end{equation}
+%where $A$  is a closed linear
+%operator defined on a Banach space $X,$ $a\in L^1(\mathbb{R}_+)$ is a scalar-valued kernel, $f$ belongs to a closed
+%subspace of the space of continuous and bounded functions, and for $\alpha>0,$ the fractional derivative is understood in the Weyl's sense.
+%
+%Under appropriate assumptions on $A$ and $f,$ we want to prove that (\ref{eq1.1}) has a unique {\it mild} solution $u$ which behaves in the same way that $f$. For example, we want to find conditions implying that $u$ is almost periodic (resp.
+%automorphic) if $f(\cdot,x)$ is almost periodic (resp. almost
+%automorphic). Existence of almost periodic or almost automorphic (among other) mild solutions to equations in the form of (\ref{eq1.1}) has been studied, for instance, in \cite{Cu-Li08,Di-09,Di-Ng-VMi-04} .
+%
+%Using some results in \cite{Li-Ng-09}, we study in \cite{Pon-13} the existence and uniqueness of mild solutions for (\ref{eq1.1}) where the input data $f$ belongs to some of above functions spaces. Concretely, we prove that if $f$ is for example almost periodic (resp. almost automorphic) and satisfies some Lipschitz type conditions, then there exists a unique mild solution $u$ of (\ref{eq1.1}) which is almost periodic (resp. almost automorphic) and is given by
+%\begin{equation}\label{eq1.2}
+%u(t)=\int_{-\infty}^t S_\alpha(t-s)f(s,u(s))ds, \quad t\in\mathbb{R},
+%\end{equation}
+%where $\{S_\alpha(t)\}_{t\geq 0}$ is the $\alpha$-{\it resolvent family} generated by $A$. It is remarkable that, in the scalar case, that is $A=-\rho I,$ with $\rho>0,$ some concrete examples of integrable $\alpha$-resolvent families are showed.
+%
+%    \end{abstract}\vspace{5pt}
+%     \hspace*{25pt}\keywords{one, two, three, four}
+%    
+%\end{minipage}
+\end{minipage}\vspace{10pt}
+\begin{minipage}{0.5\linewidth}
+\phantom{\texttt{\footnotesize rponce@inst-mat.utalca.cl}}
+\end{minipage}\hspace{-3pt}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+{\centering\bf\large El problema de Cauchy Abstracto}\\
+
+Muchos modelos matem\'aticos en f\'isica, ingenier\'ia, biolog\'ia, din\'amica de poblaciones, etc., pueden ser estudiados por medio del {\em problema de Cauchy}
+$$u'(t)=Au(t)+f(t), \quad t \in [0, T), T\leq \infty, u(0) = x,$$
+donde $A$ es un operator lineal en un espacio de Banach $X,$ $f$ es una funci\'on $X$-valuada que representa la influencia de un medio, y $x$ representa la medici\'on inicial del modelo.
+
+Como ejemplo, tomemos el {\em problema del Calor}: Sea $\Omega=(0,\pi)$ y consideremos 
+\begin{eqnarray*}
+\frac{\partial u(x,t)}{\partial t}&=&\frac{\partial^2 u(x,t)}{\partial t^2}, \quad t\geq 0, x\in \Omega
+\end{eqnarray*}
+sujeto a las condiciones $u(0,t)=u(\pi,t), t\geq 0$ y $u(x,0)=u^0(x), x\in \Omega.$ Defina el operador $A=\frac{d^2}{dx^2}$ en $X:=L^2(\Omega)$ con dominio $D(A)=H^2(\Omega)\cap H^1_0(\Omega)$ donde $H^1_0(\Omega)$ y $H^2(\Omega)$ son definidos respectivamente por
+$$H^1_0(\Omega)=\left\{u\in X: \frac{d u}{dx}\in X,\, u(0,t)=u(\pi,t)=0\right\}, \quad H^2(\Omega)=\left\{u\in X: \frac{d^2 u}{dx^2}\in X\right\}.$$
+Con esto, el problema anterior puede escribirse en la forma abstracta
+\begin{equation}\label{eq0-1}
+u'(t)=Au(t), t\geq 0, u(0)=u^0.
+\end{equation}
+
+Se puede mostrar que el espectro del operador $A$ coincide con sus valores propios y que $\sigma(A)=\{\lambda_k:=-k^2 : k\in \mathbb{N}\}.$ Usando el m\'etodo de separaci\'on de variables, y reemplazando en la ecuaci\'on, se obtiene que
+$$u(x,t)=\sum_{k=1}^\infty a_ke^{-k^2t}\sin kx, \quad t\geq 0, x\in\Omega, \quad \mbox{ donde } \quad a_k=\frac{2}{\pi}\int_0^\pi u^0(x)\sin kx dx.$$
+
+
+Para cada $t\geq 0,$ defina el operador lineal $U$ en $X$ por $U(t)v:=\sum_{k=1}^\infty e^{\lambda_k t}v_ke_k,$ 
+donde $v_k=\langle v, e_k\rangle=\frac{2}{\pi}\int_0^\pi v(x)e_k(x) dx, e_k(x):=\sin k x, v\in L^2(\Omega).$
+Observe que $U(0)v=v$ para todo $v\in L^2(\Omega)$ y que un c\'alculo sencillo muestra que $U(t+s)v=U(t)U(s)v$ para todo $s,t\geq 0$ y $v\in L^2(\Omega).$ Definiendo $u(t):=U(t)u^0, t\geq 0, u^0\in X,$ se tiene que $u'(t)=Au(t)$ para todo $t\geq 0.$ Por lo tanto, si $u^0\in D(A),$ entonces la funci\'on $u(\cdot)=U(\cdot)u^0$ es una soluci\'on (cl\'asica) del problema del calor.
+
+
+
+El objetivo del cursillo, de car\'acter (muy) introductorio, es presentar los conceptos b\'asicos de semigrupos de operadores lineales en espacios de Banach, mostrar algunas de sus propiedades y su relaci\'on con ecuaciones diferenciales.  El cursillo tendr\'a unas notas, las que est\'an basadas en los libros \cite{Ar-Ba-Hi-Ne-11}, \cite{En-Na-00}, \cite{Pa-83}, donde el lector puede encontrar los detalles.
+\end{minipage}
+
+\vspace{10pt}
+%\bibitem{tpp}
+%N1.~Apellido1, N2.~Apellido2:
+%{\em T\'itulo articulo}, nombre revista, n\'umero, p\'agina inicial--p\'agina final, a\~no.
+
+
+\begin{thebibliography}{99}
+\bibitem{Ar-Ba-Hi-Ne-11} W. Arendt, C. Batty, M. Hieber, F. Neubrander, {\em Vector-Valued Laplace transforms and Cauchy problems.} Monogr. Math., vol. \textbf{ 96}, Birkh\"auser, Basel, 2011.
+
+\bibitem{En-Na-00} K. Engel, R. Nagel, {\em One-parameter semigroups for linear evolution equations.} Grad. Texts in Math., vol. {\bf 194}, 2000.
+
+\bibitem{Gr-1910} M. Gramegna, {\em Serie di equazioni differenziali lineari ed equazioni integro-differenziali}, Atti Reale Acc. Sci. Torino, 1910.
+
+\bibitem{Pa-83} A. Pazy, {\em Semigroups of linear operators and applications to partial differential equations.} Appl. Math. Sciences., vol. {\bf 44}, Springer-Verlag, 1983.
+    
+\bibitem{Pe-1888} G. Peano, {\em  Int\'egration par s\'eries des \'equations diff\'erentielles lin\'eaires}, Math. Ann, 32, 3, 450-456, 1888.
+    
+\end{thebibliography}
+\end{titlepage}
+%\restoregeometry
+%%%%%%%%%%%%%%4
+\begin{titlepage}
+\author{%
+\tema{An\'alisis Funcional}\\
+    Escobar German\\
+    Universidad Surcolombiana \\
+    \texttt{\footnotesize gerfaes@gmail.com}\vspace{20pt} \\
+    Esmeral Kevin \\
+   CINVESTAV-IPN M\'exico\\
+   \texttt{\footnotesize kmesmeral@math.cinvestav.mx }\vspace{20pt} \\
+   Ferrer Osmin\\
+    Universidad Surcolombiana\\
+    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newcommand{\RE}{\mathrm{Re}}
+ \newcommand{\IM}{\mathrm{Im}}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathfrak{H}}
+\newcommand{\Ho}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathrm{A}}
+ \newcommand{\conv}{\xymatrix {*+<0.025cm>^[o][F-]{\star}}}
+% \newcommand{\C}{\mathcal{C}}
+ \newcommand{\K}{\mathcal{K}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\V}{\mathcal{V}}
+  \newcommand{\B}{\mathcal{B}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\E}{\mathbf{E}}
+ \newcommand{\W}{\mathcal{W}}
+ %\newcommand{\G}{\mathcal{G}}
+ \newcommand{\I}{\mathcal{I}}
+ \newcommand{\N}{\mathbb{N}}
+\newcommand{\arctanh}{\textrm{arctanh}}
+\newcommand{\arcsinh}{\textrm{arcsinh}}
+\newcommand{\arccosh}{\textrm{arccosh}}
+\newcommand{\sech}{\textrm{sech}}
+ \newcommand{\je}{J_{\ell_{2}}}
+ \newcommand{\WIA} {\widetilde{a}}
+ \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Disk}{\mathbb{D}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BBd}{\mathcal{B}\left(\Bergman\left(\Disk\right)\right)}
+  \newcommand{\BBp}{\mathcal{B}\left(\Bergman\left(\Pi\right)\right)}
+ \newcommand{\BH}{\mathcal{B}(\mathfrak{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathfrak{H})}
+ \renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Rang}{\operatorname{Rang}}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Entero}{\mathbb{Z}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+\newcommand{\F}{\operatorname{F}}
+% \newcommand{\Rang}{\mathrm{Rang}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lpi}{L_{\infty}(0,\pi)}
+ \newcommand{\Ele}{L_{2}}
+ \newcommand{\Bergman}{\mathcal{A}^{2}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Masas y mezclas de los neutrinos en extensiones  del modelo est\'andar}}
+
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+El descubrimiento de las oscilaciones de los neutrinos  , y en consecuencia, sus masas no nulas y mezclas,  implican F\'{\i}sica m\'as all\'a del modelo est\'andar \cite{GS} . 
+ 
+El decaimiento doble beta sin neutrinos \cite{RD}, si es observado, podr\'{\i}a indicar violaci\'on del numero lept\'onico y la determinaci\'on acerca de que los neutrinos ser\'{\i}an part\'{\i}culas de Majorana  \cite{SV}, tambi\'en podr\'{\i}an dilucidarse otros aspectos relacionados  con estas enigm\'aticas part\'{\i}culas.
+
+Por otra parte, los resultados de datos cosmol\'ogicos han colocado un l\'{\i}mite a la masa de los neutrinos ligeros  en un valor de 0.23 eV  con un nivel de confidencia del 95\% \cite{AA}, lo cual excluye la regi\'on cuasi-degenerada del espectro de masas de los neutrinos ligeros. Esto tiene importantes consecuencias para la interpretaci\'on del decaimiento doble beta sin neutrinos por la v\'{\i}a del intercambio de neutrinos ligeros \cite{FM}.
+
+En el \'ultimo a\~no se ha presentado una intensa b\'usqueda de modelos de masas y mezclas  de los neutrinos, debido especialmente a la reciente medici\'on de un  \'angulo de mezcla lept\'onico  $\theta_{13}$ \cite{AB}, DoobleCHOOZ \cite{AC}, DayaBay \cite{AH} y RENO \cite{AD}, reportando un valor de  $8.8^o ± 1.0^o$.
+
+Esta medici\'on bastante aproximada tiene dram\'aticas consecuencias en la construcci\'on de modelos. De un conjunto grande de los modelos propuestos una gran parte de ellos est\'an excluidos y s\'olo queda una peque\~na parte que puede dar cuenta de los resultados experimentales encontrados. 
+
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+\bibitem {AA}  P. A. R. Ade et al. [Planck Collaboration], arXiv:1303.5076 [astro-ph.CO].
+
+\bibitem {AB} P. A. R. Ade et al. [Planck Collaboration], arXiv:1303.5076 [astro-ph.CO]; T2K Collaboration, K. Abe et. al., Phys. Rev. Lett. 107 (2011) 041801, arXiv:1106.2822;
+arXiv:1106.2822; MINOS Collaboration, P. Adamson et. al., Phys. Rev. Lett. 107 (2011) 181802, arXiv:1108.0015.
+
+\bibitem {AC} DOUBLE-CHOOZ Collaboration, Y. Abe et. al., arXiv:1207.6632.
+
+\bibitem {AD}DAYA-BAY Collaboration, F. P. An et. al., arXiv:1203.1669.
+
+\bibitem {AH} RENO Collaboration, J. K. Ahn et. al., arXiv:1204.0626.
+
+\bibitem {FM}  G. L. Fogli et al., Phys. Rev. D 78, 033010 (2008); M. Mitra, G. Senjanovic and F. Vissani, arXiv:1205.3867 [hep-ph].
+
+\bibitem {GS}  S. L. Glasgow, Nucl. Phys. 22, 579 (1961); A. Salam and J. C. Ward, Phys. Lett. 13,     168 (1964); S. Weinberg, Phys. Rev. Lett. 19, 1264 (1967); S. Weinberg, The quantum theory of fields, Vol 2. Cambridge University Press (1995); I.J.R Aitchison and A.J.G Hey, Gauge Theories in particle physics. Third Edition, Taylor $\&$ Francis Group (2003).
+
+\bibitem {RD} W. Rodejohann, Int. J. Mod. Phys. E 20, 1833 (2011); F. F. Deppisch, M. Hirsch and H. Pas, J. Phys. G 39, 124007 (2012); J. D. Vergados, H. Ejiri and F. Simkovic, Rept. Prog. Phys. 75, 106301 (2012); B. Schwingenheuer, Ann. Phys. 525, 269 (2013).
+
+
+\bibitem {RD} W. Rodejohann, Int. J. Mod. Phys. E 20, 1833 (2011); F. F. Deppisch, M. Hirsch and H. Pas, J. Phys. G 39, 124007 (2012); J. D. Vergados, H. Ejiri and F. Simkovic, Rept. Prog. Phys. 75, 106301 (2012); B. Schwingenheuer, Ann. Phys. 525, 269 (2013).
+
+\bibitem {SV}  J. Schechter and J. W. F. Valle, Phys. Rev. D 25, 2951 (1982).
+
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%5
+\begin{titlepage}
+\author{%
+\tema{An\'alisis Funcional}\\
+    Gonz\'alez Hernando\\
+    Universidad Surcolombiana \\
+    \texttt{\footnotesize hergosi@usco.edu.co}\vspace{20pt} \\
+    Segovia Francis \\
+   Universidad Surcolombiana \\
+   \texttt{\footnotesize osmin.ferrer@usco.edu.co }\vspace{20pt} \\
+   Ferrer Osmin\\
+    Universidad Surcolombiana\\
+    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newcommand{\RE}{\mathrm{Re}}
+ \newcommand{\IM}{\mathrm{Im}}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathfrak{H}}
+\newcommand{\Ho}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathrm{A}}
+ \newcommand{\conv}{\xymatrix {*+<0.025cm>^[o][F-]{\star}}}
+% \newcommand{\C}{\mathcal{C}}
+ \newcommand{\K}{\mathcal{K}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\V}{\mathcal{V}}
+  \newcommand{\B}{\mathcal{B}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\E}{\mathbf{E}}
+ \newcommand{\W}{\mathcal{W}}
+ %\newcommand{\G}{\mathcal{G}}
+ \newcommand{\I}{\mathcal{I}}
+ \newcommand{\N}{\mathbb{N}}
+\newcommand{\arctanh}{\textrm{arctanh}}
+\newcommand{\arcsinh}{\textrm{arcsinh}}
+\newcommand{\arccosh}{\textrm{arccosh}}
+\newcommand{\sech}{\textrm{sech}}
+ \newcommand{\je}{J_{\ell_{2}}}
+ \newcommand{\WIA} {\widetilde{a}}
+ \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Disk}{\mathbb{D}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BBd}{\mathcal{B}\left(\Bergman\left(\Disk\right)\right)}
+  \newcommand{\BBp}{\mathcal{B}\left(\Bergman\left(\Pi\right)\right)}
+ \newcommand{\BH}{\mathcal{B}(\mathfrak{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathfrak{H})}
+ \renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Rang}{\operatorname{Rang}}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Entero}{\mathbb{Z}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+\newcommand{\F}{\operatorname{F}}
+% \newcommand{\Rang}{\mathrm{Rang}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lpi}{L_{\infty}(0,\pi)}
+ \newcommand{\Ele}{L_{2}}
+ \newcommand{\Bergman}{\mathcal{A}^{2}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Construcci\'on, Extensi\'on y Acoplamiento de Frames en Espacios de Pontryagin finito-dimensionales}}
+
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}La teor\'ia de frames en espacios de Hilbert desde su aparici\'on en \cite{DS} ha sido r\'apidamente desarrollada \cite{Casazza,CasazzaLeon, Dau,Deguang,G,RNG} , a diferencia de la teor\'ia de frames en espacios de Krein que recientemente est\'a dando sus primeros pasos, \cite{POK,KEFER,GMMM,GMMMa,PW}. En \cite{KEFER}, una familia $\{k_{n}\}_{n\in\N}$ es un frame para el espacio de Krein $\mathcal{K}$ si existen constantes $A,B>0$ tales que
+\begin{equation*}
+  A\|k\|_{J}^{2}\leq\sum_{n\in\N}|[k,k_{n}]|^{2}\leq\,B\|k\|_{J}^{2},\quad\forall k\in\mathcal{K},
+\end{equation*}
+independientemente en \cite{GMMM} y \cite{PW} se proponen definiciones alternativas. La idea fundamental  es aprovechar la versatilidad y la flexibilidad de los frames. En \cite{CasazzaLeon} y \cite{Deguang} encontramos m\'etodos para construir y extender frames en espacios de Hilbert de dimensi\'on finita. Basado en \cite{KEFER}, el prop\'osito principal de esta charla es mostrar que tales resultados tambi\'en se tienen para espacios de Krein de dimensi\'on finita, que son llamados espacios de Pontryagin.  Adem\'as,  se prueba que si $\{k_{n}\}_{n=1}^{m}$ y $\{x_{n}\}_{n=1}^{k}$ son frames para los espacios de Krein $\K$ y $\h$ respectivamente, entonces es posible acoplar estas familias. Donde el sentido de acoplar es encontrar un espacio de Krein $\Re$ con $\K,\h\subset\Re$ y un frame  $\{y_{n}\}_{n\in\N}$  tal que $\{k_{n}\}_{n=1}^{m},\{x_{n}\}_{n=1}^{k}\subset \{y_{n}\}_{n=1}^{N}$.
+
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+\bibitem{POK}Acosta-Hum\'anez, P., Esmeral, K., Ferrer O. \textit{Frames of subspaces in Hilbert spaces with $W$-metrics}, Analele Stiintifice ale Universitatii Ovidius Constanta, Accepted.
+
+\bibitem{A-A} Adamjan, V.M., Arov, D.Z. \textit{On unitary couplings of semiunitary operators}. Am. Math. Soc., Translat., II. Ser. 95,
+75-129 (1970), translation from Mat. Issled. 1, No.2, 3-64 (1966).
+
+
+\bibitem{Azizov} T. Ya.~Azizov and I.~S. Iokhvidov, \textit{Linear operator in spaces with an indefinite metric}, Wiley-Interscience, Chichester, 1989.
+
+\bibitem{Bognar}J. Bogn\'ar, \textit{Indefinite inner product spaces}, Springer Verlag, Berlin-Heidelberg, 1974.
+\bibitem{Casazza}  Casazza, Peter G., \textit{The art of frame theory}, Taiwanese J. Math. \textbf{4} (2000), no. 2, 129-201.
+\bibitem{CasazzaLeon} Casazza, Peter G. and Leon Manuel T., \textit{Existence and Construction of Finite Frames with a Given Frame Operator},  Int. J. Pure Appl. Math, Vol 63, \textbf{ 2}, (2010), 149-157.
+\bibitem{Christensen} O. Christensen, \textit{An introduction to frames and Riesz bases}, Applied and Numerical Harmonic
+Analysis, Birkh¨auser, Boston, 2003.
+
+\bibitem{Conway} Conway, J., \textit{A Course in Operator Theory, }American Mathemathical Society, Providence, Rhode Island, 2000. Cited in pages:
+
+\bibitem{Dau}I. Daubechies, \textit{The wavelet transform, time-frequency localization and signal analysis}, IEEE Trans. Inform. Theory \textbf{36} (1990), 961--1005.
+
+\bibitem{DGM} I. Daubechies, A. Grossmann and Y. Meyer, \textit{Painless nonorthogonal expansions}, J. Math. Phys. \textbf{27} (1986), 1271--1283.
+
+
+
+\bibitem{Deguang}Deguang Han, Kornelson Keri, Larson David and Weber Eric, \textit{Frames For Undergraduates}, American Mathematical Society, Providence, Rhode Island, vol. 40, 2007.
+
+
+\bibitem{DS} R. J. Duffin and A. C. Schaeffer,\textit{A class of nonharmonic Fourier series}, Trans. Amer. Math. Soc. \textbf{72} (1952), 341--366.
+
+\bibitem{KEFER} K. Esmeral O.Ferrer and E. Wagner, \textit{Frames in Krein spaces Arising from a Non-regular $W$-metric}, Banach Journal In Mathematical Analysis.
+
+\bibitem{G} P.  G\u{a}vru\c{t}a, \textit{On the duality of fusion frames}. J. Math. Anal. Appl., 333 (2007), 871--879.
+
+\bibitem{GMMM}  J. I. Giribet, A. Maestripieri, F. Mart\'inez Per\'ia and P. Massey, \textit{On frames for Krein spaces}, J. Math. Anal. Appl. \textbf{393} (2012), 122--137.
+
+\bibitem{GMMMa}J. I. Giribet, A. Maestripieri, F. Mart\'inez Per\'ia and P. Massey, \textit{On a family of frames for Krein spaces},
+	 arXiv:1112.1632v1.
+
+\bibitem{PW}I. Peng and S. Waldron, \textit{Signed frames and Hadamard products of Gram matrices}, Linear Algebra Appl. \textbf{347} (2002), 131--157.
+
+%\bibitem{M-A}M. A. Dritschel and J. Rovnyak, \textit{Operators on indefinite inner product spaces}, Fields Institute
+%Monographs no. 3, Amer. Math. Soc. Edited by Peter Lancaster 1996, \textbf{3}, 141232.
+
+\bibitem{RNG}A Rahimi, A Najati, YN Dehghan, \textit{Continuous frames in Hilbert spaces}, Methods Funct. Anal. Topology, 2006.
+
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%6
+\begin{titlepage}
+\author{%
+\tema{Topolog\'ia}\\
+    Ennis R. Rosas R\\
+    Universidad de Oriente. Departamento de Matem\'{a}ticas. Venezuela\\
+    \texttt{\footnotesize ennisrafael@gmail}\vspace{20pt} \\
+%    Segovia Francis \\
+%   Universidad Surcolombiana \\
+%   \texttt{\footnotesize osmin.ferrer@usco.edu.co }\vspace{20pt} \\
+%   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newcommand{\RE}{\mathrm{Re}}
+ \newcommand{\IM}{\mathrm{Im}}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathfrak{H}}
+\newcommand{\Ho}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathrm{A}}
+ \newcommand{\conv}{\xymatrix {*+<0.025cm>^[o][F-]{\star}}}
+% \newcommand{\C}{\mathcal{C}}
+ \newcommand{\K}{\mathcal{K}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\V}{\mathcal{V}}
+  \newcommand{\B}{\mathcal{B}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\E}{\mathbf{E}}
+ \newcommand{\W}{\mathcal{W}}
+ %\newcommand{\G}{\mathcal{G}}
+ \newcommand{\I}{\mathcal{I}}
+ \newcommand{\N}{\mathbb{N}}
+\newcommand{\arctanh}{\textrm{arctanh}}
+\newcommand{\arcsinh}{\textrm{arcsinh}}
+\newcommand{\arccosh}{\textrm{arccosh}}
+\newcommand{\sech}{\textrm{sech}}
+ \newcommand{\je}{J_{\ell_{2}}}
+ \newcommand{\WIA} {\widetilde{a}}
+ \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Disk}{\mathbb{D}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BBd}{\mathcal{B}\left(\Bergman\left(\Disk\right)\right)}
+  \newcommand{\BBp}{\mathcal{B}\left(\Bergman\left(\Pi\right)\right)}
+ \newcommand{\BH}{\mathcal{B}(\mathfrak{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathfrak{H})}
+ \renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Rang}{\operatorname{Rang}}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Entero}{\mathbb{Z}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+\newcommand{\F}{\operatorname{F}}
+% \newcommand{\Rang}{\mathrm{Rang}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lpi}{L_{\infty}(0,\pi)}
+ \newcommand{\Ele}{L_{2}}
+ \newcommand{\Bergman}{\mathcal{A}^{2}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{ Conjuntos Semi abiertos y d\'ebilmente semi abiertos con respecto a un ideal}}
+
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}
+    
+En la mente de muchos matem\'{a}ticos se ha planteado el siguiente problema. Dado un espacio topol\'{o}gico $(X,\tau)$ y un subconjunto $A\subseteq X$, que condiciones han de tenerse para que el subconjunto $A$ satisfaga una cierta condici\'{o}n si y s\'{o}lo si la clausura de $A$ satisfaga esa misma condici\'{o}n (\cite{SJNR}, \cite{NL1} y \cite{MA}). Si consideramos la noci\'{o}n de semiabierto, es f\'{a}cil ver que si $A$ es un conjunto semi abierto entonces su clausura es semiabierto. Pero, si consideramos la noci\'{o}n de compacidad, observamos que la clausura de un conjunto $A$ puede ser compacto, mientras que el conjunto $A$ puede no serlo. En \cite{FRM}, usando la noci\'{o}n de ideales topol\'{o}gicos se da una soluci\'{o}n parcial a este problema. Pero, al analizarla resultan que existen muchos problemas de fondo en la prueba. En esta ponencia, se definen los conjuntos d\'{e}bilmente semi abiertos con respecto a un ideal, los cuales contienen a los conjuntos semi abiertos con respecto a un ideal introducidos en \cite{FRM}, excepto posiblemente a los elementos del ideal. Adem\'{a}s, se muestra que si $X$ es un espacio topol\'{o}gico, $I\neq\emptyset$ es un ideal en $X$ y la colecci\'{o}n de subconjuntos abiertos satisface la propiedad de intersecci\'{o}n finita, entonces $cl(A)$ es d\'{e}bilmente semi abierto con respecto a $I$ si y s\'{o}lo si $A$ es d\'{e}bilmente semi abierto con respecto a $I$.
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+\bibitem{FRM} {\sc Friday, M. K.} (2013) ``On semi open sets with respect to an ideal''. \emph{European Journal of Pure and Applied Mathemetics} 6(1), 53-58.
+\bibitem{SJNR} {\sc Jafari, S and Rajesh, N.} (2011) ``Generalized closed sets with respect to and ideal''. \emph{European Journal of Pure and Applied Mathemetics} 4(2), 147-151.
+\bibitem{NL1} {\sc Levine, N. }(1963)``Semi open sets and semi continuity in topological spaces''. \emph{American Mathematical Monthly} 70, 36-41.
+\bibitem{MA} {\sc Maki, H. Chandrasekhara, R and Nagoor, A.} (1999) ``On generalizing semi-open sets and preopen sets''. \emph{Pure Appl. Math. Math. Sci} 49, 17-29.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%7%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{Topolog\'ia}\\
+    Ennis R. Rosas R\\
+    Universidad de Oriente. Departamento de Matem\'{a}ticas. Venezuela\\
+    \texttt{\footnotesize ennisrafael@gmail}\vspace{20pt} \\
+%    Segovia Francis \\
+%   Universidad Surcolombiana \\
+%   \texttt{\footnotesize osmin.ferrer@usco.edu.co }\vspace{20pt} \\
+%   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newcommand{\RE}{\mathrm{Re}}
+ \newcommand{\IM}{\mathrm{Im}}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathfrak{H}}
+\newcommand{\Ho}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathrm{A}}
+ \newcommand{\conv}{\xymatrix {*+<0.025cm>^[o][F-]{\star}}}
+% \newcommand{\C}{\mathcal{C}}
+ \newcommand{\K}{\mathcal{K}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\V}{\mathcal{V}}
+  \newcommand{\B}{\mathcal{B}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\E}{\mathbf{E}}
+ \newcommand{\W}{\mathcal{W}}
+ %\newcommand{\G}{\mathcal{G}}
+ \newcommand{\I}{\mathcal{I}}
+ \newcommand{\N}{\mathbb{N}}
+\newcommand{\arctanh}{\textrm{arctanh}}
+\newcommand{\arcsinh}{\textrm{arcsinh}}
+\newcommand{\arccosh}{\textrm{arccosh}}
+\newcommand{\sech}{\textrm{sech}}
+ \newcommand{\je}{J_{\ell_{2}}}
+ \newcommand{\WIA} {\widetilde{a}}
+ \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Disk}{\mathbb{D}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BBd}{\mathcal{B}\left(\Bergman\left(\Disk\right)\right)}
+  \newcommand{\BBp}{\mathcal{B}\left(\Bergman\left(\Pi\right)\right)}
+ \newcommand{\BH}{\mathcal{B}(\mathfrak{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathfrak{H})}
+ \renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Rang}{\operatorname{Rang}}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Entero}{\mathbb{Z}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+\newcommand{\F}{\operatorname{F}}
+% \newcommand{\Rang}{\mathrm{Rang}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lpi}{L_{\infty}(0,\pi)}
+ \newcommand{\Ele}{L_{2}}
+ \newcommand{\Bergman}{\mathcal{A}^{2}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Funci\'{o}n local y funci\'{o}n local clausura en un espacio topol\'{o}gico dotado con un ideal}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen} 
+Sea $(X,\tau)$ un espacio topol\'{o}gico. Un ideal $I$ sobre $(X,\tau)$ es una colecci\'{o}n no vac\'{\i}a de subconjuntos de $X$, que satisface las siguientes propiedades: (1) Si $A\in I$ y $B\subseteq A$, entonces $B\in I$ y (2) Si $A,B$ son elementos de $I$, entonces $A\cup B\in I$. Denotemos por $\tau_x$, $x\in X$, la colecci\'{o}n de todos los conjuntos $\tau$-abiertos que contienen al punto $x$. Para $A\subset X$, $A^{*}=\{x\in X: A\cap U\notin I,\mbox{ para todo } U\in \tau_{x}\}$,
+es llamada la funci\'{o}n local de $A$ con respecto al ideal $I$  y la topolog\'{i}a $\tau$. Velicko en 1968, introduce la clase de los conjuntos $\theta$-abiertos. Un conjunto $A$ se dice que es $\theta$-abierto si para todo $x\in A$ tiene una vecindad abierta cuya clausura est\'{a} contenida en $A$. El $\theta$-interior de $A$, denotado por $int_{\theta}(A)$, es definido como la uni\'{o}n de todos los subconjuntos $\theta$-abiertos contenidos en $A$ y la $\theta$-clausura de $A$, denotada por $cl_{\theta}(A)$, es $cl_{\theta}(A)=\{x\in X: cl(U)\cap A\neq\emptyset, \mbox{ para todo } U\in \tau_{x}\}$.
+$A$ es $\theta$-cerrado si y s\'{o}lo si $A=cl_{\theta}(A)$. La colecci\'{o}n de todos los conjuntos $\theta$-abiertos forma una topolog\'{\i}a $\tau_{\theta}\subset \tau$. Se define la funci\'{o}n local clausura de $A$ con respecto al ideal $I$  y la topolog\'{i}a $\tau$ como sigue:
+$$\tau(A)(I,\tau)=\{x\in X: A\cap cl(U)\notin I, \mbox{ para todo }U\in \tau_{x}\}.$$
+Si no hay peligro a confusi\'{o}n, denotaremos brevemente $\tau(A)=\tau(A)(I,\tau)$. Se buscan propiedades de $\tau(A)$, adem\'{a}s se define un operador
+$\varphi_{\tau}:\wp(X)\mapsto \tau$, dado por $\varphi(A)= X\setminus \tau(X\setminus A)$, y mostramos que si:\\
+$\sigma= \{A\subseteq X: A\subseteq \varphi_{\tau}(A)\}$ y $\sigma_{0}= \{A\subseteq X: A\subseteq int(cl(\varphi_{\tau}(A)))\}$, entonces
+$\sigma$ y $\sigma_{0}$ son topolog\'{i}as y satisfacen que $\tau_{\theta}\subseteq \sigma\subseteq \sigma_{0}$.
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+\bibitem{JH} {\sc Jankovic, D and Hamlet, T. R.} (1990) ``New topologies from old via ideals''. \emph{Amer. Math. Monthly} 97, 295-310.
+\bibitem{DA} {\sc Ahmad, A and Noiri, T.} (2013) ``Local closure functions in ideal topological spaces''. \emph{Novi Sad J. Math} 43(2), 139-149.
+\end{thebibliography}
+\end{titlepage}
+
+
+%%%%%%%%%%%8 %%%%%%%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{An\'alisis}\\
+    Carlos R. Carpintero F\\
+    Universidad de Oriente. Departamento de Matem\'{a}ticas. Venezuela\\
+    \texttt{\footnotesize carpintero.carlos@gmail.com}\vspace{20pt} \\
+%    Segovia Francis \\
+%   Universidad Surcolombiana \\
+%   \texttt{\footnotesize osmin.ferrer@usco.edu.co }\vspace{20pt} \\
+%   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newcommand{\RE}{\mathrm{Re}}
+ \newcommand{\IM}{\mathrm{Im}}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathfrak{H}}
+\newcommand{\Ho}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathrm{A}}
+ \newcommand{\conv}{\xymatrix {*+<0.025cm>^[o][F-]{\star}}}
+% \newcommand{\C}{\mathcal{C}}
+ \newcommand{\K}{\mathcal{K}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\V}{\mathcal{V}}
+  \newcommand{\B}{\mathcal{B}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\E}{\mathbf{E}}
+ \newcommand{\W}{\mathcal{W}}
+ %\newcommand{\G}{\mathcal{G}}
+ \newcommand{\I}{\mathcal{I}}
+ \newcommand{\N}{\mathbb{N}}
+\newcommand{\arctanh}{\textrm{arctanh}}
+\newcommand{\arcsinh}{\textrm{arcsinh}}
+\newcommand{\arccosh}{\textrm{arccosh}}
+\newcommand{\sech}{\textrm{sech}}
+ \newcommand{\je}{J_{\ell_{2}}}
+ \newcommand{\WIA} {\widetilde{a}}
+ \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Disk}{\mathbb{D}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BBd}{\mathcal{B}\left(\Bergman\left(\Disk\right)\right)}
+  \newcommand{\BBp}{\mathcal{B}\left(\Bergman\left(\Pi\right)\right)}
+ \newcommand{\BH}{\mathcal{B}(\mathfrak{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathfrak{H})}
+ \renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Rang}{\operatorname{Rang}}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Entero}{\mathbb{Z}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+\newcommand{\F}{\operatorname{F}}
+% \newcommand{\Rang}{\mathrm{Rang}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lpi}{L_{\infty}(0,\pi)}
+ \newcommand{\Ele}{L_{2}}
+ \newcommand{\Bergman}{\mathcal{A}^{2}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Sobre algunas propiedades espectrales y su preservaci\'{o}n}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}    
+H. Weyl mostr\'{o} que para un operador hermitiano $T$, se tiene que $\lambda\in\bigcap\{\sigma (T+K): K\mbox{ compacto }\}$ s\'{\i} y s\'{o}lo si $\lambda$ no es un punto aislado de multiplicidad finita del espectro de $T$ \cite{WH}. Coburn estudia en forma abstracta clases de operadores que satisfac\'{\i}an esta condici\'{o}n, la cual bautiza con el nombre de Teorema de Weyl \cite{CL}. Siguiendo a Coburn, muchos matem\'{a}ticos abordaron el estudio de propiedades similares definidas a trav\'{e}s de espectros derivados de la Teor\'{\i}a de Fredholm. En esta direcci\'{o}n, se introducen el Teorema de $a$-Weyl \cite{Ra}, los Teoremas de Browder y $a$-Browder \cite{HL}. As\'{\i} como tambi\'{e}n, generalizaciones de \'{e}stos \cite{BK}. Recientemente, se han introducido otra serie de propiedades espectrales, tales como las propiedades $(b)$, $(ab)$, $(\nu)$, etc, entre otras (v\'{e}ase \cite{San}). En este trabajo, mostramos que bajo ciertas condiciones estas nuevas propiedades tambi\'{e}n pueden  caracterizarse por medio de restricciones del operador \cite{CRRMA}.
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+
+
+\bibitem{CRRMA}{\sc Carpintero, C. Rosas, E. Rodriguez, J. Mu\~{n}oz, D and Alcal\'{a}, K.} (2014) ``Spectral Properties and restrictions of bounded linear operators''. \emph{Annals of Functional Analisys} por aparecer.
+
+\bibitem{CL}{\sc Coburn, L.A} (1981) ``Weyl's Theorem for Nonnormal Operators''
+\emph{Research Notes in Mathematics} 51.
+
+\bibitem{BK}{\sc Berkani, M and Koliha, J} (2003) ``Weyl type theorems for bounded linear operators''.
+\emph{Acta Sci. Math} 69, 359-376.
+
+\bibitem{HL} {\sc Harte, R. E and Lee, W. L.} (1997) ``Another note on Weyl's theorem''. \emph{Trans. Amer. Math.Soc} 349, 2115-2124.
+
+\bibitem{Ra} {\sc Rako\v{c}evi\'{c}, V.} (1989) ``Operators obeying $a$-Weyl's theorem''.
+\emph{Rev. Roumaine Math. Pures Appl} 34 (10), 915-919.
+
+\bibitem{San} {\sc Sanabria, J, Carpintero, C. Rosas, E and Garc\'{\i}a, O.} (2012) ``On generalized property $(v)$ for bounded linear operators''. \emph{Studia Math} 212, 141-154.
+
+\bibitem{WH}{\sc Weyl, H.}(1909) ``Uber beschrankte quadratiche Formen, deren Differenz vollsteigist''
+\emph{Rend. Circ. Mat. Palermo} 27, 373-392.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%9 %%%%%%%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{An\'alisis}\\
+    Carlos R. Carpintero F\\
+    Universidad de Oriente. Departamento de Matem\'{a}ticas. Venezuela\\
+    \texttt{\footnotesize carpintero.carlos@gmail.com}\vspace{20pt} \\
+%    Segovia Francis \\
+%   Universidad Surcolombiana \\
+%   \texttt{\footnotesize osmin.ferrer@usco.edu.co }\vspace{20pt} \\
+%   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newcommand{\RE}{\mathrm{Re}}
+ \newcommand{\IM}{\mathrm{Im}}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathfrak{H}}
+\newcommand{\Ho}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathrm{A}}
+ \newcommand{\conv}{\xymatrix {*+<0.025cm>^[o][F-]{\star}}}
+% \newcommand{\C}{\mathcal{C}}
+ \newcommand{\K}{\mathcal{K}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\V}{\mathcal{V}}
+  \newcommand{\B}{\mathcal{B}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\E}{\mathbf{E}}
+ \newcommand{\W}{\mathcal{W}}
+ %\newcommand{\G}{\mathcal{G}}
+ \newcommand{\I}{\mathcal{I}}
+ \newcommand{\N}{\mathbb{N}}
+\newcommand{\arctanh}{\textrm{arctanh}}
+\newcommand{\arcsinh}{\textrm{arcsinh}}
+\newcommand{\arccosh}{\textrm{arccosh}}
+\newcommand{\sech}{\textrm{sech}}
+ \newcommand{\je}{J_{\ell_{2}}}
+ \newcommand{\WIA} {\widetilde{a}}
+ \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Disk}{\mathbb{D}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BBd}{\mathcal{B}\left(\Bergman\left(\Disk\right)\right)}
+  \newcommand{\BBp}{\mathcal{B}\left(\Bergman\left(\Pi\right)\right)}
+ \newcommand{\BH}{\mathcal{B}(\mathfrak{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathfrak{H})}
+ \renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Rang}{\operatorname{Rang}}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Entero}{\mathbb{Z}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+\newcommand{\F}{\operatorname{F}}
+% \newcommand{\Rang}{\mathrm{Rang}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lpi}{L_{\infty}(0,\pi)}
+ \newcommand{\Ele}{L_{2}}
+ \newcommand{\Bergman}{\mathcal{A}^{2}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Un estudio de las funciones seno y coseno}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}     
+Es notoria la dificultad presentada en el manejo de las funciones seno y coseno por la gran mayor\'{\i}a de los  estudiantes en los cursos de c\'{a}lculo. En este sentido, y en concordancia con los objetivos del X EIMAT, presentamos en este cursillo un estudio de estas funciones a trav\'{e}s de ciertos recursos geom\'{e}tricos elementales; con el fin de proporcionar a los estudiantes, principalmente aquellos que inician sus estudios universitarios, herramientas que le hagan m\'{a}s f\'{a}cil su trabajo con estas funciones. El temario del cursillo, b\'{a}sicamente trata de las propiedades de estas funciones, determinaci\'{o}n de sus valores sin uso de calculadora, an\'{a}lisis de sus gr\'{a}ficas, ecuaciones que involucran esta clase de funciones y algunas operaciones con dichas funciones. Si bien, el contenido del cursillo es el usual de cualquier curso de trigonometr\'{\i}a elemental, se har\'{a} \'{e}nfasis en se\~nalar o destacar los errores que com\'{u}nmente comete el estudiante al tratar estos t\'{o}picos.
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+\bibitem{bav1} {\sc Leithold, L} (1991) {\it El C\'{a}lculo con Geometr\'{i}a Anal\'{i}tica.} Editorial Harla., M\'{e}xico D.F, M\'{e}xico.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%10%%%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{An\'alisis}\\
+    Rainier V. S\'{a}nchez C.\\
+    Universidad Polit\'{e}cnica Territorial del Oeste de Sucre Clodosbaldo Russian, Venezuela\\
+    \texttt{\footnotesize rainiersan76@gmail.com}\vspace{20pt} \\
+%    Segovia Francis \\
+%   Universidad Surcolombiana \\
+%   \texttt{\footnotesize osmin.ferrer@usco.edu.co }\vspace{20pt} \\
+%   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newcommand{\RE}{\mathrm{Re}}
+ \newcommand{\IM}{\mathrm{Im}}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathfrak{H}}
+\newcommand{\Ho}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathrm{A}}
+ \newcommand{\conv}{\xymatrix {*+<0.025cm>^[o][F-]{\star}}}
+% \newcommand{\C}{\mathcal{C}}
+ \newcommand{\K}{\mathcal{K}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\V}{\mathcal{V}}
+  \newcommand{\B}{\mathcal{B}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\E}{\mathbf{E}}
+ \newcommand{\W}{\mathcal{W}}
+ %\newcommand{\G}{\mathcal{G}}
+ \newcommand{\I}{\mathcal{I}}
+ \newcommand{\N}{\mathbb{N}}
+\newcommand{\arctanh}{\textrm{arctanh}}
+\newcommand{\arcsinh}{\textrm{arcsinh}}
+\newcommand{\arccosh}{\textrm{arccosh}}
+\newcommand{\sech}{\textrm{sech}}
+ \newcommand{\je}{J_{\ell_{2}}}
+ \newcommand{\WIA} {\widetilde{a}}
+ \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Disk}{\mathbb{D}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BBd}{\mathcal{B}\left(\Bergman\left(\Disk\right)\right)}
+  \newcommand{\BBp}{\mathcal{B}\left(\Bergman\left(\Pi\right)\right)}
+ \newcommand{\BH}{\mathcal{B}(\mathfrak{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathfrak{H})}
+ \renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Rang}{\operatorname{Rang}}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Entero}{\mathbb{Z}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+\newcommand{\F}{\operatorname{F}}
+% \newcommand{\Rang}{\mathrm{Rang}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lpi}{L_{\infty}(0,\pi)}
+ \newcommand{\Ele}{L_{2}}
+ \newcommand{\Bergman}{\mathcal{A}^{2}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Sobre el acotamiento y la compacidad del operador de composici\'{o}n con peso modificado en espacios de Lorentz  $\Gamma_{X}^{p}(w)$}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}    
+
+Sean \emph{$(X,\mathcal{A},\mu)$ }un espacio de medida $\sigma$-finito,
+$\mathcal{F}(X,\mathcal{A})$ el conjunto de todas las funciones con
+valores complejos $\mathcal{A\textrm{-medibles}}$ sobre $X$ y $f\in\mathcal{F}(X,\mathcal{A})$.
+Para $\lambda\geq0$, se define la funci\'on distribuci\'on de $f$, por
+$D_{f}(\lambda)=\mu\left\{ x\in X:\left|f(x)\right|>\lambda\right\} .$
+Para $t\geq0,$ se define el reordenamiento decreciente de $f$, por
+$f^{*}(t)=\inf\left\{ \lambda>0:D_{f}(\lambda)\leq t\right\}.$ Para $t>0$, la funci\'on maximal
+$f^{**}$ se define por $f^{**}(t)=\frac{1}{t}\int_{0}^{t}f^{*}(s)ds$.
+Una funci\'on medible y localmente integrable $w:\mathbb{R}^{+}\rightarrow\mathbb{R}^{+}$
+se llama peso. Para $f\in\mathcal{F}(X,\mathcal{A})$ y $0\leq p<\infty,$
+definimos $\left\Vert \text{}\right\Vert _{\Gamma_{X}^{p}(w)}:\mathcal{F}(X,\mathcal{A})\rightarrow[0,\infty]$
+por $\left\Vert f\right\Vert _{\Gamma_{X}^{p}(w)}=\left(\int_{0}^{\infty}\left[f^{**}(t)\right]^{p}w(t)dt\right)^{\frac{1}{p}}.$
+El Espacio de Lorentz con peso $\Gamma_{X}^{p}(w)$ se define como
+la clase de todas las funciones $f\in\mathcal{F}(X,\mathcal{A})$
+tales que $\left\Vert f\right\Vert _{\Gamma_{X}^{p}(w)}=\left(\int_{0}^{\infty}\left[f^{**}(t)\right]^{p}w(t)dt\right)^{\frac{1}{p}}<\infty.$
+Sea $T:X\rightarrow X$ una transformaci\'on medible y no singular y
+$u:X\rightarrow\mathbb{C}$ una funci\'on medible. Definimos la transformaci\'on
+lineal $W_{u,T}$, como sigue: $W_{u,T}:\Gamma_{X}^{p}(w)\rightarrow\mathcal{F}(X,\mathcal{A}),$
+tal que $W_{u,T}(f)=u\circ T\text{}f\circ T$
+donde, $W_{u,T}(f):X\rightarrow\mathbb{C}\textrm{ y }\left(W_{u,T}(f)\right)(x)=u\left(T(x)\right)\text{}f\left(T(x)\right)$.
+Si $W_{u,T}$ es acotado y con rango en $\Gamma_{X}^{p}(w)$, entonces
+recibe el nombre de operador de composici\'on con peso modificado. En
+esta charla se caracterizan acotamiento y la compacidad del operador
+de composici\'on con peso modificado en los Espacios de Lorentz con
+Peso $\Gamma_{X}^{p}(w)$.
+
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+
+\bibitem{zw} {\sc Arora, S. C. Datt, G and Verma, S.} (2007) ``Multiplication and Composition Operators on Orlicz-Lorentz Spaces''. \emph{Int. J. Math. Analysis} 25 (1), 1227-1234.
+\bibitem{zw1} {\sc Arora, S. C. Datt, G and Verma, S.} (2007) ``Weighted Composition Operators on Lorentz Spaces''. \emph{Bull. Korean. Math. Soc} 44 (4), 701-708.
+\end{thebibliography}
+\end{titlepage}
+
+
+%%%%%%%%%%%%%%11%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{An\'alisis}\\
+    Rainier V. S\'{a}nchez C.\\
+    Universidad Polit\'{e}cnica Territorial del Oeste de Sucre Clodosbaldo Russian, Venezuela\\
+    \texttt{\footnotesize rainiersan76@gmail.com}\vspace{20pt} \\
+%    Segovia Francis \\
+%   Universidad Surcolombiana \\
+%   \texttt{\footnotesize osmin.ferrer@usco.edu.co }\vspace{20pt} \\
+%   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newcommand{\RE}{\mathrm{Re}}
+ \newcommand{\IM}{\mathrm{Im}}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathfrak{H}}
+\newcommand{\Ho}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathrm{A}}
+ \newcommand{\conv}{\xymatrix {*+<0.025cm>^[o][F-]{\star}}}
+% \newcommand{\C}{\mathcal{C}}
+ \newcommand{\K}{\mathcal{K}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\V}{\mathcal{V}}
+  \newcommand{\B}{\mathcal{B}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\E}{\mathbf{E}}
+ \newcommand{\W}{\mathcal{W}}
+ %\newcommand{\G}{\mathcal{G}}
+ \newcommand{\I}{\mathcal{I}}
+ \newcommand{\N}{\mathbb{N}}
+\newcommand{\arctanh}{\textrm{arctanh}}
+\newcommand{\arcsinh}{\textrm{arcsinh}}
+\newcommand{\arccosh}{\textrm{arccosh}}
+\newcommand{\sech}{\textrm{sech}}
+ \newcommand{\je}{J_{\ell_{2}}}
+ \newcommand{\WIA} {\widetilde{a}}
+ \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Disk}{\mathbb{D}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BBd}{\mathcal{B}\left(\Bergman\left(\Disk\right)\right)}
+  \newcommand{\BBp}{\mathcal{B}\left(\Bergman\left(\Pi\right)\right)}
+ \newcommand{\BH}{\mathcal{B}(\mathfrak{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathfrak{H})}
+ \renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Rang}{\operatorname{Rang}}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Entero}{\mathbb{Z}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+\newcommand{\F}{\operatorname{F}}
+% \newcommand{\Rang}{\mathrm{Rang}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lpi}{L_{\infty}(0,\pi)}
+ \newcommand{\Ele}{L_{2}}
+ \newcommand{\Bergman}{\mathcal{A}^{2}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Trigonometr\'{\i}a, breve rese\~{n}a hist\'{o}rica y algunas aplicaciones}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}     
+Entre los babilonios y los egipcios, m\'{a}s de 1000 a\~nos antes de Cristo, se hallan los primeros albores de la trigonometr\'{i}a. Sin embargo, es en el siglo II antes de Cristo que el astr\'{o}nomo griego Hiparco de Nicea inicia el estudio de la trigonometr\'{i}a, debido a la necesidad que ten\'{i}a de ella en la astronom\'{i}a.  En este cursillo, se har\'{a} una breve rese\~{n}a hist\'{o}rica de la trigonometr\'{i}a y se estudiar\'{a}n los aspectos m\'{a}s relevantes de las funciones trigonom\'{e}tricas y sus inversas. As\'{\i} como tambi\'{e}n se dar\'{a}n algunas aplicaciones de \'{e}stas, entre las que destacan la representaci\'{o}n de los n\'{u}meros complejos en forma polar y la representaci\'{o}n sinusoidal de la corriente el\'{e}ctrica.
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+\bibitem{Ad}{\sc Anfossi, A.} (1976) {\it Curso de Trigonometr\'{i}a Rectil\'{\i}nea}.  Editorial Progreso, Mexico D. F.
+
+\bibitem{bav1} {\sc Leithold, L} (1991) {\it El C\'{a}lculo con Geometr\'{i}a Anal\'{i}tica.} Editorial Harla.
+
+\bibitem{bav2} {\sc Middlemiss, R} (1993) {\it Geometr\'{i}a Anal\'{i}tica.} McGraw-Hill.
+
+\bibitem{bav3} {\sc Kreyszig, E} (2003) {\it Matem\'{a}ticas Avanzadas para Ingenier\'{i}a.} Vol. II. Editorial Limusa.
+\end{thebibliography}
+\end{titlepage}
+
+
+%%%%%%%%%%%12 %%%%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{Topolog\'{\i}a}\\
+    Jos\'{e} Sanabria\\
+    Departamento de Matem\'{a}ticas, N\'{u}cleo de Sucre\\
+    Universidad de Oriente, Venezuela\\
+    \texttt{\footnotesize jesanabri@gmail.com}\vspace{20pt} \\
+%    Segovia Francis \\
+%   Universidad Surcolombiana \\
+%   \texttt{\footnotesize osmin.ferrer@usco.edu.co }\vspace{20pt} \\
+%   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newcommand{\RE}{\mathrm{Re}}
+ \newcommand{\IM}{\mathrm{Im}}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathfrak{H}}
+\newcommand{\Ho}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathrm{A}}
+ \newcommand{\conv}{\xymatrix {*+<0.025cm>^[o][F-]{\star}}}
+% \newcommand{\C}{\mathcal{C}}
+ \newcommand{\K}{\mathcal{K}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\V}{\mathcal{V}}
+  \newcommand{\B}{\mathcal{B}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\E}{\mathbf{E}}
+ \newcommand{\W}{\mathcal{W}}
+ %\newcommand{\G}{\mathcal{G}}
+ \newcommand{\I}{\mathcal{I}}
+ \newcommand{\N}{\mathbb{N}}
+\newcommand{\arctanh}{\textrm{arctanh}}
+\newcommand{\arcsinh}{\textrm{arcsinh}}
+\newcommand{\arccosh}{\textrm{arccosh}}
+\newcommand{\sech}{\textrm{sech}}
+ \newcommand{\je}{J_{\ell_{2}}}
+ \newcommand{\WIA} {\widetilde{a}}
+ \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Disk}{\mathbb{D}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BBd}{\mathcal{B}\left(\Bergman\left(\Disk\right)\right)}
+  \newcommand{\BBp}{\mathcal{B}\left(\Bergman\left(\Pi\right)\right)}
+ \newcommand{\BH}{\mathcal{B}(\mathfrak{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathfrak{H})}
+ \renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Rang}{\operatorname{Rang}}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Entero}{\mathbb{Z}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+\newcommand{\F}{\operatorname{F}}
+% \newcommand{\Rang}{\mathrm{Rang}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lpi}{L_{\infty}(0,\pi)}
+ \newcommand{\Ele}{L_{2}}
+ \newcommand{\Bergman}{\mathcal{A}^{2}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Subconjuntos $\alpha S_1$-paracompactos}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}     
+Los espacios $S_1$-paracompactos fueron introducidos por K. Al-Zoubi y A. Rawashdeh \cite{alra} utilizando la noci\'{o}n de conjuntos semi-abiertos introducida por N. Levine \cite{le}. Un espacio topol\'{o}gico $(X,\tau)$ se dice que es $S_1$-paracompacto, si cada cubrimiento semi-abierto de $X$ tiene un refinamiento abierto localmente finito. En este trabajo, introducimos el concepto de subconjunto $\alpha S_1$-paracompacto con el proposito de obtener resultados similares a los conocidos sobre la noci\'{o}n de subconjunto $\alpha S$-paracompacto, la cual se origin\'{o} a partir del concepto de espacio $S$-paracompacto \cite{al}.
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+\bibitem{al}  K. Y. Al-Zoubi.
+ \textit{$S$-paracompact spaces,} Acta. Math.
+Hungar. Vol. {\bf 110}(1-2), (2006) 165--174.
+
+\bibitem{alra}  K. Al-Zoubi \& A. Rawashdeh.
+\textit{$S_1$-paracompact spaces,} Acta. Univ.
+Apulen. No. {\bf 26}, (2011) 105--112.
+
+\bibitem{le} N. Levine.
+\textit{Semi-open sets and semi-continuity in topological spaces,} Amer. Math.
+Monthly Vol. {\bf 70}, (1963) 36--41.
+
+
+\bibitem{le} J. Sanabria \& A. G\'omez.
+\textit{$\alpha S_1$-paracompact subsets,} Preprint (2014).
+\end{thebibliography}
+\end{titlepage}
+
+%%%%%%%%%%%12 %%%%%%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{An\'{a}lisis Funcional}\\
+    Dr. Orlando J. Garcia M.\\
+    Universidad de Oriente, Venezuela\\
+    \texttt{\footnotesize ogarciam554@gmail.com}\vspace{20pt} \\
+%    Segovia Francis \\
+%   Universidad Surcolombiana \\
+%   \texttt{\footnotesize osmin.ferrer@usco.edu.co }\vspace{20pt} \\
+%   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newcommand{\RE}{\mathrm{Re}}
+ \newcommand{\IM}{\mathrm{Im}}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathfrak{H}}
+\newcommand{\Ho}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathrm{A}}
+ \newcommand{\conv}{\xymatrix {*+<0.025cm>^[o][F-]{\star}}}
+% \newcommand{\C}{\mathcal{C}}
+ \newcommand{\K}{\mathcal{K}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\V}{\mathcal{V}}
+  \newcommand{\B}{\mathcal{B}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\E}{\mathbf{E}}
+ \newcommand{\W}{\mathcal{W}}
+ %\newcommand{\G}{\mathcal{G}}
+ \newcommand{\I}{\mathcal{I}}
+ \newcommand{\N}{\mathbb{N}}
+\newcommand{\arctanh}{\textrm{arctanh}}
+\newcommand{\arcsinh}{\textrm{arcsinh}}
+\newcommand{\arccosh}{\textrm{arccosh}}
+\newcommand{\sech}{\textrm{sech}}
+ \newcommand{\je}{J_{\ell_{2}}}
+ \newcommand{\WIA} {\widetilde{a}}
+ \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Disk}{\mathbb{D}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BBd}{\mathcal{B}\left(\Bergman\left(\Disk\right)\right)}
+  \newcommand{\BBp}{\mathcal{B}\left(\Bergman\left(\Pi\right)\right)}
+ \newcommand{\BH}{\mathcal{B}(\mathfrak{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathfrak{H})}
+ \renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Rang}{\operatorname{Rang}}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Entero}{\mathbb{Z}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+\newcommand{\F}{\operatorname{F}}
+% \newcommand{\Rang}{\mathrm{Rang}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lpi}{L_{\infty}(0,\pi)}
+ \newcommand{\Ele}{L_{2}}
+ \newcommand{\Bergman}{\mathcal{A}^{2}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Operadores Cuasi Fredholm bajo perturbaciones}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen} 
+Labrouse introduce en \cite{la} la clase de los operadores cuasi Fredholm. Una versi\'on reciente de la definici\'on de esta clase de operadores es la siguiente; un operador  $T\in L(X)$ sobre un espacio de Banach X es llamado cuasi Fredholm, si existe $d\in\mathbb{N}$ tal que $R(T^{n})$ es cerrado y $\kappa_n(T)=\mbox{dim }((R(T^n)\cap N(T))/(R(T^{n+1})\cap N(T)))=0$, para todo $n\geq d$. Esta clase de operadores es, estrictamente, m\'as general que la clase de los operadores semi B-Fredholm (v\'ease \cite{la} Proposici\'on 2.5). Recientemente en \cite{orlando I} y \cite{orlando II} se estudia el comportamiento de la clase de los operadores semi B-Fredholm bajo perturbaciones. En este trabajo se presenta una propiedad de descomposici\'on para las clase de los ope{\break}radores cuasi Fredholm, la cual permite estudiar con mayor claridad problemas sobre la estabilidad bajo perturbaciones de dicha clase.
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+\bibitem{orlando I} {\sc Garc\'{\i}a, O. Carpintero, C. Rosas, E. and Sanabria, J.} (2014) ``Property ($gR$) under nilpotents commuting perturbation''. \emph{Matemati$\check{c}$ki Vesnik} V. 66, 140--147.
+
+\bibitem{orlando II} {\sc Garc\'{\i}a, O. Carpintero, C. Rosas, E. and Sanabria, J.} (2014) ``Semi B-Fredholm and Semi B-Weyl spectrum under perturbations''. \emph{Boletin de la sociedad Matem\'{a}tica Mexicana} V. 20, 39--47.
+    
+\bibitem{la} {\sc Labrousse, J. P.} (1980) ``Les Operateurs quasi Fredholm: une generalization des operateurs semi Fredholm''. \emph{Rendiconti del Circolo Matematico di Palermo} V. 29, 161--258.
+\end{thebibliography}
+\end{titlepage}
+
+
+%%%%%%%%%%%%14 %%%%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{C\'alculo}\\
+    Dr. Orlando J. Garcia M.\\
+    Universidad de Oriente, Venezuela\\
+    \texttt{\footnotesize ogarciam554@gmail.com}\vspace{20pt} \\
+%    Segovia Francis \\
+%   Universidad Surcolombiana \\
+%   \texttt{\footnotesize osmin.ferrer@usco.edu.co }\vspace{20pt} \\
+%   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newcommand{\RE}{\mathrm{Re}}
+ \newcommand{\IM}{\mathrm{Im}}
+ \newcommand{\eps}{\varepsilon}
+ \newcommand{\To}{\longrightarrow}
+ \newcommand{\h}{\mathfrak{H}}
+\newcommand{\Ho}{\mathcal{H}}
+ \newcommand{\s}{\mathcal{S}}
+ \newcommand{\A}{\mathrm{A}}
+ \newcommand{\conv}{\xymatrix {*+<0.025cm>^[o][F-]{\star}}}
+% \newcommand{\C}{\mathcal{C}}
+ \newcommand{\K}{\mathcal{K}}
+ \newcommand{\J}{\mathcal{J}}
+ \newcommand{\V}{\mathcal{V}}
+  \newcommand{\B}{\mathcal{B}}
+ \newcommand{\M}{\mathcal{M}}
+ \newcommand{\E}{\mathbf{E}}
+ \newcommand{\W}{\mathcal{W}}
+ %\newcommand{\G}{\mathcal{G}}
+ \newcommand{\I}{\mathcal{I}}
+ \newcommand{\N}{\mathbb{N}}
+\newcommand{\arctanh}{\textrm{arctanh}}
+\newcommand{\arcsinh}{\textrm{arcsinh}}
+\newcommand{\arccosh}{\textrm{arccosh}}
+\newcommand{\sech}{\textrm{sech}}
+ \newcommand{\je}{J_{\ell_{2}}}
+ \newcommand{\WIA} {\widetilde{a}}
+ \newcommand{\X}{\mathcal{X}}
+  \newcommand{\Disk}{\mathbb{D}}
+ \newcommand{\BOP}{\mathbf{B}}
+ \newcommand{\BBd}{\mathcal{B}\left(\Bergman\left(\Disk\right)\right)}
+  \newcommand{\BBp}{\mathcal{B}\left(\Bergman\left(\Pi\right)\right)}
+ \newcommand{\BH}{\mathcal{B}(\mathfrak{H})}
+ \newcommand{\KH}{\mathcal{K}(\mathfrak{H})}
+ \renewcommand{\ker}{\operatorname{ker}}
+\newcommand{\Rang}{\operatorname{Rang}}
+ \newcommand{\Real}{\mathbb{R}}
+ \newcommand{\Entero}{\mathbb{Z}}
+ \newcommand{\Complex}{\mathbb{C}}
+ \newcommand{\Field}{\mathbb{F}}
+\newcommand{\F}{\operatorname{F}}
+% \newcommand{\Rang}{\mathrm{Rang}}
+ \newcommand{\RPlus}{\Real^{+}}
+ \newcommand{\Polar}{\mathcal{P}_{\s}}
+ \newcommand{\Poly}{\mathcal{P}(E)}
+ \newcommand{\EssD}{\mathcal{D}}
+ \newcommand{\Lpi}{L_{\infty}(0,\pi)}
+ \newcommand{\Ele}{L_{2}}
+ \newcommand{\Bergman}{\mathcal{A}^{2}}
+ \newcommand{\States}{\mathcal{T}}
+ \newcommand{\abs}[1]{\left\vert#1\right\vert}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\seq}[1]{\left<#1\right>}
+ \newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+ \newcommand{\essnorm}[1]{\norm{#1}_{\ess}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Diferenciabilidad de funciones reales y complejas}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{175pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen} 
+La derivada de una funci\'{o}n es una de las herramientas m\'{a}s poderosas en matem\'{a}ticas, es indispensable para las investigaciones no elementales tanto en las ciencias naturales como en las ciencias sociales y human\'{\i}sticas. A partir del concepto de derivada de una funci\'{o}n se define la noci\'{o}n de funci\'{o}n anal\'{\i}tica, tanto en el caso real como complejo. La Teor\'{\i}a de funciones anal\'{\i}ticas, no solo es una de las mas hermosas, sino que adem\'{a}s es bien conocida su aplicaci\'{o}n en varias ramas de la ciencia. Muchos problemas en matem\'{a}ticas aplicada, que aparecen en la teor\'{\i}a de calor, la din\'{a}mica de fluidos y la electrost\'{a}tica, encuentra su marco adecuado en la teor\'{\i}a de funciones anal\'{\i}ticas.\\
+La definici\'{o}n y primeras propiedades de la derivada de una funci\'{o}n compleja son muy similares a las correspondientes para las funciones reales (exceptuando, como siempre, las ligadas directamente a la relaci\'{o}n de orden en $\mathbb{R}$, como por ejemplo el Teorema del valor medio).\\
+En este cursillo se estudiar\'{a} la diferenciabilidad de algunas funciones reales y complejas, y adem\'{a}s veremos que la diferenciabilidad en el sentido complejo tiene consecuencias mucho m\'{a}s fuerte que en el caso real.
+
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+\bibitem{Ad}{\sc Michael, S.} (1992) {\it Calculus infinitesimal}. Universidad de Brandeis.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%15 %%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{Topolog\'ia Geometr\'ia Fractal}\\
+    D\'uwamg Alexis Prada Mar\'in\\
+    Universidad Pontificia Bolivariana Seccional Bucaramanga\\
+   \emph{Grupo de Investigaci\'on GIM-UPB}\\
+    \texttt{\footnotesize duwamg.prada@upb.edu.co}\vspace{10pt}\\
+    \textbf{Andr\'es Felipe Pinto}\\ 
+    \textbf{Leidy Carolina Hern\'andez}\\
+       \textbf{Saira Janeth Fiallo}\\
+    \texttt{\footnotesize saira.fiallo.$2013$@upb.edu.co}\\
+    \emph{Semillero de Fractales GEOFRACT}\\
+    \emph{Grupo de Investigaci\'on GIM-UPB}\vspace{10pt}\\
+    \textbf{Michael Andr\'es Alvarez Navarro}
+    \textbf{Estudiante en proyecto de grado de Ingenier\'ia Electr\'onica, Universidad Industrial de Santander}\\
+   \hspace*{-15pt} \texttt{\footnotesize michael@matematicas.uis.edu.co}\\
+ %    Segovia Francis \\
+%   Universidad Surcolombiana \\
+%   \texttt{\footnotesize osmin.ferrer@usco.edu.co }\vspace{20pt} \\
+%   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+ \newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}[teorema]{Lema}
+\newtheorem{corolario}[teorema]{Corolario}
+\newtheorem{observacion}[teorema]{Observaci\'on}
+\newtheorem{afirmacion}[teorema]{Afirmaci\'on}
+\newtheorem{proposicion}[teorema]{Proposici\'on}
+\newtheorem{ejemplo}[teorema]{Ejemplo}
+\newtheorem{pregunta}[teorema]{Pregunta}
+\theoremstyle{definition}
+\newtheorem{definicion}[teorema]{Definici\'on}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Bd}{\mathrm{Bd}}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\A}{\mathrm{A}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Dimensi\'on Fractal: Box Counting}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{350pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen} La Geometr\'ia Fractal es una rama de las matem\'aticas muy atractiva no
+solamente por los objetos fractales que son posibles construir, la
+noci\'on de autosemejanza, sistemas din\'amicos, caos, \'orbitas y
+dimensi\'on, tanto topol\'ogica como Hausdorff, se han convertido en
+herramientas de gran utilidad en el campo de las matem\'aticas, las
+ciencias, el arte, la medicina, la ingenier\'ia, psicolog\'ia y hasta en
+la m\'usica.\\
+
+Los objetos fractales son reconocidos gracias a la autosimilaridad,
+es decir, pensar en que el todo est\'a formado por varias copias de s\'i
+mismo, solo que estas copias est\'an reducidas y se encuentran en
+diferente posici\'on.\\
+
+Adem\'as de la autosimilaridad, los objetos fractales presentan una
+idea fuera de lo com\'un, la dimensi\'on fractal.  La dimensi\'on que se
+le ha asignado por convenci\'on a ciertos objetos geom\'etricos y
+f\'isicos, est\'a asociada a una cantidad finita de variables, por
+ejemplo,a un cubo se le asocia una tripla definida directamente por
+el grosor, el ancho y el alto del mismo, luego la dimensi\'on de este
+objeto es tres.  Este tipo de dimensi\'on es conocida como la
+dimensi\'on topol\'ogica. Generalmente este tipo de dimensi\'on es
+determinada por un n\'umero entero.  Poincar\'e generaliz\'o la dimensi\'on
+para los espacios topol\'ogicos asignando al vac\'io dimensi\'on menos uno
+y dimensi\'on $n$ a un espacio tal que si las fronteras de sus
+entornos peque\~nos de todos los puntos del espacio tienen dimensi\'on
+$n-1$.\\
+
+La dimensi\'on fractal, como lo indica apropiadamente su nombre, es
+una dimensi\'on fraccionada y est\'a determinada por un n\'umero racional.
+Este tipo de dimensi\'on ha sido muy utilizada por ejemplo para medir
+la longitud de la costa de una isla o por ejemplo para preguntarnos
+¿que dimensi\'on tiene la superficie de un pulm\'on humano? o mostrar
+que la dimensi\'on topol\'ogica de nuestro cuerpo humano es tres pero la
+dimensi\'on fractal es dos, son preguntas que despiertan un inter\'es
+por estudiar este tipo de dimensi\'on.\\
+
+El m\'etodo Box-counting o conteo por cajas, se ha utilizado para
+calcular la dimensi\'on fractal de ciertos objetos que se representan
+en un plano.  El objetivo de esta comunicaci\'on es mostrar el m\'etodo
+de calcular dimensi\'on fractal mediante esta t\'ecnica y adem\'as
+observar la utilidad que puede presentar para el estudio en
+ingenier\'ia civil, caracterizando aleaciones con algunos compuestos
+espec\'ificos, tales como el hierro, manganeso y aluminio.\\[10pt]
+{\bf\large Definiciones B\'asicas}\\[10pt]
+\footnotesize 
+\begin{definicion}
+Un fractal es un subconjunto en el plano que es autosimilar y cuya
+dimensi\'on fractal excede a su dimensi\'on topol\'ogica.
+\end{definicion}
+
+\begin{definicion}
+La dimensi\'on autosimilar de $X$ es el \'unico valor $d$ que satisface
+la ecuaci\'on la ecuaci\'on $N(k)=k^d$, es decir,
+$$d=\frac{ln(N)}{ln(k)}$$
+\end{definicion}
+
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{minipage}{0.5\linewidth}
+\phantom{\texttt{\footnotesize rponce@inst-mat.utalca.cl}}
+\end{minipage}\hspace{-3pt}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\begin{definicion}
+Sean $A$ una figura cerrada y acotada, adem\'as $D_1, D_2, D_3,...$
+discos con di\'ametro $\epsilon$ y $N(\epsilon)$ el n\'umero de discos
+de radio $\epsilon$ necesarios para cubrir a $A.$  Entonces la
+medida $d-$dimensional es proporcional al valor del l\'imite
+$$h^d(A)=lim_{\epsilon\longrightarrow 0}N(\epsilon)\epsilon ^d$$
+Hausdorff demostr\'o que existe un \'unico valor $d$ para el cual
+$h^d(A)$ no es cero ni infinito.  Para este valor $d=D_H(A)$ se
+satisface entonces que \begin{center}
+                       $h^d(A)=\left\{
+                         \begin{array}{ll}
+                           \infty, & \hbox{si $d<D_h(A)$;} \\
+                           0, & \hbox{si $d>D_h(A)$.}
+                         \end{array}
+                       \right.$
+\end{center}
+$D_H(A)$ es por definici\'on la dimensi\'on de Hausdorff de $A.$
+\end{definicion}
+\begin{definicion}
+Definimos $D(A)$ la dimensi\'on por cajas de una figura $A$ como
+$$D(A)=\lim_{\delta\longrightarrow 0}\frac{ln N_{\delta}(A)}{ln(\frac{1}{\delta})}$$
+donde $N_{\delta}(A)$ es el n\'umero de cuadrados de lado $\delta>0$
+que cubre a $A.$
+\end{definicion}
+
+\begin{pregunta}
+¿Es posible caracterizar el nivel de aleaci\'on de elementos hierro,
+cobre, manganeso y aluminio con determinado tiempo de molienda
+respecto a la fundici\'on de estos mediante comparaciones utilizando
+como t\'ecnica box-counting?
+\end{pregunta}
+%    \end{resumen}
+  \end{minipage}
+  % \vspace{10pt}
+%\end{minipage}
+\vspace{10pt}\\[5pt]
+\begin{thebibliography}{99}
+\bibitem{sabogal} ARENAS, G., SABOGAL, S., \textit{una introducci\'on a la geometr\'ia fractal} Publicaciones Universidad Industrial de
+Santander, Bucaramanga, Santander, Colombia, (2011)
+
+\bibitem{Ghyka} GHYKA, M., \textit{The geometry of art an life},
+Dover Publications, Inc., New York, (1983)
+
+\bibitem{Nadler} NADLER, S., \textit{Dimension theory: an introduction with exercises},
+Aportaciones matem\'aticas, Sociedad matem\'atica Mexicana, UNAM,
+M\'exico, (2002)
+
+\bibitem{Prada} PRADA D., \textit{Un conjunto dorado de Cantor}
+Monograf\'ia de grado, Licenciatura en Matem\'aticas, Universidad
+Industrial de Santander, Bucaramanga, Colombia (2006)
+
+\bibitem{rubiano} RUBIANO, G., \textit{Iteraci\'on y fractales, con matem\'atica},
+Colecci\'on obra selecta, Universidad Nacional de Colombia, Bogot\'a,
+Colombia, (2009).
+
+\bibitem{willar} WILLARD, S., \textit{General Topology},
+Massachussetts, Addison Wesley Publishing Company, (1970).
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%16 %%%%%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{Topolog\'ia Geometr\'ia Fractal}\\
+    D\'uwamg Alexis Prada Mar\'in\\
+    Universidad Pontificia Bolivariana Seccional Bucaramanga\\
+   \emph{Grupo de Investigaci\'on GIM-UPB}\\
+    \texttt{\footnotesize duwamg.prada@upb.edu.co}\vspace{10pt}\\
+        Jenny Mayerli G\'omez Cort\'es \\
+   Universidad Industrial De Santander\\
+   \texttt{\footnotesize mayita429@hotmail }\vspace{20pt} \\
+%   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+% \newtheorem{teorema}{Teorema}[section]
+%\newtheorem{lema}[teorema]{Lema}
+%\newtheorem{corolario}[teorema]{Corolario}
+%\newtheorem{observacion}[teorema]{Observaci\'on}
+%\newtheorem{afirmacion}[teorema]{Afirmaci\'on}
+%\newtheorem{proposicion}[teorema]{Proposici\'on}
+%\newtheorem{ejemplo}[teorema]{Ejemplo}
+%\newtheorem{pregunta}[teorema]{Pregunta}
+%\theoremstyle{definition}
+%\newtheorem{definicion}[teorema]{Definici\'on}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Bd}{\mathrm{Bd}}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\A}{\mathrm{A}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Un Conjunto Dorado de Cantor}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{350pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen} 
+    
+El conjunto de Cantor es un conjunto especial que presenta
+interesantes propiedades topol\'ogicas como ser compacto, totalmente
+disconexo, perfecto y no vac\'io, adem\'as de ser m\'etrico y no
+numerable. En ocasiones se le conoce como el conjunto ternario de
+Cantor, sin embargo, se pueden construir conjuntos de Cantor
+variando la longitud del intervalo hueco intermedio que lo
+denominaremos como $\alpha.$
+
+El objetivo principal de la presente comunicaci\'on es mostrar si es
+posible intersecar dos $\alpha-$medios conjuntos de Cantor, de tal
+forma que la longitud de los intervalos componentes, de uno de
+dichos conjuntos quede entretejido en los intervalos huecos del
+otro, dejando as\'i como \'unico elemento en la intersecci\'on a cero.
+
+Existe un valor cr\'itico, para tal longitud de dichos intervalos
+componentes, en el cual, el problema tiene soluci\'on. Este valor
+cr\'itico est\'a directamente relacionado con la raz\'on \'aurea y se
+encuentra cuando realizamos el cociente entre el valor de los
+intervalos componentes y el valor del hueco intermedio.
+\\[10pt]
+{\bf\large Definiciones B\'asicas}\\[10pt]
+Sean $\alpha\in(0,1)$, $I_0=[0,1]$ y sea $I_1$ la uni\'on de los dos
+intervalos cerrados que quedan despu\'es de remover el intervalo
+abierto de longitud $\alpha$ del medio de $I_0$.
+
+Cada uno de los intervalos cerrados $I_1$ tiene longitud
+$\frac{1-\alpha}{2};$ sea $\beta$ que denota $\frac{1-\alpha}{2}.$
+Note que $\beta\in(0,\frac{1}{2})$ y $\alpha=1-2\beta.$  Nuevamente
+en cada intervalo de $I_1$ lo que se hizo en $I_0.$  Removemos la
+mitad de cada intervalo abierto cuya longitud es $\alpha$ la
+longitud del intervalo cerrado.  Lo anterior nos deja $4$
+intervalos, cada uno de longitud $\beta^2,$ la uni\'on de estos
+intervalos la llamaremos $I_2.$
+
+\begin{definicion}
+Luego $I_n$ es la uni\'on de los $2^n$ intervalos cerrados de longitud
+$\beta^n$ que quedan despu\'es de que el intervalo abierto de longitud
+$\alpha \beta^{n-1}$ es removido de la mitad de cada uno de los
+componentes de $I_{n-1}.$
+\end{definicion}
+
+\begin{definicion}
+El $\alpha$-medio conjunto de Cantor en el intervalo $[0,1]$ es
+$$C_{\alpha}\equiv \bigcap_{n=0}^{\infty}I_n$$
+\end{definicion}
+
+Cuando $\alpha=\beta=\frac{1}{3}$ se obtiene el conjunto ternario de
+Cantor.
+
+\begin{definicion}
+Si $A$ es un subconjunto de la recta real y $\lambda$ es un n\'umero
+real positivo, entonces $\lambda A=\{\lambda x\mid x\in A\}.$
+\end{definicion}
+
+\begin{pregunta}
+Dado $\beta\in (0,1),$ ¿es posible encontrar un $\lambda\in(0,1)$
+tal que $C_{\alpha}\bigcap \lambda C_{\alpha}=\{0\}$?
+\end{pregunta}
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \vspace{10pt}
+\begin{thebibliography}{99}
+\bibitem{edgar} ESTEVEZ, E., \textit{El espacio de los c\'odigos}, Monograf\'ia de grado, Licenciatura en Matem\'aticas,
+Universidad Industrial de Santander, Bucaramanga, Colombia (1994).
+
+\bibitem{kraft} KRAFT, R., \textit{What's the difference between Cantor Sets},
+American Mathematical Monthly., Vol 101, (1994).
+
+\bibitem{kraftr} KRAFT, R., \textit{A golden Cantor Set},
+American Mathematical Monthly., Vol 105, (1998).
+
+\bibitem{Prada} PRADA D., \textit{Un conjunto dorado de Cantor}
+Monograf\'ia de grado, Licenciatura en Matem\'aticas, Universidad
+Industrial de Santander, Bucaramanga, Colombia (2006)
+
+\bibitem{IStewart} STEWART, I., \textit{C\'omo cortar un pastel, y otros rompecabezas matem\'aticos},
+Editorial Cr\'itica, (2007).
+
+\bibitem{Stewart} STEWART, I., \textit{De aqu\'i al infinito.  Las matem\'aticas de hoy},
+Biblioteca de Bolsillo, (2004).
+
+\bibitem{willar} WILLARD, S., \textit{General Topology},
+Massachussetts, Addison Wesley Publishing Company, (1970).
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%17%%%%%%%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{Geometr\'ia }\\
+    Gonzalo Garc\'ia\\
+     Universidad del Valle\\
+      \texttt{\footnotesize \hspace*{-1.2cm}gonzalo.garcia@correounivalle.edu.co}\vspace{10pt}\\
+        %   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Bd}{\mathrm{Bd}}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\A}{\mathrm{A}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Curvatura media Prescrita  en la bola}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{120pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen} 
+   Sea $(B^{n},\delta_{ij})$ la bola unitaria  n-dimensional ($n\geq 3$) con la m\'etrica euclidiana y sea $h:\partial B \mapsto R$ una funci\'on eje sim\'etrica con al menos dos m\'aximos. En esta conferencia encontraremos condiciones suficientes para que la funci\'on $h$ sea la curvatura media de una m\'etrica plana conforme a la m\'etrica euclidiana sobre la bola unitaria.
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \vspace{10pt}
+\begin{thebibliography}{99}
+\bibitem{ChwLc} {\sc Chen and Li C.} (2001) \textsl{Prescribing Scalar Curvature on $S^{n}$.}\,\ Pacific journal of mathematics. Vol 199, 1, 61-78
+
+\bibitem{Ej}{ \sc Escobar J.}(1996) \textsl{Conformal metric with prescribed mean curvature on the boundary. }\, \ Calculus of Variations and Partial Differential Equations. Vol 4 559-592
+
+\bibitem{EjGg}{ \sc Escobar J. y Garcia G.}(2004) \textsl{Conformal metrics on the ball with zero scalar curvature and prescribed mean curvature on the boundary.}\ Journal of Functional Analysis. V. 211,  71-152.
+
+\bibitem{EcGg}{\sc Escudero C. y Garcia G.} (2003) \textsl{Una nota sobre el problema de la deformacion conforme de metricas en la bola unitaria.}\ Revista colombiana de matem\'aticas. Vol 37,  1-9.
+\bibitem{GgOa}{\sc Garcia G. y Ortiz A.} (2014) \textsl{Prescribed mean Curvature on the Ball.}\ En preparaci\'on.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%%%%%%%%%18 %%%%%%
+\begin{titlepage}
+\author{%
+\tema{Topologia y Geometr\'ia }\\
+    John Beiro Moreno Barrios\\
+    Universidad del atl\'antico\\
+      \texttt{\footnotesize \hspace*{-1.2cm}johnmoreno@mail.uniatlantico.edu.co}\vspace{10pt}\\
+        %   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Bd}{\mathrm{Bd}}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\A}{\mathrm{A}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{La cuantizaci\'on geom\'etrica y una transformada de Segal-Bargmann deformada para $\R^{2}$}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{120pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}    
+El prop\'osito de este trabajo es construir una transformada de Segal-Bargmann deformada en $\R^{2}$ desde el punto de vista de la cuantizaci\'on geom\'etrica. La transformada de Segal-Bargmann usual tiene aplicaciones en \'optica cu\'antica, procesamiento de se\~nales y an\'alisis harmonica sobre el espacio fase (Ver por ejemplo \cite{foll}) pero fue originalmente introduzida por V. Bargamann en \cite{bg}. Sabemos que la cuantizaci\'on geom\'etrica puede ser usada para construir la transformada de Segal-Bargmann (ver por ejemplo \cite{woo}), Hall  en \cite{hall} realiza una construcci\'on en detalle de esta transformada, m\'as especificamente la transformada de Segal-Bargmann generalizada, para grupos de Lie del tipo compacto usando la cuantizaci\'on geom\'etrica. En este trabajo, vamos a usar la cuantizaci\'on geom\'etrica induzida por una polarizaci\'on compleja obteniendo una transformada de Segal-Bargmann deformada con propiedades muy similares a la transformada original y que nos permite obtener junto con a una convoluci\'on el producto de Moyal-Weyl (ver \cite{jb}).
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \vspace{10pt}
+\begin{thebibliography}{99}
+
+\bibitem{bg}{\sc Bargamann, V.} (1961) {\it On a Hilbert space analytic function and an associated integral transform}. Commun. Pure Appl. Math., 14:187-214.
+
+\bibitem{foll} {\sc Folland G. B.} (1989) "Harmonic on phase space''. \emph{Annals of Math Studies} V. 122.
+\bibitem{hall} {\sc Hall B.} (2002) "Geometric quantization and the generalized Segal-Bargmann transform for Lie groups of compact type''.
+    \emph{Commun. Math. Phys,} 226--268.
+\bibitem{jb}{\sc Moreno J. and Rios P. de M.} (2013) " Constru\c{c}\~ao geometrica de star product integral em espa\c{c}os simpleticos sim\'etricas n\~ao compactos''    \emph{Ph. D. thesis, Universidade de S\~ao Paulo.}
+\bibitem{woo}{\sc Woodhouse N.} (1980) "Geometric quantization''. Clarendon Press-Oxford.
+\end{thebibliography}
+\end{titlepage}
+%%%%%%%%%%%19 %%%%%%%%%%%%%
+\begin{titlepage}
+\author{%
+\tema{An\'{a}lisis }\\
+    Richard Malav\'e\\
+     Departamento de Matem\'{a}ticas. Universidad de Oriente. Cuman\'{a}. Venezuela\\
+      \texttt{\footnotesize
+       rmalaveg@gmail.com}\vspace{10pt}\\
+        %   Ferrer Osmin\\
+%    Universidad Surcolombiana\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Bd}{\mathrm{Bd}}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\A}{\mathrm{A}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Estructuras $\Omega$-$H$ equivalentes con estructuras de Lyra y su aplicaci\'on en la mec\'anica}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{120pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen} 
+    Dada una variedad diferenciable compleja $M$ y sobre ella dos estructuras $\Omega$-$H$ equivalentes. Se define $\overline{\mu}=(M,\overline{\nabla},g)$ tal que
+$$
+\overline{\mu}=\left\{
+   \begin{array}{rcl}
+   (\overline{\nabla}_X g)(Y,Z) &=&0 \\
+   \overline{S}(Y,Z)&=& r\left\{\Omega(Y)Z - \Omega(Z)Y\right\}, \hspace{0,3 cm} r\in C^\infty(\overline{M})
+   \end{array}\right.,
+$$
+como la estructura de Lyra.
+En estas estructuras siempre se cumple la invarianza entre las curvaturas $R$ y $\overline{R}$ en $\mu$ y $\overline{\mu}$ respectivamente, en este trabajo se proponre resolver el problema de la construcci\'on de un factor generatriz, el cual trata de describir el comportamiento de un sistema de ecuaciones diferenciales no holon\'omico (sistema con enlace), como sistemas holon\'omico (sistema sin enlace). Uno de los primeros investigadores que analiz\'o estos resultados fu\'e S.A Chapligu\'{\i}n en 1948, dejando problemas abiertos a la mec\'anica
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \vspace{10pt}
+\begin{thebibliography}{99}
+\bibitem{CG09} Chapligu\'{\i}n S.A, Collected word (In Rusian), \textit{Gosteyizdat, Moscow},  \textbf{1}, (1948).
+
+\bibitem{MM95} Jouskovski, N. E.,  Contrucci\'on de las fuerzas en bases a una familia de trayectorias dadas,  \textit{Colecci\'{o}n de trabajos de Jouskovski, N. E. Edit. Gostexizdat}, {\bf 347}, (1948), 227-242.
+
+\bibitem{At92}  Mart\'{\i}nez R and Ram\'{\i}rez R, Lyra spaces. Their application to mechanics, \textit{Jadronic, J.}, {\bf 12}, (1992), 123-236.
+
+\bibitem{MR92} Malav\'e R and Mart\'{\i}nez R.  \textit{Displacement of the mechanical systems with minimal acceleration in a sub-manifold}, IJMS,(Serials Publications) {\bf 12}, (2013).75-76.
+
+\bibitem{GMR09} Si\~niukov, Geodesic mappings of riemannian spaces (IN Rusian), \textit{Nauka, Moscow}, {\bf 3}, (1979).
+\end{thebibliography}
+\end{titlepage}
+
+%%%%%%%%%%%%20 %%%%%%%%%%
+%%%%%%%%%%%%%21%%%
+%%%%%%%%%%%%%%%22
+\begin{titlepage}
+\author{%
+\tema{Teor\'ia de Operadores}\\
+    Boris Lora Castro\\
+     Universidad del Atl\'antico\\
+      \texttt{\footnotesize
+       borisjose62@gmail.com}\vspace{10pt}\\
+          William Vides Ramos\\
+    Universidad de la Guajira\\
+%    \texttt{\footnotesize francis.segovia@usco.edu.co}\\
+         }
+%%%%%%%definiciones%%%%
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Bd}{\mathrm{Bd}}
+\newcommand{\Int}{\mathrm{Int}}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\Cl}{\mathrm{Cl}}
+\newcommand{\A}{\mathrm{A}}
+
+%%%%%%%% fin definiciones%%%%%%
+\pagecolor{white}
+\BgThispage
+\newgeometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\vspace*{-1.1cm}
+\noindent
+\def\titulo#1{\section{#1}}
+\section{\bf\large\textcolor{white}{Operadores en Espacios de Krein y de Pontryagin}}
+\vspace*{2cm}\par
+\noindent
+
+\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+        \printauthor
+    \end{flushright}
+\end{minipage} \hspace{0pt}
+%
+\begin{minipage}{0.02\linewidth}
+      \color{ptctitle} \rule{1pt}{310pt}
+\end{minipage} 
+\end{minipage}
+\hspace*{-4.5cm}
+%
+\begin{minipage}{0.85\linewidth}
+\begin{minipage}{0.85\linewidth}
+\footnotesize
+\vspace{5pt}
+    \begin{resumen}     
+Un espacio con m\'etrica indefinida es esencialemte un espacio sobre el cual se ha definido una forma sesquilineal indefinida que genera un producto interno no-definido positivo. Cuando el espacio se puede expresar como la suma directa ortogonal de dos espacios uno de los cuales es un espacio de Hilbert y el otro un espacio anti-Hilbert, es decir un espacio que se convierte en espacio de Hilbert si se le cambia el signo a su producto interno, se llama espacio de Krein y si uno de los espacios-sumandos tiene dimensi\'on finita, espacio de Pontryagin.\\
+La teor\'ia de operadores lineales en espacios de m\'etrica indefinida naci\'o en los a\~nos 40 del siglo pasado en los trabajos de los matem\'aticos rusos Pontryagin, Krein, Iokhvidov, entre otros. Durante alg\'un tiempo se dedicaron a ella exclusivamente los matem\'aticos de la antigua URSS concentrados en tres escuelas: la de Odessa dirigida por Krein, la de Mosc\'u, cuya cabeza era Naimark y la de Voronyesh a cargo de Iokhvidov. Pronto aparecieron trabajos en estos temas de matem\'aticos de otros pa\'ises como Finlandia (Pesonen, Nevanlinna y Louhivaara), Alemania (Langer) y Francia (De Brange y Schwarz). En Am\'erica se interesan en estos temas matem\'aticos como Rovnyak y Dritschel, entre otros, cuyo n\'umero ha ido increment\'andose con los a\~nos.\\
+En Am\'erica Latina son pocos los matem\'aticos dedicados a estos temas; se descatan Venezuela y Argentina donde un grupo de interesados (Bruzual, Dominguez, Marcantognini, Strauss, Maestripieri, Stojanoff) ha publicado, y sigue publicando, art\'iculos con resultados novedosos.\\
+Las m\'ultiples aplicaciones de esta teor\'ia y su escasa divulgaci\'on  en el \'ambito local hace interesante la apertura de un espacio para su estudio en nuestro medio acad\'emico.  En un Encuentro anterior se realiz\'o un cursillo sobre la teor\'ia general de Espacios con M\'etrica Indefinida, este a\~no deseamos continuar la divulgaci\'on de estos temas desarrollando un cursillo sobre Teor\'ia de Operadores en Espacios de Krein y de Pontryagin. En este cursillo se considera un estudio comparativo del comportamiento de los operadores lineales en espacios de Hilbert y en espacios con m\'etrica indefinida, particularmente espacios de Krein y de Pontryagin.\\
+El cursillo se divide en tres secciones: en la primera se consideran aspectos generales de la teor\'ia de operadores lineales en espacios de  Hilbert, as\'i como ciertos conceptos b\'asicos de la teor\'ia de estos espacios como ortogonalidad, suma directa de subespacios, bases ortogonales, norma de un operador, operador adjunto, ra\'iz de un operador entre otros conceptos b\'asicos; la segunda parte trata sobre los espacios de m\'etrica indefinida y en especial los espacios de Krein y de Pontryagin, se definen los conceptos m\'as relevantes de estas teor\'ias y se dan algunos ejemplos; finalmente, en la tercera parte se consideran los operadores lineales sobre espacios de m\'etrica indefinida y se compara su comportamiento con lo que ocurre en los espacios de Hilbert.
+    \end{resumen}
+   \end{minipage}
+   \vspace{10pt}
+\end{minipage}
+\vspace{10pt}\\[5pt]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \vspace{10pt}
+\begin{thebibliography}{99}
+\bibitem{AI}{\sc{Azizov, T.A. and Iokhvidov,I.S.}(1989) \it{Foundations of the Theory of Linear Operators in Spaces with Indefinite Metric}. Nauka., Moscow, URSS.}
+    
+\bibitem{AI2}{\sc{Azizov, T.A. and Iokhvidov,I.S.}(1989) \it{Linear Operators in Spaces with Indefinite Metric}. Wiley, New York,  [English transl].}
+
+\bibitem{Bo}{\sc{J. Bognar.}(1974) \it{ Indefnite inner product spaces.}. Springer Verlag.}
+    
+\bibitem{DR}{\sc{Dritschel M. and Rovnyak J.}(1990) "Theorems for Contraction operators on Krein Spaces". \emph{Operator Theory. Advances and Applications.}V.47, Birkhauser Verlag, Basel.}
+
+\bibitem{BDL} {\sc {Bruzual R, Dominguez M and Lora B.} (2012) "Representation of generalized Toeplitz kernels with a finite number of negative squares.''. \emph{Acta Sci. Math.} V.2.}
+\end{thebibliography}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
